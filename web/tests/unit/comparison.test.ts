@@ -38,16 +38,23 @@ describe('the opening comparison at Eiras, at the planned hour', () => {
     expect(snap()).toEqual(base);
     expect(high.before.p50[H]).toBe(before.p);
     console.log(JSON.stringify({ hourUtc: now.hours_utc[H], before, lowAt, highAt, others: others.length }));
-    // the forecast of 3 Oct 22:31 UTC with the censored count scale (2026-10-03); the 2 Oct forecast gave 0.4623,
-    // 0.241 and 0.7196 at the same instant
-    expect(before.p).toBeCloseTo(0.4559, 3);
-    expect(before.fog).toBeCloseTo(0.9354, 3);
-    expect(lowAt.p).toBeCloseTo(0.2384, 3);
-    expect(lowAt.fog).toBeCloseTo(0.655, 3);
-    expect(highAt.p).toBeCloseTo(0.7154, 3);
-    expect(highAt.fog).toBeCloseTo(0.7242, 3);
-    // the upstream reference (Escravote) keeps its value
-    expect(cs.series(DEMO.upstream).p50[H]).toBeCloseTo(0.4559, 3);
+    // the pinned values hold for the committed forecast; a refreshed forecast (the deploy fetches one) keeps the update's direction
+    if (now.forecast_fetched_utc === '2026-10-03T22:31:18Z') {
+      // the forecast of 3 Oct 22:31 UTC with the censored count scale (2026-10-03); the 2 Oct forecast gave 0.4623,
+      // 0.241 and 0.7196 at the same instant
+      expect(before.p).toBeCloseTo(0.4559, 3);
+      expect(before.fog).toBeCloseTo(0.9354, 3);
+      expect(lowAt.p).toBeCloseTo(0.2384, 3);
+      expect(lowAt.fog).toBeCloseTo(0.655, 3);
+      expect(highAt.p).toBeCloseTo(0.7154, 3);
+      expect(highAt.fog).toBeCloseTo(0.7242, 3);
+    } else {
+      expect(lowAt.p).toBeLessThan(before.p);
+      expect(highAt.p).toBeGreaterThan(before.p);
+      expect(lowAt.fog).toBeLessThan(before.fog);
+    }
+    // the upstream reference (Escravote) keeps its value: the same rain cell and prior as Eiras
+    expect(cs.series(DEMO.upstream).p50[H]).toBeCloseTo(before.p, 3);
     expect(others.length).toBe(19);
   });
 });
