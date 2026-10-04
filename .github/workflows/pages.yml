@@ -1,0 +1,156 @@
+# Builds the web app and deploys it to GitHub Pages at https://yazan-o.github.io/sayr/.
+# Every build (a push, a manual run, or nowcast.yml's daily call) refetches the rain ensemble, rewrites the nowcast,
+# then rebuilds and validates Sayr's FHIR resources (SUSHI and the HL7 validator) so the x-ray's per-site risk
+# Observations come from the same forecast as the map, and no deploy can publish an older forecast than the live
+# one (2026-10-02). A failed forecast download fails the run (the deploy never falls back to a cached forecast), and
+# so does any validation error or test failure (pytest for the pipeline and the FHIR layer, Vitest for the app); the
+# site then keeps the previous consistent deploy. Builds and deploys each run one at a time (the concurrency groups
+# below). GitHub does not promise that queued runs start in order, so the deploy job checks freshness itself
+# (docs/freshness_gate.py): it deploys only when no city on the live site has a newer forecast than this build, and
+# it fails when the live forecast cannot be read, unless the site does not exist yet (a 404 at its root).
+# Published: web/dist only (the app, its fonts, the JSON in data/out, the stream packs and Sayr's own FHIR resources
+# from fhir/served). The pre-publish scan fails the run on any restricted file, credential-looking string or FHIR
+# resource that is not one of Sayr's own.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      nowcast:
+        description: Kept for nowcast.yml; every build now refreshes the nowcast and the FHIR resources
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+env:
+  # The HL7 validator the local builds used (fhir/build/validate/sayr.log).
+  FHIR_VALIDATOR_VERSION: 6.10.4
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    outputs:
+      fetched: ${{ steps.stamp.outputs.fetched }}
+      base_url: ${{ steps.pages.outputs.base_url }}
+    concurrency:
+      group: pages-build
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      # web/scripts/build_streams.py reads the terrain tiles with Pillow; tzdata gives zoneinfo the city time zones
+      # whatever the runner image carries.
+      - name: Python packages
+        run: |
+          pip install pillow==12.3.0 tzdata==2026.4
+          pip install -r requirements.txt
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            web/package-lock.json
+            fhir/package-lock.json
+
+      # No --allow-cache: a failed download stops the run here instead of shipping an older forecast.
+      - name: Refresh the nowcast for the five cities
+        run: python -m pipeline nowcast
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # Fetches the OneAquaHealth guide at its pinned commit onto the runner (never committed or published), builds it
+      # and Sayr's resources with SUSHI, validates every Sayr resource, then exports Sayr's own into fhir/served.
+      - name: Rebuild and validate the FHIR resources from the new nowcast
+        working-directory: fhir
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/validator_cli.jar" \
+            "https://github.com/hapifhir/org.hl7.fhir.core/releases/download/${FHIR_VALIDATOR_VERSION}/validator_cli.jar"
+          export FHIR_VALIDATOR_JAR="$RUNNER_TEMP/validator_cli.jar"
+          echo "FHIR_VALIDATOR_JAR=$FHIR_VALIDATOR_JAR" >> "$GITHUB_ENV"
+          npx --yes npm@11 ci
+          npm run fhir
+
+      # npm 10.9 crashes resolving Vitest's optional peers; npm 11 installs the lockfile cleanly.
+      - name: Install
+        working-directory: web
+        run: npx --yes npm@11 ci
+
+      # sync-fhir stops the build if fhir/served disagrees with data/out's nowcast.
+      - name: Build for /sayr/
+        working-directory: web
+        env:
+          SAYR_BASE: /sayr/
+        run: npm run build
+
+      # Any failure stops the run before the upload, so nothing is deployed. The browser suites (Playwright) are not
+      # run here: the map draws 3D terrain with WebGL, and without a GPU it does not settle within their timeouts.
+      - name: Pipeline tests
+        run: python -m pytest -q
+
+      - name: FHIR tests (the HL7 validator re-runs on the built resources)
+        working-directory: fhir
+        run: python -m pytest -q
+
+      - name: App unit tests
+        working-directory: web
+        run: npm test
+
+      - name: Pre-publish scan
+        run: |
+          python docs/prepublish_scan.py
+          python docs/prepublish_scan.py --site web/dist
+
+      - name: Forecast fetch times of this build, all five cities
+        id: stamp
+        run: echo "fetched=$(python docs/freshness_gate.py stamp data/out)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/configure-pages@v6
+        id: pages
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages-deploy
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: docs
+
+      # Freshness gate: skip the deploy when the live site serves a newer forecast for any of the five cities (an
+      # older build that started late). A lookup error fails the run; only a 404 at the site root (no site yet, the
+      # first deployment) deploys without a comparison.
+      - name: Compare with the live forecast, all five cities
+        id: fresh
+        env:
+          FETCHED: ${{ needs.build.outputs.fetched }}
+          BASE_URL: ${{ needs.build.outputs.base_url }}
+        run: python3 docs/freshness_gate.py check "$BASE_URL" "$FETCHED" >> "$GITHUB_OUTPUT"
+
+      - id: deployment
+        if: steps.fresh.outputs.deploy == 'true'
+        uses: actions/deploy-pages@v5
