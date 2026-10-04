@@ -1,0 +1,32 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+# source files whose licences are not stated; the build downloads them locally
+data/raw/restricted/
+# OneAquaHealth raw API responses are not redistributed (no licence stated); derived counts and site lists in
+# data/out/ are published
+data/raw/oah_*.json
+# local secrets and tool paths never leave this machine
+.env
+.env.*
+
+# terrain tile cache used by web/scripts/build_streams.py (re-fetched on build)
+data/raw/terrarium/
+
+# Dependencies, generated outputs, captures and local execution files
+node_modules/
+dist/
+build/
+.vite/
+.cache/
+logs/
+*.log
+*.tmp
+web/public/data/
+web/screens/
+web/test-results/
+web/playwright-report/
+fhir/ig-src/
+fhir/fhir-static/
+fhir/tools.local.json
+fhir/sayr-ig/input/fsh/generated/
