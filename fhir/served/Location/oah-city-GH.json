@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ghent</p><p>Identifier GH (https://yazan-o.github.io/sayr/fhir/sid/oah-city)</p><p>Position 51.0543, 3.7174</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ghent</p><p>Identifier GH (https://yazan-o.github.io/afterrain/fhir/sid/oah-city)</p><p>Position 51.0543, 3.7174</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-city",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-city",
    "value": "GH"
   }
  ],

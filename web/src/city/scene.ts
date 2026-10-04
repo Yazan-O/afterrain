@@ -2735,7 +2735,7 @@ export function createCityScene(city: CityId): Scene & { route(params: readonly 
     return { center: [c.lng, c.lat], zoom: map.getZoom(), pitch: map.getPitch(), bearing: map.getBearing() };
   };
   const setTitle = (stream: string | null): void => {
-    if (!ctx.story) document.title = `Sayr: ${cs.pack.name}${stream ? `, ${stream}` : ''}`;
+    if (!ctx.story) document.title = `AfterRain: ${cs.pack.name}${stream ? `, ${stream}` : ''}`;
   };
   /** Pan and zoom within the city at rest (mouse and touch); the camera belongs to the animation otherwise. */
   let panBounds: maplibregl.LngLatBoundsLike | null = null;
@@ -4148,7 +4148,7 @@ export function createCityScene(city: CityId): Scene & { route(params: readonly 
     showSiteLabel(opening.code);
     return true;
   }
-  /** "Nobody has measured Eiras after rain. Sayr asks for one sample: Sunday, 08:00 to 20:00." from the nowcast. */
+  /** "Nobody has measured Eiras after rain. AfterRain asks for one sample: Sunday, 08:00 to 20:00." from the nowcast. */
   function askLine(code: string): Node[] | null {
     const all = rounds().flatMap((r) => r.quests);
     const at = (q: Quest): boolean => hasStrip(q) && questOpen(q);
@@ -4163,7 +4163,7 @@ export function createCityScene(city: CityId): Scene & { route(params: readonly 
       return e;
     };
     const day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][localParts(q.startMs, zone).weekday]!;
-    out.push(document.createTextNode(`Sayr asks for one sample${q.code === code ? '' : ` at ${q.display}`}: ${day}, `), t(q.startMs), document.createTextNode(' to '), t(q.endMs), document.createTextNode('.'));
+    out.push(document.createTextNode(`AfterRain asks for one sample${q.code === code ? '' : ` at ${q.display}`}: ${day}, `), t(q.startMs), document.createTextNode(' to '), t(q.endMs), document.createTextNode('.'));
     return out;
   }
 

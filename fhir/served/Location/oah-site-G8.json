@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Zwalm4 (Zw4)</p><p>OneAquaHealth research site G8 in Ghent.</p><p>Identifier G8 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 50.87971, 3.73771</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Zwalm4 (Zw4)</p><p>OneAquaHealth research site G8 in Ghent.</p><p>Identifier G8 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 50.87971, 3.73771</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "G8",
    "assigner": {
     "display": "OneAquaHealth"

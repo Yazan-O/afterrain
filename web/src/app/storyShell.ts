@@ -19,7 +19,7 @@ import { createGeoView, GEO_TIMES, type GeoMove, type GeoView } from './geoView'
 import { storyLine, type Line, type SayData } from './narration';
 import { CITY_BEATS, STORM_BEATS, StoryMachine, storyChapters, type ChapterId, type StoryChapter, type StoryCommand } from './story';
 
-export const TAGLINE = ['Your stream is measured on dry days.', 'Sayr watches the storms.'] as const;
+export const TAGLINE = ['Your stream is measured on dry days.', 'AfterRain watches the storms.'] as const;
 const STORY_CITY: CityId = 'CO';
 
 export interface StoryHost {

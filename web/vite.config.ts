@@ -10,7 +10,7 @@ const firstPaint = (): Plugin => ({
 });
 
 export default defineConfig({
-  // GitHub Pages serves the app under /sayr/ (SAYR_BASE=/sayr/ in the Pages workflow); local dev and e2e keep '/'.
+  // GitHub Pages serves the app under /afterrain/ (SAYR_BASE=/afterrain/ in the Pages workflow); local dev and e2e keep '/'.
   base: process.env['SAYR_BASE'] ?? '/',
   // No client-side routing, so no single-page fallback: a missing file (a data file above all) is a 404,
   // not index.html with status 200.

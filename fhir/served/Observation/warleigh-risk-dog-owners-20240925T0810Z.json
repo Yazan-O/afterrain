@@ -15,7 +15,7 @@
   "coding": [
    {
     "code": "ecoli-exceedance-probability",
-    "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+    "system": "https://yazan-o.github.io/afterrain/fhir/CodeSystem/afterrain-cs",
     "display": "Probability of E. coli over 900 per 100 mL"
    }
   ]
@@ -31,11 +31,11 @@
  "effectiveDateTime": "2024-09-25T09:10:00+01:00",
  "performer": [
   {
-   "reference": "Organization/sayr-team"
+   "reference": "Organization/afterrain-team"
   }
  ],
  "device": {
-  "reference": "Device/sayr-model-warleigh-without-2024"
+  "reference": "Device/afterrain-model-warleigh-without-2024"
  },
  "method": {
   "text": "Logistic regression on upstream storm-overflow spills, river flow, rain and season (model_warleigh.json). Fitted on the 2021, 2022, 2023 samples; 2024 held out."

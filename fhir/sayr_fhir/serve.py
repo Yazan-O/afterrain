@@ -66,5 +66,5 @@ def resource_file(path: str) -> Path | None:
 def serve(port: int = 8777) -> None:
     Handler.index = json.loads((C.STATIC / "_search" / "index.json").read_text(encoding="utf-8"))
     httpd = ThreadingHTTPServer(("127.0.0.1", port), Handler)
-    print(f"Sayr static FHIR surface on http://127.0.0.1:{port}/ (Ctrl+C to stop)")
+    print(f"AfterRain static FHIR surface on http://127.0.0.1:{port}/ (Ctrl+C to stop)")
     httpd.serve_forever()

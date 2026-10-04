@@ -12,7 +12,7 @@ spec = importlib.util.spec_from_file_location("freshness_gate", ROOT / "docs" / 
 gate = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(gate)
 
-BASE = "https://example.test/sayr/"
+BASE = "https://example.test/afterrain/"
 T0, T1 = "2026-10-02T04:05:00Z", "2026-10-03T04:05:00Z"
 
 

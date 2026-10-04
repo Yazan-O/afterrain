@@ -43,7 +43,7 @@ Description: "PROPOSAL (not part of the OAH-FHIR IG). A public-health alert tell
 * sender MS
 * sender only Reference(Device or Organization)
 * reasonCode 1..* MS
-* reasonCode from SayrAlertReasonVs (extensible)
+* reasonCode from AfterRainAlertReasonVs (extensible)
 * reasonReference 1..* MS
 * reasonReference only Reference(ObservationHealthMeasureOah or ObservationIndicatorsOah)
 * reasonReference ^short = "The risk estimate and the samples that justify the alert"

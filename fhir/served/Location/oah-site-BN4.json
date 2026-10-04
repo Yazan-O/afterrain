@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Serretelle 4</p><p>OneAquaHealth research site BN4 in Benevento.</p><p>Identifier BN4 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 41.12414, 14.74864</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Serretelle 4</p><p>OneAquaHealth research site BN4 in Benevento.</p><p>Identifier BN4 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 41.12414, 14.74864</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "BN4",
    "assigner": {
     "display": "OneAquaHealth"

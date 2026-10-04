@@ -14,9 +14,9 @@
 // checks read it ("live:<Type/id>#<pointer>").
 import type { Json } from './xrayMap';
 
-export const SAYR_CS = 'https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs';
+export const SAYR_CS = 'https://yazan-o.github.io/afterrain/fhir/CodeSystem/afterrain-cs';
 /**
- * The OneAquaHealth health-measure profile Sayr's published risk observations use (hl7.eu.fhir.oah). The forecast
+ * The OneAquaHealth health-measure profile AfterRain's published risk observations use (hl7.eu.fhir.oah). The forecast
  * record claims it; the test record does not, because the profile fixes status to final and a test estimate is
  * preliminary (HL7 validator, 2026-10-03).
  */
@@ -80,7 +80,7 @@ export interface ForecastInput {
 
 /** "Forecast at <site>": the nowcast's own values at one hour (no test reading at the site). */
 export function forecastRecord(f: ForecastInput): LiveRecord {
-  const id = `sayr-forecast-${f.code}-${stamp(f.hourUtc)}`;
+  const id = `afterrain-forecast-${f.code}-${stamp(f.hourUtc)}`;
   const ref = `Observation/${id}`;
   const file = `nowcast_${f.city}.json`;
   const json: Json = {
@@ -125,7 +125,7 @@ export interface TestInput {
 
 /** "Test estimate at <site>": the browser's recomputed estimate after one test reading. */
 export function testRecord(t: TestInput): LiveRecord {
-  const id = `sayr-test-${t.code}-${stamp(t.hourUtc)}-r${t.revision}`;
+  const id = `afterrain-test-${t.code}-${stamp(t.hourUtc)}-r${t.revision}`;
   const ref = `Observation/${id}`;
   const reading = t.over900 ? 'over 900' : '900 or less';
   const json: Json = {

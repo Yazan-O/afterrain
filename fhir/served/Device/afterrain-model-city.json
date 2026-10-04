@@ -1,0 +1,26 @@
+{
+ "resourceType": "Device",
+ "id": "afterrain-model-city",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>AfterRain city risk model</p><p>Version: afterrain-city-2:8b0c1ef2b5</p></div>"
+ },
+ "status": "active",
+ "deviceName": [
+  {
+   "name": "AfterRain city risk model",
+   "type": "user-friendly-name"
+  }
+ ],
+ "type": {
+  "text": "Statistical risk model (software)"
+ },
+ "version": [
+  {
+   "value": "afterrain-city-2:8b0c1ef2b5"
+  }
+ ],
+ "owner": {
+  "reference": "Organization/afterrain-team"
+ }
+}

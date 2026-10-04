@@ -2,7 +2,7 @@
 // layer opacities), advanced by clock seconds, with no DOM; src/app/storyShell.ts mounts the scenes it names.
 //
 // The take (about 80 seconds), narrated one sentence at a time: a real place (Warleigh Weir on the Avon), the 2024
-// storm that went unseen there, the five-year proof, the dark hours nobody samples, then Sayr's forecast for Coimbra
+// storm that went unseen there, the five-year proof, the dark hours nobody samples, then AfterRain's forecast for Coimbra
 // in a person's words, its sampling request and one example test reading; then free exploration.
 //
 // Time. Each chapter has a local script time in seconds that advances with the clock's animation seconds. It holds
@@ -443,7 +443,7 @@ export class StoryMachine {
 //          maps each beat to a moment of the 2024 storm): the weir, the rain,
 //          Freshford's logged spill, the morning, the 31,000, the five-year proof
 //   dark   the dark hours: OneAquaHealth's samples fall to the dry side; the wet side stays dark
-//   city   Europe and OneAquaHealth's five cities, then into Coimbra (src/app/geoView.ts); "Sayr forecasts those hours.", the map's key on the map itself, the person's sentence at Eiras, the
+//   city   Europe and OneAquaHealth's five cities, then into Coimbra (src/app/geoView.ts); "AfterRain forecasts those hours.", the map's key on the map itself, the person's sentence at Eiras, the
 //          sampling request, the example test reading and its comparison, the close; then free exploration
 
 /** Local seconds of the storm chapter's beats (the replay moments they show are set in storyShell.ts). */

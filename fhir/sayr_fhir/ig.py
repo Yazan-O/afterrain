@@ -1,4 +1,4 @@
-"""Fetch and build the OneAquaHealth IG, build Sayr's IG on top of it, and package both."""
+"""Fetch and build the OneAquaHealth IG, build AfterRain's IG on top of it, and package both."""
 from __future__ import annotations
 
 import json

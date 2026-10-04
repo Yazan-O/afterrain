@@ -69,7 +69,7 @@ def _bbox(points: list[tuple[float, float]], m: float) -> tuple[float, float, fl
 
 
 # OneAquaHealth raw API responses are not redistributed (no licence stated). A city pack
-# publishes only what the app draws: site code, name and coordinates, the city's name and centre, and Sayr's own
+# publishes only what the app draws: site code, name and coordinates, the city's name and centre, and AfterRain's own
 # derived numbers. The health-risk and urban payloads, site polygons and altitudes, and the citizen-created sites stay
 # in the unpublished raw cache (data/raw/oah_*.json). The withheld keys stay present as null / [] because the app's
 # schema and tests still name them.
@@ -105,7 +105,7 @@ def city_pack(f: Fetcher, c: dict[str, Any], cid: str, dry: dict[str, Any]) -> d
                      "why": "OneAquaHealth API content is not redistributed until its licence is settled; these "
                             "fields are null or empty here"},
         "source": "Site codes, names and coordinates: OneAquaHealth public API (api.enora-oah.eu), read-only. "
-                  "rain_3d_before_sampling_mm and dry_weather: Sayr, derived from that API's daily weather.",
+                  "rain_3d_before_sampling_mm and dry_weather: AfterRain, derived from that API's daily weather.",
     }
 
 

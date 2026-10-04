@@ -1,12 +1,12 @@
 {
-  "method": "Recorded HL7 validation snapshot, with resource ids counted from Sayr's own generated transaction Bundle.",
-  "sayr_resource_count": 925,
+  "method": "Recorded HL7 validation snapshot, with resource ids counted from AfterRain's own generated transaction Bundle.",
+  "afterrain_resource_count": 925,
   "own_resource_ids": [
     "Binary/warleigh-backtest-data",
-    "CodeSystem/sayr-cs",
+    "CodeSystem/afterrain-cs",
     "Communication/alert-warleigh-dog-owners-20240925T0810Z",
-    "Device/sayr-model-city",
-    "Device/sayr-model-warleigh-without-2024",
+    "Device/afterrain-model-city",
+    "Device/afterrain-model-warleigh-without-2024",
     "Group/cohort-adult-swimmers",
     "Group/cohort-children-paddling",
     "Group/cohort-dog-owners",
@@ -597,7 +597,7 @@
     "Observation/warleigh-risk-dog-owners-20240927T0845Z",
     "Observation/warleigh-risk-dog-owners-20240927T1200Z",
     "Observation/warleigh-risk-dog-owners-20240927T1515Z",
-    "Organization/sayr-team",
+    "Organization/afterrain-team",
     "Organization/wessex-water",
     "PractitionerRole/wessex-water-sampler",
     "Specimen/warleigh-water-20210319T1110Z",
@@ -925,8 +925,8 @@
     "StructureDefinition/alert-oah",
     "StructureDefinition/alert-validity-period",
     "Subscription/subscription-dog-owner-alerts",
-    "ValueSet/sayr-alert-reason-vs",
-    "ValueSet/sayr-water-contact-activity-vs"
+    "ValueSet/afterrain-alert-reason-vs",
+    "ValueSet/afterrain-water-contact-activity-vs"
   ],
   "resource_types": {
     "Binary": 1,
@@ -948,15 +948,15 @@
   "files": 927,
   "error": 0,
   "fatal": 0,
-  "validated_utc": "2026-10-03T22:56:39Z",
+  "validated_utc": "2026-10-04T20:12:33Z",
   "validator": "HL7 FHIR validator 6.10.4",
   "summary": "fhir/served/sayr.summary.json",
-  "summary_sha256": "820c4a90fbda6648eb42c6b31cf563ab94f1b52e8707aac474460262e87cebaa",
+  "summary_sha256": "1b9d39b471675b6534dbf3ab77f728f007aa6ceb4931d7d25e160b511d91b475",
   "served_index": "fhir/served/index.json",
-  "served_index_sha256": "5bd70bbfb4e1511ba8ea20e61932740053666ab662f3a1f6604ec7fcff36b009",
+  "served_index_sha256": "3ef6925009e39c348d87f4db6be99b2ca5c14049a508a37e06195c08cdbffab0",
   "provenance": {
     "bundle_path": "fhir/fhir-static/_bundles/sayr-transaction.json",
-    "bundle_sha256": "0124be0e004714c986ca6db158c81e66e4db6186561d1426d805c6a69757a76d",
+    "bundle_sha256": "31e7101b79e10e8049e6215efde77d842376e9f529cc71212892ee629e8120f6",
     "bundle_entries": 925,
     "publication": "Generated source Bundle excluded from the public copy; only resource ids and inventory counts retained here."
   }

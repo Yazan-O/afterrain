@@ -29,10 +29,10 @@
    "valueString": "CC BY 4.0 (Wessex Water) and OGL v3.0 (Environment Agency)"
   }
  ],
- "url": "https://yazan-o.github.io/sayr/fhir/Library/warleigh-backtest",
+ "url": "https://yazan-o.github.io/afterrain/fhir/Library/warleigh-backtest",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/dataset",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/dataset",
    "value": "warleigh-backtest"
   }
  ],
@@ -50,10 +50,10 @@
   ]
  },
  "date": "2026-10-03",
- "publisher": "Sayr team",
+ "publisher": "AfterRain team",
  "author": [
   {
-   "name": "Sayr team"
+   "name": "AfterRain team"
   }
  ],
  "description": "Warleigh Weir, River Avon: 322 E. coli samples (2021-03-19 to 2025-12-08) with the storm-overflow spills of the 48 hours before each, the gauge rain and flow of the days finished before it, the warning rules that fired, and the model probability.",

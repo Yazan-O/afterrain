@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Bairro São Miguel</p><p>OneAquaHealth research site C11 in Coimbra.</p><p>Identifier C11 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.22752, -8.43757</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Bairro São Miguel</p><p>OneAquaHealth research site C11 in Coimbra.</p><p>Identifier C11 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 40.22752, -8.43757</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "C11",
    "assigner": {
     "display": "OneAquaHealth"

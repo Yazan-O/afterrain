@@ -98,7 +98,7 @@ describe('the records behind the line', () => {
     const ser = cs.series('C4');
     const r = testRecord({ code: 'C4', site: 'Eiras', hour: h, hourUtc: now.hours_utc[h]!, collectedUtc: now.hours_utc[h]!, over900: true, p50: ser.p50[h]!, fog: ser.fog[h]!, revision: cs.revision, modelVersion: now.model_version, published: null });
     expect(r.heading).toBe('Test estimate at Eiras');
-    expect(r.ref).toMatch(/^Observation\/sayr-test-C4-\d{8}T\d{4}Z-r1$/);
+    expect(r.ref).toMatch(/^Observation\/afterrain-test-C4-\d{8}T\d{4}Z-r1$/);
     expect(resolvePointer(r.json, '/status')).toBe('preliminary');
     expect(resolvePointer(r.json, '/meta/tag/0/code')).toBe('test-reading');
     expect(resolvePointer(r.json, '/valueQuantity/value')).toBeCloseTo(ser.p50[h]!, 4);

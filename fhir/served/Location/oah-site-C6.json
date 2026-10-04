@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Casa do Sal</p><p>OneAquaHealth research site C6 in Coimbra.</p><p>Identifier C6 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.21942, -8.43772</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Casa do Sal</p><p>OneAquaHealth research site C6 in Coimbra.</p><p>Identifier C6 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 40.21942, -8.43772</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "C6",
    "assigner": {
     "display": "OneAquaHealth"

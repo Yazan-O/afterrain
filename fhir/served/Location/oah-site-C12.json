@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Escola Agrária</p><p>OneAquaHealth research site C12 in Coimbra.</p><p>Identifier C12 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.20386, -8.45302</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Escola Agrária</p><p>OneAquaHealth research site C12 in Coimbra.</p><p>Identifier C12 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 40.20386, -8.45302</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "C12",
    "assigner": {
     "display": "OneAquaHealth"

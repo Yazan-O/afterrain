@@ -1,14 +1,14 @@
 {
  "resourceType": "Device",
- "id": "sayr-model-warleigh-without-2024",
+ "id": "afterrain-model-warleigh-without-2024",
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Sayr Warleigh Weir risk model</p><p>Version: Fitted on the 2021, 2022, 2023 samples; 2024 held out; build 2026-10-03T22:28:20Z</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>AfterRain Warleigh Weir risk model</p><p>Version: Fitted on the 2021, 2022, 2023 samples; 2024 held out; build 2026-10-03T22:28:20Z</p></div>"
  },
  "status": "active",
  "deviceName": [
   {
-   "name": "Sayr Warleigh Weir risk model",
+   "name": "AfterRain Warleigh Weir risk model",
    "type": "user-friendly-name"
   }
  ],
@@ -21,6 +21,6 @@
   }
  ],
  "owner": {
-  "reference": "Organization/sayr-team"
+  "reference": "Organization/afterrain-team"
  }
 }

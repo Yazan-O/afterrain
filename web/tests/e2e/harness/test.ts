@@ -1,4 +1,4 @@
-// The Playwright `test` every Sayr screen uses. It watches each page for console errors, uncaught errors,
+// The Playwright `test` every AfterRain screen uses. It watches each page for console errors, uncaught errors,
 // unhandled promise rejections and failed responses, and fails the test at teardown if any occurred.
 // `expectScreenQuality` runs every content check in one call.
 import { expect, test as base, type Page, type TestInfo } from '@playwright/test';

@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ousseau</p><p>OneAquaHealth research site T18 in Toulouse.</p><p>Identifier T18 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.57882, 1.35262</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ousseau</p><p>OneAquaHealth research site T18 in Toulouse.</p><p>Identifier T18 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 43.57882, 1.35262</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "T18",
    "assigner": {
     "display": "OneAquaHealth"

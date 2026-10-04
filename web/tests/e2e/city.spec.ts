@@ -195,7 +195,7 @@ test.describe('links, queries and the forecast (1440x900)', () => {
     }
     await page.goto(`/?t=${T}#/replay/1999-01-01`);
     await expect(page).toHaveURL(/#\/replay$/);
-    await expect(page).toHaveTitle('Sayr: the storm replayed');
+    await expect(page).toHaveTitle('AfterRain: the storm replayed');
   });
 
   test('a ?t without a zone is read as UTC', async ({ page }) => {
@@ -229,12 +229,12 @@ test.describe('links, queries and the forecast (1440x900)', () => {
     await page.goto(`/?t=${T}#/city/CO/stream/${QS}`);
     await ready(page);
     await inState(page, 'strip');
-    await expect(page).toHaveTitle(`Sayr: Coimbra, ${CO.quest.streamName}`);
+    await expect(page).toHaveTitle(`AfterRain: Coimbra, ${CO.quest.streamName}`);
     await page.keyboard.press('Escape');
     await inState(page, 'rest');
-    await expect(page).toHaveTitle('Sayr: Coimbra');
+    await expect(page).toHaveTitle('AfterRain: Coimbra');
     await page.evaluate(() => (location.hash = '#/dark-hours'));
-    await expect(page).toHaveTitle('Sayr: the dark hours');
+    await expect(page).toHaveTitle('AfterRain: the dark hours');
   });
 
   test('the credits close on Escape and on a tap elsewhere', async ({ page }) => {

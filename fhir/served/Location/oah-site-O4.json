@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Makrellbekken - Dronningfossen</p><p>OneAquaHealth research site O4 in Oslo.</p><p>Identifier O4 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 59.9308, 10.6778</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Makrellbekken - Dronningfossen</p><p>OneAquaHealth research site O4 in Oslo.</p><p>Identifier O4 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 59.9308, 10.6778</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "O4",
    "assigner": {
     "display": "OneAquaHealth"

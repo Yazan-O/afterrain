@@ -1,5 +1,5 @@
 // The FHIR x-ray's pure parts: which OAH-FHIR resource sits behind a thing on screen, and which lines of that
-// resource the flipped card typesets. The resources are Sayr's own, copied from sayr/fhir/fhir-static into
+// resource the flipped card typesets. The resources are AfterRain's own, copied from sayr/fhir/fhir-static into
 // /data/fhir by `npm run data` (scripts/sync-fhir.mjs), which also writes index.json.
 //
 //   a replay sample (data-src "replay_<key>.json#/samples/<i>/...")  ObservationIndicatorsOah + SpecimenOah
@@ -26,7 +26,7 @@ export interface FhirIndex {
 export interface XrayTarget {
   /** "Type/id" references, in the order the card shows them. */
   readonly refs: readonly string[];
-  /** The resource is Sayr's proposal, not a profile of the guide. */
+  /** The resource is AfterRain's proposal, not a profile of the guide. */
   readonly proposed: boolean;
 }
 

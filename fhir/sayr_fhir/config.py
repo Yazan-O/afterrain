@@ -1,4 +1,4 @@
-"""Paths, pins and tool discovery for the Sayr FHIR build."""
+"""Paths, pins and tool discovery for the AfterRain FHIR build."""
 from __future__ import annotations
 
 import json
@@ -11,7 +11,7 @@ SAYR_DIR = FHIR_DIR.parent                                  # sayr
 DATA_OUT = SAYR_DIR / "data" / "out"
 
 # The OneAquaHealth FHIR IG source. The repository states no licence, so it is fetched at build time
-# into ig-src/ (git-ignored) instead of being redistributed with Sayr.
+# into ig-src/ (git-ignored) instead of being redistributed with AfterRain.
 IG_REPO = "https://github.com/hl7-eu/oah"
 IG_COMMIT = "b907cf0869b59d82d9138b3d147fca66f333d911"      # last push 2026-06-11
 IG_SRC = FHIR_DIR / "ig-src"
@@ -20,7 +20,7 @@ OAH_PACKAGE = {"name": "hl7.eu.fhir.oah", "version": "0.1.0-ci-build", "canonica
 OAH_DEPENDENCIES = {"hl7.fhir.r4.core": "4.0.1", "hl7.fhir.uv.xver-r5.r4": "0.1.0", "hl7.fhir.uv.extensions.r4": "5.3.0"}
 
 SAYR_IG = FHIR_DIR / "sayr-ig"
-SAYR_PACKAGE = {"name": "sayr.fhir.oah", "version": "0.1.0", "canonical": "https://yazan-o.github.io/sayr/fhir"}
+SAYR_PACKAGE = {"name": "afterrain.fhir.oah", "version": "0.1.0", "canonical": "https://yazan-o.github.io/afterrain/fhir"}
 CANONICAL = SAYR_PACKAGE["canonical"]
 
 BUILD = FHIR_DIR / "build"                  # everything regenerated; git-ignored

@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Warleigh Weir, River Avon</p><p>E. coli sampling point on the River Avon near Bath (Wessex Water, CC BY 4.0).</p><p>Identifier warleigh-weir (https://yazan-o.github.io/sayr/fhir/sid/site)</p><p>Position 51.37705, -2.300635</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Warleigh Weir, River Avon</p><p>E. coli sampling point on the River Avon near Bath (Wessex Water, CC BY 4.0).</p><p>Identifier warleigh-weir (https://yazan-o.github.io/afterrain/fhir/sid/site)</p><p>Position 51.37705, -2.300635</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/site",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/site",
    "value": "warleigh-weir"
   }
  ],

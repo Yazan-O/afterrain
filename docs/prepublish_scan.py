@@ -6,8 +6,8 @@
 
 Repository mode uses `git ls-files --cached --others --exclude-standard` inside a git repository, and
 otherwise walks the tree applying the .gitignore files (plain patterns only; a negation pattern stops the scan).
-A file holding a FHIR resource passes only as one of Sayr's own served resources: under fhir/served/ (repository) or
-data/fhir/ (site), listed in that folder's index.json, with one of Sayr's ids.
+A file holding a FHIR resource passes only as one of AfterRain's own served resources: under fhir/served/ (repository) or
+data/fhir/ (site), listed in that folder's index.json, with one of AfterRain's ids.
 The forbidden literals are assembled from pieces so this file does not match itself.
 """
 from __future__ import annotations
@@ -53,8 +53,8 @@ CREDENTIALS = [
 CRED_RE = [(re.compile(p.encode(), re.IGNORECASE), why) for p, why in CREDENTIALS]
 PATH_RE = [(re.compile(p), why) for p, why in RESTRICTED_PATHS]
 FHIR_RE = re.compile(rb'"resourceType"\s*:')
-# FHIR resources may be published only as Sayr's own served set (fhir/served in the repository, data/fhir in the site):
-# listed in that folder's index.json and named with Sayr's own ids. The guide's examples never match these ids.
+# FHIR resources may be published only as AfterRain's own served set (fhir/served in the repository, data/fhir in the site):
+# listed in that folder's index.json and named with AfterRain's own ids. The guide's examples never match these ids.
 FHIR_HOME = {"git": "fhir/served", "gitignore walk": "fhir/served", "site": "data/fhir"}
 # The served set is the selection plus its dependency closure (web/scripts/sync-fhir.mjs --export): cohorts, model
 # devices, organisations, the dataset Library with its Binary, and the alert's supporting observation. Each id is
@@ -64,18 +64,18 @@ SAYR_ID = re.compile(r"^(Location/(warleigh-weir|oah-site-[A-Za-z0-9]+|oah-city-
                      r"|Observation/(warleigh-ecoli-\d{8}T\d{4}Z(-\d)?|warleigh-risk-dog-owners-\d{8}T\d{4}Z"
                      r"|oah-risk-dog-owners-[A-Za-z0-9]+)"
                      r"|Specimen/warleigh-water-\d{8}T\d{4}Z(-\d)?|Communication/alert-warleigh-[A-Za-z0-9-]+"
-                     r"|Device/sayr-model-(city|warleigh-without-\d{4})|Group/cohort-dog-owners"
+                     r"|Device/afterrain-model-(city|warleigh-without-\d{4})|Group/cohort-dog-owners"
                      r"|Library/warleigh-backtest|Binary/warleigh-backtest-data"
-                     r"|Organization/(sayr-team|wessex-water)|PractitionerRole/wessex-water-sampler)$")
+                     r"|Organization/(afterrain-team|wessex-water)|PractitionerRole/wessex-water-sampler)$")
 
 
 def fhir_problem(rel: str, home: str, listed: set[str]) -> str | None:
-    """Why a file holding a FHIR resource may not be published, or None when it is one of Sayr's served resources."""
+    """Why a file holding a FHIR resource may not be published, or None when it is one of AfterRain's served resources."""
     if not rel.startswith(home + "/") or not rel.endswith(".json"):
-        return f"FHIR resource outside {home}/ (only Sayr's own served resources are published)"
+        return f"FHIR resource outside {home}/ (only AfterRain's own served resources are published)"
     ref = rel[len(home) + 1:-len(".json")]
     if not SAYR_ID.match(ref):
-        return "FHIR resource whose id is not one of Sayr's own (the guide's examples are not published)"
+        return "FHIR resource whose id is not one of AfterRain's own (the guide's examples are not published)"
     if ref not in listed:
         return f"FHIR resource not listed in {home}/index.json"
     return None

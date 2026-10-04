@@ -1,5 +1,5 @@
-// Every Sayr code a browser-made record uses is defined, with
-// the same display, in the Sayr code system the guide publishes (fhir/sayr-ig/input/fsh/terminology.fsh); the forecast
+// Every AfterRain code a browser-made record uses is defined, with
+// the same display, in the AfterRain code system the guide publishes (fhir/sayr-ig/input/fsh/terminology.fsh); the forecast
 // record claims the OneAquaHealth health-measure profile (the test record cannot: the profile fixes status to final);
 // every dateTime has seconds. Checks reject a live record using a term the code system lacks.
 import { readFileSync } from 'node:fs';
@@ -13,7 +13,7 @@ const FSH = readFileSync(resolve(dirname(fileURLToPath(import.meta.url)), '..', 
 const defined = new Map<string, string>();
 let inCs = false;
 for (const line of FSH.split(/\r?\n/)) {
-  if (/^CodeSystem:\s*SayrCs\b/.test(line)) inCs = true;
+  if (/^CodeSystem:\s*AfterRainCs\b/.test(line)) inCs = true;
   else if (/^(CodeSystem|ValueSet|Profile|Instance|Extension):/.test(line)) inCs = false;
   const m = inCs ? /^\* #([\w-]+) "([^"]*)"/.exec(line) : null;
   if (m) defined.set(m[1]!, m[2]!);
@@ -29,7 +29,7 @@ function codings(j: Json, out: { code: string; display?: string }[] = []): { cod
   return out;
 }
 
-describe('live FHIR records use only defined Sayr terms', () => {
+describe('live FHIR records use only defined AfterRain terms', () => {
   const recs = [
     forecastRecord({ city: 'CO', code: 'C4', site: 'Eiras', siteIndex: 3, hour: 64, hourUtc: '2026-10-06T14:00Z', p50: 0.46, fog: 0.95, forecastFetchedUtc: '2026-10-03T22:31:18Z', modelVersion: 'm', published: null }),
     ...[false, true].map((over900) => testRecord({ code: 'C4', site: 'Eiras', hour: 64, hourUtc: '2026-10-06T14:00Z', collectedUtc: '2026-10-06T14:00Z', over900, p50: 0.3, fog: 0.7, revision: 1, modelVersion: 'm', published: null })),
@@ -40,7 +40,7 @@ describe('live FHIR records use only defined Sayr terms', () => {
       const cs = codings(r.json);
       expect(cs.length).toBeGreaterThan(0);
       for (const c of cs) {
-        expect(defined.has(c.code), `SayrCs#${c.code} is not defined`).toBe(true);
+        expect(defined.has(c.code), `AfterRainCs#${c.code} is not defined`).toBe(true);
         if (c.display !== undefined) expect(c.display).toBe(defined.get(c.code));
       }
       const j = r.json as { status: string; meta: { profile?: string[] }; effectiveDateTime: string };

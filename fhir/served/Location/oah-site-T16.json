@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Fossé de Larramet aval</p><p>OneAquaHealth research site T16 in Toulouse.</p><p>Identifier T16 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.57895, 1.35929</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Fossé de Larramet aval</p><p>OneAquaHealth research site T16 in Toulouse.</p><p>Identifier T16 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 43.57895, 1.35929</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "T16",
    "assigner": {
     "display": "OneAquaHealth"

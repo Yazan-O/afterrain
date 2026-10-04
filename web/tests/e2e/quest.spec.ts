@@ -372,7 +372,7 @@ test.describe('a tested stream closed and opened again (1440x900)', () => {
     const collected = (): Promise<string[]> =>
       page.evaluate((code) => {
         const notes = Object.values(window.__sayrLive ?? {})
-          .filter((j) => String((j as { id?: string }).id ?? '').startsWith(`sayr-test-${code}-`))
+          .filter((j) => String((j as { id?: string }).id ?? '').startsWith(`afterrain-test-${code}-`))
           .map((j) => JSON.stringify(j).match(/assumed collected ([0-9T:\-]+Z)/)?.[1] ?? '');
         return [...new Set(notes)];
       }, t1.code);

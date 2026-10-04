@@ -8,14 +8,14 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Probability of E. coli over 900 per 100 mL: 0.5023 probability</p><p>At Location/oah-site-C11, 2026-10-07T11:00:00+01:00, for Group/cohort-dog-owners</p><p>Fog (uncertainty of the exceedance probability): 0.9386 fog</p><p>City model: logistic regression of the chance that one sample is over 900 E. coli per 100 mL on ln(1 + the rain of the 48 hours before), fitted on 390 Bath and Toulouse samples with a shared rain slope (city_model.json). At this site it runs at the mean of the two site intercepts plus the site&#x27;s own offset,which is still at its prior because the OneAquaHealth API holds no E. coli counts for the site. Rain from the Open-Meteo ECMWF IFS 0.25 ensemble. The value is the highest, over the forecast hours, of the median over the ensemble members. Model version sayr-city-2:8b0c1ef2b5.</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Probability of E. coli over 900 per 100 mL: 0.5023 probability</p><p>At Location/oah-site-C11, 2026-10-07T11:00:00+01:00, for Group/cohort-dog-owners</p><p>Fog (uncertainty of the exceedance probability): 0.9386 fog</p><p>City model: logistic regression of the chance that one sample is over 900 E. coli per 100 mL on ln(1 + the rain of the 48 hours before), fitted on 390 Bath and Toulouse samples with a shared rain slope (city_model.json). At this site it runs at the mean of the two site intercepts plus the site&#x27;s own offset,which is still at its prior because the OneAquaHealth API holds no E. coli counts for the site. Rain from the Open-Meteo ECMWF IFS 0.25 ensemble. The value is the highest, over the forecast hours, of the median over the ensemble members. Model version afterrain-city-2:8b0c1ef2b5.</p></div>"
  },
  "status": "final",
  "code": {
   "coding": [
    {
     "code": "ecoli-exceedance-probability",
-    "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+    "system": "https://yazan-o.github.io/afterrain/fhir/CodeSystem/afterrain-cs",
     "display": "Probability of E. coli over 900 per 100 mL"
    }
   ]
@@ -31,14 +31,14 @@
  "effectiveDateTime": "2026-10-07T11:00:00+01:00",
  "performer": [
   {
-   "reference": "Organization/sayr-team"
+   "reference": "Organization/afterrain-team"
   }
  ],
  "device": {
-  "reference": "Device/sayr-model-city"
+  "reference": "Device/afterrain-model-city"
  },
  "method": {
-  "text": "City model: logistic regression of the chance that one sample is over 900 E. coli per 100 mL on ln(1 + the rain of the 48 hours before), fitted on 390 Bath and Toulouse samples with a shared rain slope (city_model.json). At this site it runs at the mean of the two site intercepts plus the site's own offset,which is still at its prior because the OneAquaHealth API holds no E. coli counts for the site. Rain from the Open-Meteo ECMWF IFS 0.25 ensemble. The value is the highest, over the forecast hours, of the median over the ensemble members. Model version sayr-city-2:8b0c1ef2b5."
+  "text": "City model: logistic regression of the chance that one sample is over 900 E. coli per 100 mL on ln(1 + the rain of the 48 hours before), fitted on 390 Bath and Toulouse samples with a shared rain slope (city_model.json). At this site it runs at the mean of the two site intercepts plus the site's own offset,which is still at its prior because the OneAquaHealth API holds no E. coli counts for the site. Rain from the Open-Meteo ECMWF IFS 0.25 ensemble. The value is the highest, over the forecast hours, of the median over the ensemble members. Model version afterrain-city-2:8b0c1ef2b5."
  },
  "valueQuantity": {
   "value": 0.5023,
@@ -52,7 +52,7 @@
     "coding": [
      {
       "code": "fog",
-      "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+      "system": "https://yazan-o.github.io/afterrain/fhir/CodeSystem/afterrain-cs",
       "display": "Fog (uncertainty of the exceedance probability)"
      }
     ]
@@ -70,7 +70,7 @@
    "text": "The estimate is for the water at this place; the cohort is the group it is addressed to. The model has no cohort-specific term."
   },
   {
-   "text": "Forecast fetched 2026-10-03T22:31:18Z; forecast hours 2026-10-03T22:00Z to 2026-10-09T23:00Z. Sayr state at the peak hour: unknown (fog 0.9386; unknown at 0.5 or more)."
+   "text": "Forecast fetched 2026-10-03T22:31:18Z; forecast hours 2026-10-03T22:00Z to 2026-10-09T23:00Z. AfterRain state at the peak hour: unknown (fog 0.9386; unknown at 0.5 or more)."
   }
  ]
 }

@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau de Bonneval aval</p><p>OneAquaHealth research site T2 in Toulouse.</p><p>Identifier T2 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.53219, 1.46332</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau de Bonneval aval</p><p>OneAquaHealth research site T2 in Toulouse.</p><p>Identifier T2 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 43.53219, 1.46332</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "T2",
    "assigner": {
     "display": "OneAquaHealth"

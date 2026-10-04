@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Marcaissonne aval</p><p>OneAquaHealth research site T5 in Toulouse.</p><p>Identifier T5 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.5678, 1.50937</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Marcaissonne aval</p><p>OneAquaHealth research site T5 in Toulouse.</p><p>Identifier T5 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 43.5678, 1.50937</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "T5",
    "assigner": {
     "display": "OneAquaHealth"

@@ -110,7 +110,7 @@ describe('x-ray mapping on the tracked FHIR resources', () => {
     expect(resolvePointer(c, '/about/0/reference')).toBe(WEIR_REF);
   });
 
-  it('the served copy holds only recorded Sayr resource ids, each identical to the tracked resource', () => {
+  it('the served copy holds only recorded AfterRain resource ids, each identical to the tracked resource', () => {
     const idx = index();
     const validation = JSON.parse(readFileSync(resolve(here, '..', '..', '..', 'docs', 'validation.json'), 'utf-8')) as { own_resource_ids: string[] };
     const own = new Set(validation.own_resource_ids);

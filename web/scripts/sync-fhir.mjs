@@ -1,13 +1,13 @@
-// Sayr's served FHIR resources: the ones the app's x-ray shows, with the validator's summary and an index.
+// AfterRain's served FHIR resources: the ones the app's x-ray shows, with the validator's summary and an index.
 //
-//   node scripts/sync-fhir.mjs --export   (run by `npm run fhir` in sayr/fhir) selects Sayr's own resources from
+//   node scripts/sync-fhir.mjs --export   (run by `npm run fhir` in sayr/fhir) selects AfterRain's own resources from
 //                                         sayr/fhir/fhir-static into the tracked folder sayr/fhir/served, then syncs
 //   node scripts/sync-fhir.mjs            (npm run data) checks sayr/fhir/served against sayr/data/out and copies it
 //                                         to public/data/fhir; the build needs no fhir-static, Java or validator
 //   --warn-drift                          (npm run dev) reports a served folder built from another nowcast instead
 //                                         of stopping
 //
-// Export selection: only Sayr's own resources. A resource must be in Sayr's transaction Bundle and must not be in
+// Export selection: only AfterRain's own resources. A resource must be in AfterRain's transaction Bundle and must not be in
 // the guide's (the guide's examples carry no confirmed licence and are never copied). Which resources: the Warleigh
 // E. coli Observation and its Specimen for every replay sample, Warleigh Weir, every OneAquaHealth site Location,
 // any ObservationHealthMeasureOah whose subject is such a site, and the proposed AlertOah Communication; then their
@@ -62,8 +62,8 @@ function exportServed() {
   const guide = refsIn('oah-transaction.json');
 
   const HEALTH = 'http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-health-measure-oah';
-  const SITE_CODE = 'https://yazan-o.github.io/sayr/fhir/sid/oah-site-code';
-  const ALERT = 'https://yazan-o.github.io/sayr/fhir/StructureDefinition/alert-oah';
+  const SITE_CODE = 'https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code';
+  const ALERT = 'https://yazan-o.github.io/afterrain/fhir/StructureDefinition/alert-oah';
   const stamp = (iso) => iso.replace(/[-:]/g, '').replace(/\.\d+/, '').replace(/00Z$/, 'Z'); // 2024-09-24T08:10:00Z -> 20240924T0810Z
 
   const want = new Set(['Location/warleigh-weir']);
@@ -87,7 +87,7 @@ function exportServed() {
     if (type === 'Communication' && profiles.includes(ALERT)) want.add(ref);
   }
 
-  // the dependency closure of the selection, inside Sayr's own Bundle
+  // the dependency closure of the selection, inside AfterRain's own Bundle
   const queue = [...want].filter((r) => sayr.has(r));
   while (queue.length) {
     const ref = queue.pop();
@@ -95,7 +95,7 @@ function exportServed() {
     for (const dep of refsOf(read(join(src, type, `${id}.json`)))) {
       if (want.has(dep)) continue;
       if (guide.has(dep)) fail(`${ref} references ${dep}, one of the guide's examples; it must not be copied`);
-      if (!sayr.has(dep)) fail(`${ref} references ${dep}, which is not in Sayr's Bundle`);
+      if (!sayr.has(dep)) fail(`${ref} references ${dep}, which is not in AfterRain's Bundle`);
       want.add(dep);
       queue.push(dep);
     }
@@ -108,7 +108,7 @@ function exportServed() {
     if (!sayr.has(ref)) continue; // a replay sample outside the backtest has no resource
     const [type, id] = ref.split('/');
     const from = join(src, type, `${id}.json`);
-    if (!existsSync(from)) fail(`${from} is in Sayr's Bundle but not in fhir-static`);
+    if (!existsSync(from)) fail(`${from} is in AfterRain's Bundle but not in fhir-static`);
     mkdirSync(join(served, type), { recursive: true });
     copyFileSync(from, join(served, type, `${id}.json`));
     copied.push(ref);
@@ -123,7 +123,7 @@ function exportServed() {
     siteRisk[code] = refs[0];
   }
   write(join(served, 'index.json'), { source: 'sayr/fhir/served', validation: 'sayr.summary.json', resources: copied, healthMeasures, siteRisk, alerts });
-  console.log(`sync-fhir: exported ${copied.length} of Sayr's resources and the validator summary -> ${served}`);
+  console.log(`sync-fhir: exported ${copied.length} of AfterRain's resources and the validator summary -> ${served}`);
 }
 
 function listFiles(dir) {

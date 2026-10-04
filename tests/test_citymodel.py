@@ -160,7 +160,7 @@ def test_nowcast_shape() -> None:
     for c in config.OAH_CITIES:
         pk = _out(f"nowcast_{c}.json")
         total += len(pk["sites"])
-        assert pk["forecast_fetched_utc"].endswith("Z") and pk["model_version"].startswith("sayr-city-2:")
+        assert pk["forecast_fetched_utc"].endswith("Z") and pk["model_version"].startswith("afterrain-city-2:")
         assert 1 <= len(pk["quests"]) <= 3 and len({q["code"] for q in pk["quests"]}) == len(pk["quests"])
         for q in pk["quests"]:
             assert fields <= set(q)

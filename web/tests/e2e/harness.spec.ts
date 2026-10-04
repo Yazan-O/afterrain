@@ -79,7 +79,7 @@ test.describe('word budget', () => {
   test('counts only what a viewer can read, plus canvas words', async ({ page }) => {
     await open(page, 'clean');
     const words = countWords(await collectText(page));
-    expect(words.words).toEqual(['Sayr', 'within', '48', 'hours', '09:10', 'usual']);
+    expect(words.words).toEqual(['AfterRain', 'within', '48', 'hours', '09:10', 'usual']);
     assertWordBudget(await collectText(page), 'rest');
   });
 
@@ -107,7 +107,7 @@ test.describe('word budget', () => {
   test('skips the code in a [data-code] region (the x-ray), while every digit there still needs its source', async ({ page }) => {
     await open(page, 'code-region');
     const text = await collectText(page);
-    expect(countWords(text).words).toEqual(['Sayr', 'checked', 'by', 'the', 'validator']);
+    expect(countWords(text).words).toEqual(['AfterRain', 'checked', 'by', 'the', 'validator']);
     assertWordBudget(text, 'rest');
     assertNumbersTraced(text, await servedNumbers(page), await servedDataFiles(page, referencedFiles(text)));
     await open(page, 'code-stray');

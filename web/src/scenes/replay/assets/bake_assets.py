@@ -23,7 +23,7 @@ LON0, LON1 = -2.415, -2.160
 LAT0, LAT1 = 51.262, 51.412
 NX = 896  # grid columns; rows follow from the box's aspect in metres
 Z = 13
-UA = {"User-Agent": "Sayr hackathon bake script (OneAquaHealth IEEE hackathon)"}
+UA = {"User-Agent": "AfterRain hackathon bake script (OneAquaHealth IEEE hackathon)"}
 
 
 def tile_xy(lon, lat, z):

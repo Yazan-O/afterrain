@@ -1,4 +1,4 @@
-"""Standing checks on Sayr's FHIR layer. Run `npm run fhir` (or `python -m sayr_fhir build`) first.
+"""Standing checks on AfterRain's FHIR layer. Run `npm run fhir` (or `python -m sayr_fhir build`) first.
 
 test_validator_zero_errors re-runs the HL7 validator on the built resources and fails on any error.
 The other tests check that the resources carry the real values of sayr/data/out.
@@ -31,7 +31,7 @@ def test_validator_zero_errors(sayr):
     igs = [C.BUILD / "packages" / f"{C.OAH_PACKAGE['name']}-{C.OAH_PACKAGE['version']}.tgz",
            C.BUILD / "packages" / f"{C.SAYR_PACKAGE['name']}-{C.SAYR_PACKAGE['version']}.tgz"]
     cap = json.loads((C.STATIC / "metadata.json").read_text(encoding="utf-8"))
-    s = validate.validate_dir("test", resources + [assemble.transaction(resources) | {"id": "sayr-transaction"}, cap], igs)
+    s = validate.validate_dir("test", resources + [assemble.transaction(resources) | {"id": "afterrain-transaction"}, cap], igs)
     assert s["validated"] == len(resources) + 2
     assert s["files"] == s["validated"], "the validator skipped files"
     errors = [g for g in s["groups"] if g["severity"] in ("error", "fatal")]
@@ -99,7 +99,7 @@ def test_site_risk_equals_nowcast_peak(sayr):
             assert pk["model_version"] in r["method"]["text"] and pk["forecast_fetched_utc"] in r["note"][1]["text"]
             n += 1
     assert n == 106
-    assert sayr["Device/sayr-model-city"]["version"][0]["value"] == pk["model_version"]
+    assert sayr["Device/afterrain-model-city"]["version"][0]["value"] == pk["model_version"]
 
 
 def test_alert_window_is_the_48h_rule(sayr):

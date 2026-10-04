@@ -2,12 +2,12 @@
 
 build/live-export/ (git-ignored) holds the records the opening's interaction makes at Eiras: the published forecast,
 a low and a high test reading, written by web/tests/e2e/story.spec.ts ("the opening comparison's live records").
-They are validated with the HL7 validator against the OneAquaHealth package and the Sayr package (which defines the
+They are validated with the HL7 validator against the OneAquaHealth package and the AfterRain package (which defines the
 test-reading terms). The forecast record claims ObservationHealthMeasureOah; the test records do not (the profile
 fixes status to final, and a test estimate is preliminary). The records are not kept in the repository: the
-pre-publish scan admits FHIR resources only as Sayr's served set. Without an export the test skips; the unit test
+pre-publish scan admits FHIR resources only as AfterRain's served set. Without an export the test skips; the unit test
 web/tests/unit/liveTerms.test.ts checks the terms, the profile claim and the dateTimes on every run.
-Checks for undefined Sayr terms, invalid dateTimes and forecast records outside the profile.
+Checks for undefined AfterRain terms, invalid dateTimes and forecast records outside the profile.
 """
 from __future__ import annotations
 

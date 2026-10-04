@@ -1,4 +1,4 @@
-// The quest's ask (spec W5, the tagline "Sayr watches the storms"): one full sentence that names the site and the
+// The quest's ask (spec W5, the tagline "AfterRain watches the storms"): one full sentence that names the site and the
 // storm window, from the nowcast's quest fields (pipeline/nowcast.py):
 //   when_local            the window as the site's local weekday and part of day ("Wednesday afternoon",
 //                         "Wednesday morning to afternoon", "Wednesday daytime" for the whole sampling day)

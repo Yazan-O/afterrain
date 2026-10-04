@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Condeixa</p><p>OneAquaHealth research site C13 in Coimbra.</p><p>Identifier C13 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.11106, -8.49052</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Condeixa</p><p>OneAquaHealth research site C13 in Coimbra.</p><p>Identifier C13 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 40.11106, -8.49052</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "C13",
    "assigner": {
     "display": "OneAquaHealth"

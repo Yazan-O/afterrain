@@ -1,4 +1,4 @@
-"""A short generated narrative (Resource.text) for every Sayr resource, built from its own content."""
+"""A short generated narrative (Resource.text) for every AfterRain resource, built from its own content."""
 from __future__ import annotations
 
 from html import escape

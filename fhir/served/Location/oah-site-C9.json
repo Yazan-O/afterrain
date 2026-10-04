@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Fornos</p><p>OneAquaHealth research site C9 in Coimbra.</p><p>Identifier C9 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.27702, -8.4272</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Fornos</p><p>OneAquaHealth research site C9 in Coimbra.</p><p>Identifier C9 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 40.27702, -8.4272</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "C9",
    "assigner": {
     "display": "OneAquaHealth"

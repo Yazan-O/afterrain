@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Makrellbekken - Njård</p><p>OneAquaHealth research site O20 in Oslo.</p><p>Identifier O20 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 59.9432, 10.6736</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Makrellbekken - Njård</p><p>OneAquaHealth research site O20 in Oslo.</p><p>Identifier O20 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 59.9432, 10.6736</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "O20",
    "assigner": {
     "display": "OneAquaHealth"

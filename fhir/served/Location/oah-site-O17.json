@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alna – Bryn stasjon</p><p>OneAquaHealth research site O17 in Oslo.</p><p>Identifier O17 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 59.9078, 10.8128</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alna – Bryn stasjon</p><p>OneAquaHealth research site O17 in Oslo.</p><p>Identifier O17 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 59.9078, 10.8128</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "O17",
    "assigner": {
     "display": "OneAquaHealth"

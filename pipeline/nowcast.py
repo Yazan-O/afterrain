@@ -19,7 +19,7 @@ Unchanged. The window rule (contiguous same-day sampling hours scoring >= 0.8 of
 SECOND DATED CHANGE: the sampling window is the whole forecast horizon (2026-09-27; the 2026-09-26 text above is
 left as written)
 ------------------------------------------------------------------------------------------------------------
-Why. Sayr's promise is "Sayr watches the storms". What no site has measured is its response to rain (the offset b
+Why. AfterRain's promise is "AfterRain watches the storms". What no site has measured is its response to rain (the offset b
   on the rain input), and only a sample taken in or just after rain can inform it; a dry-day count mostly informs
   the dry-day level a. A citizen can plan a sample days ahead, so a 72 h cap on the sampling hour only pushed quests
   onto the dry days before the rain.
@@ -95,7 +95,7 @@ ALGORITHM = {"probability": "posterior predictive over the offset grid (pipeline
 
 def model_version(p: offsets.Params) -> str:
     blob = json.dumps({"params": p.__dict__, "algorithm": ALGORITHM}, sort_keys=True).encode()
-    return "sayr-city-2:" + hashlib.sha256(blob).hexdigest()[:10]
+    return "afterrain-city-2:" + hashlib.sha256(blob).hexdigest()[:10]
 
 
 def fetch_city(f: Fetcher, cid: str, sites: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], str]:

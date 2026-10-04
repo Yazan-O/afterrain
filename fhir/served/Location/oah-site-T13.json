@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau du Roussimort aval</p><p>OneAquaHealth research site T13 in Toulouse.</p><p>Identifier T13 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.5353, 1.37785</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau du Roussimort aval</p><p>OneAquaHealth research site T13 in Toulouse.</p><p>Identifier T13 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 43.5353, 1.37785</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "T13",
    "assigner": {
     "display": "OneAquaHealth"

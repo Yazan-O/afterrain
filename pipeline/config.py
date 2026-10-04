@@ -90,5 +90,5 @@ def label(value: float, qualifier: str = "") -> bool | None:
 
 WINDOW_H = 48.0
 # Hours from taking a quest sample to its E. coli result: culture methods incubate about 18-24 h (ISO 9308-2
-# Colilert-18 reads at 18-22 h), so a result reaches Sayr the next day. Only hours from then on count toward a quest.
+# Colilert-18 reads at 18-22 h), so a result reaches AfterRain the next day. Only hours from then on count toward a quest.
 LAB_TURNAROUND_H = 24

@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Gaustadbekken -Forskningsparketn</p><p>OneAquaHealth research site O9 in Oslo.</p><p>Identifier O9 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 59.9425, 10.7181</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Gaustadbekken -Forskningsparketn</p><p>OneAquaHealth research site O9 in Oslo.</p><p>Identifier O9 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 59.9425, 10.7181</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "O9",
    "assigner": {
     "display": "OneAquaHealth"

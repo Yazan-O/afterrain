@@ -70,11 +70,11 @@ export function storyLine(beat: string, d: SayData | null): Line | null {
     case 'coimbra':
       return { main: [text('Coimbra, Portugal.')] };
     case 'forecast':
-      return { main: [text('Sayr forecasts those hours.')] };
+      return { main: [text('AfterRain forecasts those hours.')] };
     case 'changes':
       return { main: [text('One sample changes the answer.')] };
     case 'close':
-      return { main: [text('Sayr. Know the water before you go in.')] };
+      return { main: [text('AfterRain. Know the water before you go in.')] };
   }
   if (!d) return null;
   const n = d.numbers;

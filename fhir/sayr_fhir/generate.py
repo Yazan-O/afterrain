@@ -1,4 +1,4 @@
-"""Turn Sayr's real outputs (sayr/data/out) into FSH instances on the OneAquaHealth profiles.
+"""Turn AfterRain's real outputs (sayr/data/out) into FSH instances on the OneAquaHealth profiles.
 
 Every value comes from a file in data/out; a missing file or field stops the build with its name.
 """
@@ -129,7 +129,7 @@ def locations() -> tuple[list[str], dict]:
     site = need(replay, "site", "replay_2024-09-23.json")
     out.append(instance(
         "warleigh-weir", "LocationOah", "Location - Warleigh Weir, River Avon",
-        "Wessex Water's E. coli sampling point at Warleigh Weir on the River Avon near Bath: Sayr's proof river.",
+        "Wessex Water's E. coli sampling point at Warleigh Weir on the River Avon near Bath: AfterRain's proof river.",
         [f"* identifier[0].system = {s(SID + '/site')}", '* identifier[0].value = "warleigh-weir"',
          f"* name = {s(need(site, 'name', 'replay site'))}",
          '* description = "E. coli sampling point on the River Avon near Bath (Wessex Water, CC BY 4.0)."',
@@ -213,10 +213,10 @@ def cohorts_fsh() -> list[str]:
                 rules.append(f"* characteristic[{i}].valueRange.high = {age[1]} 'a' \"years\"")
             rules.append(f"* characteristic[{i}].exclude = false")
             i += 1
-        rules += [f'* characteristic[{i}].code = SayrCs#water-contact-activity "Water contact activity"',
-                  f"* characteristic[{i}].valueCodeableConcept = SayrCs#{act} {s(act_display)}",
+        rules += [f'* characteristic[{i}].code = AfterRainCs#water-contact-activity "Water contact activity"',
+                  f"* characteristic[{i}].valueCodeableConcept = AfterRainCs#{act} {s(act_display)}",
                   f"* characteristic[{i}].exclude = false"]
-        out.append(instance(gid, "GroupOah", f"Group - {name}", f"Sayr cohort: {name.lower()}.", rules))
+        out.append(instance(gid, "GroupOah", f"Group - {name}", f"AfterRain cohort: {name.lower()}.", rules))
     return out
 
 
@@ -226,10 +226,10 @@ def fold_of(kind: str, t: dt.datetime, fitted_on: str) -> tuple[str, str]:
     a, b = (int(x) for x in years.split("-"))
     if kind == "leave-one-year-out":
         rest = [y for y in range(a, b + 1) if y != t.year]
-        return (f"sayr-model-warleigh-without-{t.year}",
+        return (f"afterrain-model-warleigh-without-{t.year}",
                 f"Fitted on the {', '.join(map(str, rest))} samples; {t.year} held out")
     if kind == "held-out 2025 test":
-        return "sayr-model-warleigh", f"Fitted on the {a}-{b} samples; 2025 held out as the test year"
+        return "afterrain-model-warleigh", f"Fitted on the {a}-{b} samples; 2025 held out as the test year"
     raise SystemExit(f"unknown probability_kind '{kind}' in warleigh_backtest.json")
 
 
@@ -253,11 +253,11 @@ def risk_fsh(replay: dict, backtest: dict, model: dict, build_utc: str) -> tuple
             risk_ids[(smp["time_utc"], gid)] = rid
             out.append(instance(
                 rid, "ObservationHealthMeasureOah", f"Observation - risk for {name.lower()} at Warleigh Weir, {when}",
-                f"Sayr's estimate, for {name.lower()}, of the chance that the water at Warleigh Weir is over 900 E. coli per 100 mL at {when}.",
+                f"AfterRain's estimate, for {name.lower()}, of the chance that the water at Warleigh Weir is over 900 E. coli per 100 mL at {when}.",
                 ["* status = #final",
-                 '* code = SayrCs#ecoli-exceedance-probability "Probability of E. coli over 900 per 100 mL"',
+                 '* code = AfterRainCs#ecoli-exceedance-probability "Probability of E. coli over 900 per 100 mL"',
                  "* subject = Reference(warleigh-weir)", f"* focus = Reference({gid})",
-                 f"* effectiveDateTime = {s(when)}", "* performer[0] = Reference(sayr-team)",
+                 f"* effectiveDateTime = {s(when)}", "* performer[0] = Reference(afterrain-team)",
                  f"* device = Reference({dev})",
                  f"* method.text = {s('Logistic regression on upstream storm-overflow spills, river flow, rain and season (model_warleigh.json). ' + version + '.')}",
                  f"* valueQuantity = {dec(p)} '1' \"probability\"",
@@ -269,15 +269,15 @@ def risk_fsh(replay: dict, backtest: dict, model: dict, build_utc: str) -> tuple
                  "* extension[0].valueReference = Reference(warleigh-backtest)",
                  '* note[0].text = "The estimate is for the water at this place; the cohort is the group it is addressed to. The model has no cohort-specific term."']))
     for dev, version in devices.items():
-        out.append(instance(dev, "Device", "Device - Sayr Warleigh Weir risk model",
-                            "Software: Sayr's logistic model of the chance that Warleigh Weir is over 900 E. coli per 100 mL.",
-                            ["* status = #active", '* deviceName[0].name = "Sayr Warleigh Weir risk model"',
+        out.append(instance(dev, "Device", "Device - AfterRain Warleigh Weir risk model",
+                            "Software: AfterRain's logistic model of the chance that Warleigh Weir is over 900 E. coli per 100 mL.",
+                            ["* status = #active", '* deviceName[0].name = "AfterRain Warleigh Weir risk model"',
                              "* deviceName[0].type = #user-friendly-name", '* type.text = "Statistical risk model (software)"',
                              f"* version[0].value = {s(version + '; build ' + build_utc)}",
-                             "* owner = Reference(sayr-team)"]))
-    out.append(instance("sayr-team", "Organization", "Organization - Sayr team",
-                        "The student team that builds Sayr for the OneAquaHealth IEEE Global Hackathon 2026.",
-                        ['* name = "Sayr team"']))
+                             "* owner = Reference(afterrain-team)"]))
+    out.append(instance("afterrain-team", "Organization", "Organization - AfterRain team",
+                        "The student team that builds AfterRain for the OneAquaHealth IEEE Global Hackathon 2026.",
+                        ['* name = "AfterRain team"']))
     return out, {"risk_ids": risk_ids, "threshold": threshold, "devices": devices, "device_by_time": device_by_time}
 
 
@@ -314,27 +314,27 @@ def site_risk_fsh() -> tuple[list[str], dict]:
             ids[code] = rid
             out.append(instance(
                 rid, "ObservationHealthMeasureOah", f"Observation - risk for {cname} at OneAquaHealth site {code}",
-                f"Sayr's estimate, for {cname}, of the highest chance over the forecast that the water at OneAquaHealth "
+                f"AfterRain's estimate, for {cname}, of the highest chance over the forecast that the water at OneAquaHealth "
                 f"site {code} is over 900 E. coli per 100 mL, and the hour it occurs.",
                 ["* status = #final",
-                 '* code = SayrCs#ecoli-exceedance-probability "Probability of E. coli over 900 per 100 mL"',
+                 '* code = AfterRainCs#ecoli-exceedance-probability "Probability of E. coli over 900 per 100 mL"',
                  f"* subject = Reference(oah-site-{code})", f"* focus = Reference({gid})",
-                 f"* effectiveDateTime = {s(when)}", "* performer[0] = Reference(sayr-team)",
-                 "* device = Reference(sayr-model-city)",
+                 f"* effectiveDateTime = {s(when)}", "* performer[0] = Reference(afterrain-team)",
+                 "* device = Reference(afterrain-model-city)",
                  f"* method.text = {s(f'City model: logistic regression of the chance that one sample is over 900 E. coli per 100 mL on ln(1 + the rain of the 48 hours before), fitted on {train_n} Bath and Toulouse samples with a shared rain slope (city_model.json). At this site it runs at the mean of the two site intercepts plus the site' + chr(39) + f's own offset,which is still at its prior because the OneAquaHealth API holds no E. coli counts for the site. Rain from the Open-Meteo ECMWF IFS 0.25 ensemble. The value is the highest, over the forecast hours, of the median over the ensemble members. Model version {version}.')}",
                  f"* valueQuantity = {dec(p50[i])} '1' \"probability\"",
-                 '* component[0].code = SayrCs#fog "Fog (uncertainty of the exceedance probability)"',
+                 '* component[0].code = AfterRainCs#fog "Fog (uncertainty of the exceedance probability)"',
                  f"* component[0].valueQuantity = {dec(fog)} '1' \"fog\"",
                  '* note[0].text = "The estimate is for the water at this place; the cohort is the group it is addressed to. The model has no cohort-specific term."',
-                 f"* note[1].text = {s(f'Forecast fetched {fetched[cid]}; forecast hours {hours[0]} to {hours[-1]}. Sayr state at the peak hour: {state} (fog {dec(fog)}; unknown at 0.5 or more).')}"]))
+                 f"* note[1].text = {s(f'Forecast fetched {fetched[cid]}; forecast hours {hours[0]} to {hours[-1]}. AfterRain state at the peak hour: {state} (fog {dec(fog)}; unknown at 0.5 or more).')}"]))
     if len(versions) != 1:
         raise SystemExit(f"the five nowcasts carry different model versions: {sorted(versions)}")
     version = versions.pop()
-    dev = instance("sayr-model-city", "Device", "Device - Sayr city risk model",
-                   "Software: Sayr's city model of the chance that a OneAquaHealth site is over 900 E. coli per 100 mL.",
-                   ["* status = #active", '* deviceName[0].name = "Sayr city risk model"',
+    dev = instance("afterrain-model-city", "Device", "Device - AfterRain city risk model",
+                   "Software: AfterRain's city model of the chance that a OneAquaHealth site is over 900 E. coli per 100 mL.",
+                   ["* status = #active", '* deviceName[0].name = "AfterRain city risk model"',
                     "* deviceName[0].type = #user-friendly-name", '* type.text = "Statistical risk model (software)"',
-                    f"* version[0].value = {s(version)}", "* owner = Reference(sayr-team)"])
+                    f"* version[0].value = {s(version)}", "* owner = Reference(afterrain-team)"])
     return out + [dev], {"ids": ids, "model_version": version, "forecast_fetched_utc": fetched}
 
 
@@ -348,7 +348,7 @@ def library_fsh(backtest: dict, obs_by_time: dict[str, str], build_utc: str) -> 
              f"* version = {s(build_utc)}", '* name = "WarleighWeirBacktest"',
              f"* title = {s(f'Warleigh Weir E. coli and storm-overflow backtest ({first[:4]}-{last[:4]})')}",
              "* status = #active", '* type = $library-type#asset-collection "Asset Collection"',
-             f"* date = {s(build_utc[:10])}", '* publisher = "Sayr team"', '* author[0].name = "Sayr team"',
+             f"* date = {s(build_utc[:10])}", '* publisher = "AfterRain team"', '* author[0].name = "AfterRain team"',
              f"* description = {s(f'Warleigh Weir, River Avon: {len(rows)} E. coli samples ({first} to {last}) with the storm-overflow spills of the 48 hours before each, the gauge rain and flow of the days finished before it, the warning rules that fired, and the model probability.')}",
              f"* copyright = {s('Contains Wessex Water data (CC BY 4.0) and Environment Agency data (Open Government Licence v3.0). Derived values keep these licences; attribute Wessex Water and the Environment Agency.')}",
              f"* extension[size].valueQuantity = {path.stat().st_size} 'By' \"bytes\"",
@@ -407,14 +407,14 @@ def alert_fsh(replay: dict, backtest: dict, obs_by_time: dict, risk: dict) -> tu
              f"* extension[validity].valuePeriod.end = {s(local_iso(until))}",
              f"* reasonReference[0] = Reference({risk_id})"]
     rules += [f"* reasonReference[{i + 1}] = Reference({e})" for i, e in enumerate(evidence)]
-    rules += [f"* reasonCode[{i}] = SayrCs#{c} {s(d)}" for i, (c, d) in enumerate(reasons)]
+    rules += [f"* reasonCode[{i}] = AfterRainCs#{c} {s(d)}" for i, (c, d) in enumerate(reasons)]
     rules += [f"* payload[0].contentString = {s(text)}"]
     aid = f"alert-warleigh-dog-owners-{stamp(t_issue)}"
     fsh = instance(aid, "AlertOah", "Communication - alert for dog owners at Warleigh Weir (proposal)",
                    "An AlertOah (proposed profile) sent to dog owners following Warleigh Weir.", rules)
     sub = instance("subscription-dog-owner-alerts", "Subscription", "Subscription - alerts for dog owners",
                    "Pushes every alert addressed to the dog-owner cohort over a websocket.",
-                   ["* status = #requested", '* reason = "Push Sayr alerts addressed to dog owners"',
+                   ["* status = #requested", '* reason = "Push AfterRain alerts addressed to dog owners"',
                     '* criteria = "Communication?category=http://terminology.hl7.org/CodeSystem/communication-category|alert&subject=Group/cohort-dog-owners"',
                     "* channel.type = #websocket"])
     facts = {"id": aid, "sent_utc": t_issue.isoformat(), "until_utc": until.isoformat(), "text": text,

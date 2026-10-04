@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau du Palays</p><p>OneAquaHealth research site T1 in Toulouse.</p><p>Identifier T1 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.55267, 1.49147</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau du Palays</p><p>OneAquaHealth research site T1 in Toulouse.</p><p>Identifier T1 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 43.55267, 1.49147</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "T1",
    "assigner": {
     "display": "OneAquaHealth"

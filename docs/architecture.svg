@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1248" height="552" viewBox="0 40 1248 552" role="img" aria-label="Sayr architecture: public sources feed a Python pipeline; its static data drives a browser engine and five scenes, and a FHIR generator whose output passes the HL7 validator and is served read-only.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1248" height="552" viewBox="0 40 1248 552" role="img" aria-label="AfterRain architecture: public sources feed a Python pipeline; its static data drives a browser engine and five scenes, and a FHIR generator whose output passes the HL7 validator and is served read-only.">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap');
@@ -104,7 +104,7 @@
   <rect x="528" y="352" width="192" height="112" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
   <text x="544" y="380" class="name">FHIR generator</text>
   <text x="544" y="404" class="line">FSH from data/out</text>
-  <text x="544" y="422" class="line">925 Sayr resources</text>
+  <text x="544" y="422" class="line">925 AfterRain resources</text>
   <text x="544" y="440" class="line">alert proposed</text>
 
   <!-- 7. HL7 validator (focal) -->

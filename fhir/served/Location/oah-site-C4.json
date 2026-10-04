@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Eiras</p><p>OneAquaHealth research site C4 in Coimbra.</p><p>Identifier C4 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.25289, -8.43659</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Eiras</p><p>OneAquaHealth research site C4 in Coimbra.</p><p>Identifier C4 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 40.25289, -8.43659</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "C4",
    "assigner": {
     "display": "OneAquaHealth"

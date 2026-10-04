@@ -1,4 +1,4 @@
-// The quality checks every Sayr screen must pass. Each check has a `find…` function that returns what it
+// The quality checks every AfterRain screen must pass. Each check has a `find…` function that returns what it
 // found (so the harness tests can show a check failing) and an `assert…` function that throws on failure.
 import type { Page } from '@playwright/test';
 import { TERRAIN_CREDITS } from '../../../src/app/credits';

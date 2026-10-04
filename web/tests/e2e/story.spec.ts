@@ -74,11 +74,11 @@ const SAYS: Record<string, RegExp> = {
   gap: /^The hours after rain, when people and dogs are in the water, are the hours nobody measures\.$/,
   europe: /^OneAquaHealth studies city streams in five European cities\.$/,
   coimbra: /^Coimbra, Portugal\.$/,
-  forecast: /^Sayr forecasts those hours\.$/,
+  forecast: /^AfterRain forecasts those hours\.$/,
   human: /^Eiras, (\w+day\. Usual chance today\.|(\w+day|from \w+day \d\d:00): (higher|high) chance (after rain|even without rain)\. Keep dogs out until .+\.)$/,
-  ask: /^Nobody has measured Eiras after rain\. Sayr asks for one sample( at .+)?: \w+day, \d\d:00 to \d\d:00\.$/,
+  ask: /^Nobody has measured Eiras after rain\. AfterRain asks for one sample( at .+)?: \w+day, \d\d:00 to \d\d:00\.$/,
   changes: /^One sample changes the answer\.$/,
-  close: /^Sayr\. Know the water before you go in\.$/,
+  close: /^AfterRain\. Know the water before you go in\.$/,
 };
 
 async function record(page: Page, name: string): Promise<void> {
@@ -484,7 +484,7 @@ test.describe("the opening comparison's live records", () => {
     type Rec = { resourceType: string; id: string; component?: { valueBoolean?: boolean }[] };
     const grab = (): Promise<Rec[]> => page.evaluate(() => Object.values(window.__sayrLive ?? {}) as Rec[]);
     const reading = (rs: Rec[], over: boolean): Rec | undefined =>
-      rs.filter((r) => r.id.startsWith('sayr-test-C4-') && r.component?.some((c) => c.valueBoolean === over)).sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true })).pop();
+      rs.filter((r) => r.id.startsWith('afterrain-test-C4-') && r.component?.some((c) => c.valueBoolean === over)).sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true })).pop();
     await page.goto(`/?theme=night&t=${T}#/story/test`);
     await expect(page.locator('.city')).toHaveAttribute('data-compare', 'held', { timeout: 60_000 });
     const low = reading(await grab(), false);
@@ -495,7 +495,7 @@ test.describe("the opening comparison's live records", () => {
     await expect(page.locator('.city')).toHaveAttribute('data-compare', 'held', { timeout: 10_000 });
     const all = await grab();
     const high = reading(all, true);
-    const forecast = all.find((r) => r.id.startsWith('sayr-forecast-C4-'));
+    const forecast = all.find((r) => r.id.startsWith('afterrain-forecast-C4-'));
     expect(low, 'the low reading record').toBeTruthy();
     expect(high, 'the high reading record').toBeTruthy();
     expect(forecast, 'the forecast record').toBeTruthy();

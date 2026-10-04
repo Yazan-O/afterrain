@@ -1,4 +1,4 @@
-"""The pre-publish scan accepts Sayr's served FHIR export and rejects everything it guards against."""
+"""The pre-publish scan accepts AfterRain's served FHIR export and rejects everything it guards against."""
 from __future__ import annotations
 
 import importlib.util
@@ -47,7 +47,7 @@ def test_rejects_unlisted_and_misplaced() -> None:
 def _site(tmp: Path) -> Path:
     site = tmp / "site"
     shutil.copytree(SERVED, site / "data" / "fhir")
-    (site / "index.html").write_text("<!doctype html><title>Sayr</title>", encoding="utf-8")
+    (site / "index.html").write_text("<!doctype html><title>AfterRain</title>", encoding="utf-8")
     return site
 
 

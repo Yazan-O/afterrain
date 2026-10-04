@@ -78,7 +78,7 @@ if (!app) throw new Error('#app is missing from index.html');
 app.innerHTML = `
   <div id="scene"></div>
   <p class="tagline" aria-hidden="true">${TAGLINE.map((l) => `<span>${l}</span>`).join(' ')}</p>
-  <h1 class="mark">Sayr</h1>
+  <h1 class="mark">AfterRain</h1>
   <div class="place">
     <button class="city-btn" type="button" aria-haspopup="true" aria-expanded="false"></button>
     <span class="hour" data-time></span>
@@ -148,13 +148,13 @@ modeBtn.addEventListener('click', () => {
 theme.subscribe(syncModeLabel);
 syncModeLabel();
 
-const SCENE_TITLES: Record<string, string> = { replay: 'Sayr: the storm replayed', 'dark-hours': 'Sayr: the dark hours', darkhours: 'Sayr: the dark hours' };
+const SCENE_TITLES: Record<string, string> = { replay: 'AfterRain: the storm replayed', 'dark-hours': 'AfterRain: the dark hours', darkhours: 'AfterRain: the dark hours' };
 function renderChrome(): void {
   const id = chromeCity();
   place.hidden = id === null;
   elsewhere.hidden = route.kind !== 'city';
   if (id === null) {
-    document.title = route.kind === 'scene' ? (SCENE_TITLES[route.name] ?? 'Sayr') : 'Sayr';
+    document.title = route.kind === 'scene' ? (SCENE_TITLES[route.name] ?? 'AfterRain') : 'AfterRain';
     return;
   }
   cityBtn.textContent = CITIES[id].name;
@@ -163,7 +163,7 @@ function renderChrome(): void {
     .map((c) => `<li><a href="${cityHash(c)}">${CITIES[c].name}</a></li>`)
     .join('');
   // the city scene adds the open stream's name (src/city/scene.ts)
-  document.title = `Sayr: ${CITIES[id].name}`;
+  document.title = `AfterRain: ${CITIES[id].name}`;
 }
 
 // ----- the FHIR x-ray -----

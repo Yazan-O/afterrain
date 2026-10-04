@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ponticelli</p><p>OneAquaHealth research site BN3 in Benevento.</p><p>Identifier BN3 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 41.13348, 14.78614</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ponticelli</p><p>OneAquaHealth research site BN3 in Benevento.</p><p>Identifier BN3 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 41.13348, 14.78614</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "BN3",
    "assigner": {
     "display": "OneAquaHealth"

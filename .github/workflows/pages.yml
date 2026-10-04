@@ -1,6 +1,6 @@
-# Builds the web app and deploys it to GitHub Pages at https://yazan-o.github.io/sayr/.
+# Builds the web app and deploys it to GitHub Pages at https://yazan-o.github.io/afterrain/.
 # Every build (a push, a manual run, or nowcast.yml's daily call) refetches the rain ensemble, rewrites the nowcast,
-# then rebuilds and validates Sayr's FHIR resources (SUSHI and the HL7 validator) so the x-ray's per-site risk
+# then rebuilds and validates AfterRain's FHIR resources (SUSHI and the HL7 validator) so the x-ray's per-site risk
 # Observations come from the same forecast as the map, and no deploy can publish an older forecast than the live
 # one (2026-10-02). A failed forecast download fails the run (the deploy never falls back to a cached forecast), and
 # so does any validation error or test failure (pytest for the pipeline and the FHIR layer, Vitest for the app); the
@@ -8,9 +8,9 @@
 # below). GitHub does not promise that queued runs start in order, so the deploy job checks freshness itself
 # (docs/freshness_gate.py): it deploys only when no city on the live site has a newer forecast than this build, and
 # it fails when the live forecast cannot be read, unless the site does not exist yet (a 404 at its root).
-# Published: web/dist only (the app, its fonts, the JSON in data/out, the stream packs and Sayr's own FHIR resources
+# Published: web/dist only (the app, its fonts, the JSON in data/out, the stream packs and AfterRain's own FHIR resources
 # from fhir/served). The pre-publish scan fails the run on any restricted file, credential-looking string or FHIR
-# resource that is not one of Sayr's own.
+# resource that is not one of AfterRain's own.
 name: pages
 
 on:
@@ -75,7 +75,7 @@ jobs:
           java-version: '17'
 
       # Fetches the OneAquaHealth guide at its pinned commit onto the runner (never committed or published), builds it
-      # and Sayr's resources with SUSHI, validates every Sayr resource, then exports Sayr's own into fhir/served.
+      # and AfterRain's resources with SUSHI, validates every AfterRain resource, then exports AfterRain's own into fhir/served.
       - name: Rebuild and validate the FHIR resources from the new nowcast
         working-directory: fhir
         run: |
@@ -92,10 +92,10 @@ jobs:
         run: npx --yes npm@11 ci
 
       # sync-fhir stops the build if fhir/served disagrees with data/out's nowcast.
-      - name: Build for /sayr/
+      - name: Build for /afterrain/
         working-directory: web
         env:
-          SAYR_BASE: /sayr/
+          SAYR_BASE: /afterrain/
         run: npm run build
 
       # Any failure stops the run before the upload, so nothing is deployed. The browser suites (Playwright) are not

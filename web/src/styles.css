@@ -1,4 +1,4 @@
-/* Sayr. The visual style: Archivo (500 and 700, no italics) and JetBrains Mono for small chart labels on a night terrain map; paper white by day.
+/* AfterRain. The visual style: Archivo (500 and 700, no italics) and JetBrains Mono for small chart labels on a night terrain map; paper white by day.
    Text colours are checked for WCAG AA against each theme's ground (tests/e2e/app.spec.ts). */
 :root {
   --bg: #04090a;

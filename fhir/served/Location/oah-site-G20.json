@@ -8,12 +8,12 @@
  },
  "text": {
   "status": "generated",
-  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Gent4 (G4)</p><p>OneAquaHealth research site G20 in Ghent.</p><p>Identifier G20 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 51.0939, 3.71687</p></div>"
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Gent4 (G4)</p><p>OneAquaHealth research site G20 in Ghent.</p><p>Identifier G20 (https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code)</p><p>Position 51.0939, 3.71687</p></div>"
  },
  "mode": "instance",
  "identifier": [
   {
-   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "system": "https://yazan-o.github.io/afterrain/fhir/sid/oah-site-code",
    "value": "G20",
    "assigner": {
     "display": "OneAquaHealth"

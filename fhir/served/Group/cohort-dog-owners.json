@@ -19,7 +19,7 @@
     "coding": [
      {
       "code": "water-contact-activity",
-      "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+      "system": "https://yazan-o.github.io/afterrain/fhir/CodeSystem/afterrain-cs",
       "display": "Water contact activity"
      }
     ]
@@ -28,7 +28,7 @@
     "coding": [
      {
       "code": "dog-in-water",
-      "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+      "system": "https://yazan-o.github.io/afterrain/fhir/CodeSystem/afterrain-cs",
       "display": "Dog enters the water"
      }
     ]

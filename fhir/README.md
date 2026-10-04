@@ -1,12 +1,12 @@
-# Sayr on the OneAquaHealth FHIR Implementation Guide
+# AfterRain on the OneAquaHealth FHIR Implementation Guide
 
-Every Sayr number (a river sample, a site, a cohort's risk, the dataset, an alert) is stored as a FHIR R4 resource on the profiles of the OneAquaHealth FHIR Implementation Guide (`hl7.eu.fhir.oah`, source `github.com/hl7-eu/oah`). The HL7 validator checks every resource against that guide on each build, and a build with any validation error fails.
+Every AfterRain number (a river sample, a site, a cohort's risk, the dataset, an alert) is stored as a FHIR R4 resource on the profiles of the OneAquaHealth FHIR Implementation Guide (`hl7.eu.fhir.oah`, source `github.com/hl7-eu/oah`). The HL7 validator checks every resource against that guide on each build, and a build with any validation error fails.
 
 One command rebuilds everything from `sayr/data/out`:
 
 ```
 npm ci            # SUSHI 3.20.1, pinned
-npm run fhir      # builds, validates, then exports Sayr resources to served/
+npm run fhir      # builds, validates, then exports AfterRain resources to served/
 npm run fhir:test # pytest: re-runs the validator and checks the values against data/out
 npm run fhir:serve            # read-only FHIR surface on http://127.0.0.1:8777/
 npm run fhir:examples         # validate the guide's own examples against the guide
@@ -18,21 +18,21 @@ Requirements: Python 3.13, Node 22.12+, Java 17+ and `validator_cli.jar` ([relea
 
 1. Fetches `hl7-eu/oah` at commit `b907cf08` into `ig-src/` and builds it with SUSHI. The repository states no licence, so its content is fetched at build time and never committed here.
 2. Packages the guide as `hl7.eu.fhir.oah#0.1.0-ci-build` (conformance resources, with its examples under `package/example`).
-3. Generates Sayr's instances in FSH from `sayr/data/out` (`sayr-ig/input/fsh/generated/`); a missing file or field stops the build.
-4. Builds the Sayr FSH project (`sayr-ig/`, which depends on the guide) with SUSHI, then adds a generated narrative to every resource.
+3. Generates AfterRain's instances in FSH from `sayr/data/out` (`sayr-ig/input/fsh/generated/`); a missing file or field stops the build.
+4. Builds the AfterRain FSH project (`sayr-ig/`, which depends on the guide) with SUSHI, then adds a generated narrative to every resource.
 5. Writes the static FHIR surface (`fhir-static/`) and the transaction Bundles.
-6. Runs the HL7 validator on every Sayr resource, the transaction Bundle and the CapabilityStatement, and fails on any error.
+6. Runs the HL7 validator on every AfterRain resource, the transaction Bundle and the CapabilityStatement, and fails on any error.
 
 ## Resource map
 
-| Sayr object | Profile | Built from |
+| AfterRain object | Profile | Built from |
 |---|---|---|
 | Warleigh Weir, the 106 OneAquaHealth research sites, the five cities, Pech David on the Garonne | `LocationOah` | `replay_2024-09-23.json`, `city_*.json` |
 | Each Warleigh water sample | `SpecimenOah` (collector: a Wessex Water `PractitionerRole`) | `warleigh_backtest.json` |
 | Each Warleigh E. coli result | `ObservationIndicatorsOah` | `warleigh_backtest.json` |
 | Children paddling, adult swimmers, dog owners | `GroupOah` | cohort definitions |
 | Risk for a cohort at Warleigh Weir at each replay sample | `ObservationHealthMeasureOah` (subject `LocationOah`, focus `GroupOah`) | `warleigh_backtest.json` model probabilities |
-| Risk for dog owners at each of the 106 OneAquaHealth sites: the highest chance over the forecast, its hour and its fog (id `oah-risk-dog-owners-<site code>`) | `ObservationHealthMeasureOah` (subject `LocationOah` `oah-site-<site code>`, focus `GroupOah`), with the city model as a `Device` (`sayr-model-city`) | `nowcast_<city>.json`, `city_model.json` |
+| Risk for dog owners at each of the 106 OneAquaHealth sites: the highest chance over the forecast, its hour and its fog (id `oah-risk-dog-owners-<site code>`) | `ObservationHealthMeasureOah` (subject `LocationOah` `oah-site-<site code>`, focus `GroupOah`), with the city model as a `Device` (`afterrain-model-city`) | `nowcast_<city>.json`, `city_model.json` |
 | The Warleigh backtest dataset | `LibraryOah` (`size`, `numberOfRecords`), with the file as a `Binary` | `warleigh_backtest.json` |
 | The alert | `AlertOah` (proposed, on `Communication`) and a `Subscription` | `replay_2024-09-23.json`, `warleigh_backtest.json` |
 
@@ -43,12 +43,12 @@ Requirements: Python 3.13, Node 22.12+, Java 17+ and `validator_cli.jar` ([relea
 
 **Risk estimates.**
 - Each value is the probability that a single sample is over 900 E. coli per 100 mL. At Warleigh Weir it comes from the Warleigh model.
-- At a OneAquaHealth site it comes from the city model and the rain forecast: the highest, over the forecast hours, of the median over the ensemble members. `effectiveDateTime` is the first hour at that value, in the city's local time. A `component` coded `SayrCs#fog` carries the fog at that hour. The method text names the model version (also on the `Device`), and a note gives the forecast fetch time, the forecast hours and Sayr's state at the peak hour. One resource per site, for dog owners, since the profile does not require a cohort. The resources are rebuilt from the nowcast on each `npm run fhir`.
+- At a OneAquaHealth site it comes from the city model and the rain forecast: the highest, over the forecast hours, of the median over the ensemble members. `effectiveDateTime` is the first hour at that value, in the city's local time. A `component` coded `AfterRainCs#fog` carries the fog at that hour. The method text names the model version (also on the `Device`), and a note gives the forecast fetch time, the forecast hours and AfterRain's state at the peak hour. One resource per site, for dog owners, since the profile does not require a cohort. The resources are rebuilt from the nowcast on each `npm run fhir`.
 - For a 2024 sample, the model was fitted on 2021-2023 with 2024 held out. `Observation.device` names that model and its version.
 - The `workflow-supportingInfo` extension points each estimate at the dataset `Library` it came from.
 - The model has no cohort-specific term. The cohort is the group the estimate is addressed to.
 
-**Sayr's own terms.** Concepts that no code system carries (the exceedance probability, water-contact activities, alert reasons) are in `SayrCs`. They are written as proposed additions to the guide's temporary code system.
+**AfterRain's own terms.** Concepts that no code system carries (the exceedance probability, water-contact activities, alert reasons) are in `AfterRainCs`. They are written as proposed additions to the guide's temporary code system.
 
 ## The alert: why Communication
 
@@ -67,13 +67,13 @@ The instance is issued at the first Warleigh sample after the 31,000 peak that w
 `fhir-static/` is a read-only FHIR REST surface that any static host can serve:
 
 - `metadata` (and `metadata.json`): the CapabilityStatement. It lists every resource type, its profiles, `read`, and the search parameters with the values that are precomputed.
-- `<Type>/<id>.json`: every resource. That is the guide's 504, including its 468 examples, and all of Sayr's.
+- `<Type>/<id>.json`: every resource. That is the guide's 504, including its 468 examples, and all of AfterRain's.
 - `_search/index.json` maps each supported query to a precomputed searchset Bundle in `_search/<Type>/`. The queries are:
   - `Location?identifier=` for every Location identifier, with and without the system;
   - `Observation?subject=Location/<id>` for every location that has observations;
   - `Observation?focus=Group/<cohort>`;
   - `Library?description=Benevento`;
-  - `Library?_id=Library-Benevento-All,warleigh-backtest` (a guide example next to Sayr's dataset);
+  - `Library?_id=Library-Benevento-All,warleigh-backtest` (a guide example next to AfterRain's dataset);
   - `Communication?category=alert` and `Communication?subject=Group/cohort-dog-owners`.
 - Search results follow FHIR R4 semantics. For example, string search matches the start of the text, so `Library?description=Benevento` returns the 12 per-site libraries. `Library-Benevento-All` is not among them, because its description starts with "Consolidated".
 - `_bundles/oah-transaction.json` and `_bundles/sayr-transaction.json` are the transaction Bundles (PUT by id) that load the same content into a real server.
@@ -97,7 +97,7 @@ curl "http://localhost:8080/fhir/Observation?subject=Location/warleigh-weir&_cou
 
 ## Licences
 
-- Sayr's code: MIT.
+- AfterRain's code: MIT.
 - The generated resources keep the licences of their data (`../data/LICENSE-DATA.md`): Wessex Water CC BY 4.0, Environment Agency OGL v3.0, Hub'Eau Licence Ouverte 2.0.
 - OneAquaHealth API site data carries no stated licence.
 - The OneAquaHealth guide carries no stated licence. It is fetched at build time, and `fhir-static/` (which contains the guide's examples) is git-ignored.
