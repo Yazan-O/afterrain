@@ -33,7 +33,7 @@
 <h3 align="center">
   <a href="https://yazan-o.github.io/afterrain/">Open the live demo</a>
   &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-  <a href="VIDEO_URL">Watch the video (3 to 5 min)</a>
+  <a href="https://youtu.be/7p_uU6psF5U">Watch the video (3 to 5 min)</a>
 </h3>
 
 <p align="center">
