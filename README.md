@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://yazan-o.github.io/afterrain/"><img src="assets/hero.png" width="100%" alt="AfterRain. Know the water before you go in. A night map of the River Avon above Warleigh Weir, near Bath: the Freshford storm overflow, 4.55 km upstream, lights the river orange at 10:28 on 23 September 2024."></a>
+  <a href="https://yazan-o.github.io/afterrain/"><img src="assets/cover.jpg" width="100%" alt="AfterRain. Know the water before you go in. A miniature river town half under a rain cloud, its streams glowing orange under drifting fog, while a small robot in a yellow raincoat holds up a glowing water-sample bottle beside a dog."></a>
 </p>
 
 <p align="center">
@@ -18,6 +18,10 @@
   <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat&labelColor=1b2421&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/-MapLibre%20GL-396CB2?style=flat&labelColor=1b2421&logo=maplibre&logoColor=white" alt="MapLibre GL JS">
   <a href="fhir/"><img src="https://img.shields.io/badge/HL7%20FHIR%20R4-OAH--FHIR-0E7C86?style=flat&labelColor=1b2421" alt="HL7 FHIR R4 on the OAH-FHIR Implementation Guide"></a>
+</p>
+
+<p align="center">
+  <a href="https://yazan-o.github.io/afterrain/"><img src="assets/hero.png" width="100%" alt="AfterRain. Know the water before you go in. A night map of the River Avon above Warleigh Weir, near Bath: the Freshford storm overflow, 4.55 km upstream, lights the river orange at 10:28 on 23 September 2024."></a>
 </p>
 
 <p align="center">
@@ -301,7 +305,10 @@ Contains Wessex Water data (CC BY 4.0), Environment Agency data (OGL v3.0), (c) 
 
 <br>
 
-**Team:** [Mohamad Yazan Sadoun](https://github.com/Yazan-O) and [Abdullah Osman](https://github.com/AbdullahOsmanR).
+### Team AfterRain
+
+- **[Mohamad Yazan Sadoun](https://github.com/Yazan-O)** · University of Oklahoma, INQUIRE Lab
+- **[Abdullah Osman](https://github.com/AbdullahOsmanR)** · University of Istanbul
 
 Built by the AfterRain team, a team of students, for the OneAquaHealth IEEE Global Hackathon 2026. Thanks to the OneAquaHealth consortium for the open API and the OAH-FHIR guide. Code: MIT.
 
