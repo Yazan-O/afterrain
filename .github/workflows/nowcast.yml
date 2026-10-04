@@ -1,13 +1,13 @@
-# Daily at 04:00 UTC (23:00 CDT) through judging: refetch the Open-Meteo rain ensemble, rewrite
+# Run by hand: refetch the Open-Meteo rain ensemble, rewrite
 # data/out/nowcast_<city>.json and the nowcast rows of numbers.json, rebuild and validate the per-site FHIR risk
 # Observations from that nowcast, rebuild the web app and redeploy it. Nothing is committed back: the fresh forecast
 # lives only in the deployed site, so the repository history stays as submitted.
 # After judging closes on 15 October: gh workflow disable nowcast.yml
 name: nowcast
 
+# Paused for judging (owner, 2026-10-04): the site stays on the submitted forecast of 3 October 2026.
+# Run by hand (workflow_dispatch) to deploy a fresh forecast.
 on:
-  schedule:
-    - cron: '0 4 * * *'
   workflow_dispatch:
 
 permissions:

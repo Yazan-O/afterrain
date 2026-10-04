@@ -1,5 +1,5 @@
 # Builds the web app and deploys it to GitHub Pages at https://yazan-o.github.io/afterrain/.
-# Every build (a push, a manual run, or nowcast.yml's daily call) refetches the rain ensemble, rewrites the nowcast,
+# A push or manual run ships the committed forecast of 3 October 2026; a nowcast.yml call refetches the rain ensemble, rewrites the nowcast,
 # then rebuilds and validates AfterRain's FHIR resources (SUSHI and the HL7 validator) so the x-ray's per-site risk
 # Observations come from the same forecast as the map, and no deploy can publish an older forecast than the live
 # one (2026-10-02). A failed forecast download fails the run (the deploy never falls back to a cached forecast), and
@@ -20,9 +20,9 @@ on:
   workflow_call:
     inputs:
       nowcast:
-        description: Kept for nowcast.yml; every build now refreshes the nowcast and the FHIR resources
+        description: Refetch the rain ensemble and rebuild the nowcast (nowcast.yml); otherwise the committed forecast ships
         type: boolean
-        default: true
+        default: false
 
 permissions:
   contents: read
@@ -40,6 +40,7 @@ jobs:
     outputs:
       fetched: ${{ steps.stamp.outputs.fetched }}
       base_url: ${{ steps.pages.outputs.base_url }}
+      refreshed: ${{ inputs.nowcast == true }}
     concurrency:
       group: pages-build
       cancel-in-progress: false
@@ -65,8 +66,11 @@ jobs:
             web/package-lock.json
             fhir/package-lock.json
 
-      # No --allow-cache: a failed download stops the run here instead of shipping an older forecast.
+      # Judging build: a push or manual run deploys the committed forecast of 3 October 2026 (data/out), so the site
+      # shows the same numbers as the film and the submission text. Only a call with nowcast: true (nowcast.yml, run
+      # by hand) refetches the rain ensemble. No --allow-cache: a failed download stops the run.
       - name: Refresh the nowcast for the five cities
+        if: inputs.nowcast == true
         run: python -m pipeline nowcast
 
       - uses: actions/setup-java@v6
@@ -146,11 +150,12 @@ jobs:
       # first deployment) deploys without a comparison.
       - name: Compare with the live forecast, all five cities
         id: fresh
+        if: needs.build.outputs.refreshed == 'true'
         env:
           FETCHED: ${{ needs.build.outputs.fetched }}
           BASE_URL: ${{ needs.build.outputs.base_url }}
         run: python3 docs/freshness_gate.py check "$BASE_URL" "$FETCHED" >> "$GITHUB_OUTPUT"
 
       - id: deployment
-        if: steps.fresh.outputs.deploy == 'true'
+        if: needs.build.outputs.refreshed != 'true' || steps.fresh.outputs.deploy == 'true'
         uses: actions/deploy-pages@v5
