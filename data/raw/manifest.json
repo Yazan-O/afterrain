@@ -1,0 +1,1114 @@
+{
+  "wessex_edm_warleigh_2020_2023.json": {
+    "file": "data/raw/wessex_edm_warleigh_2020_2023.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2020_23_view/FeatureServer/0/query?where=SiteId+IN+%28%2713130S%27%2C%2717390C%27%2C%2714452B%27%2C%2713031S%27%2C%2716897C%27%2C%2716898C%27%2C%2716899C%27%2C%2716925C%27%2C%2716922C%27%2C%2713352S%27%2C%2716790C%27%2C%2716789C%27%2C%2714531S%27%2C%2716788C%27%2C%2713331C%27%2C%2715536B%27%2C%2713226S%27%2C%2713341S%27%2C%2713256S%27%2C%2716546C%27%2C%2714459B%27%2C%2714444B%27%2C%2719556S%27%2C%2716900C%27%2C%2713318B%27%2C%2716935C%27%2C%2712772C%27%29&outFields=SiteId%2CSiteName%2CEventStart%2CEventEnd%2COutfallLatitude%2COutfallLongitude%2CReceivingWatercourse&orderByFields=OBJECTID",
+    "fetched_utc": "2026-09-26T01:25:57Z",
+    "licence": "CC BY 4.0",
+    "bytes": 2149231,
+    "published": true
+  },
+  "wessex_edm_warleigh_2024.json": {
+    "file": "data/raw/wessex_edm_warleigh_2024.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2024_view/FeatureServer/0/query?where=SiteId+IN+%28%2713130S%27%2C%2717390C%27%2C%2714452B%27%2C%2713031S%27%2C%2716897C%27%2C%2716898C%27%2C%2716899C%27%2C%2716925C%27%2C%2716922C%27%2C%2713352S%27%2C%2716790C%27%2C%2716789C%27%2C%2714531S%27%2C%2716788C%27%2C%2713331C%27%2C%2715536B%27%2C%2713226S%27%2C%2713341S%27%2C%2713256S%27%2C%2716546C%27%2C%2714459B%27%2C%2714444B%27%2C%2719556S%27%2C%2716900C%27%2C%2713318B%27%2C%2716935C%27%2C%2712772C%27%29&outFields=SiteId%2CSiteName%2CEventStart%2CEventEnd%2COutfallLatitude%2COutfallLongitude%2CReceivingWatercourse&orderByFields=OBJECTID",
+    "fetched_utc": "2026-09-26T01:25:59Z",
+    "licence": "CC BY 4.0",
+    "bytes": 1991867,
+    "published": true
+  },
+  "wessex_edm_warleigh_2025.json": {
+    "file": "data/raw/wessex_edm_warleigh_2025.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2025_view/FeatureServer/0/query?where=OutfallLatitude%3E51.28+AND+OutfallLatitude%3C51.378+AND+OutfallLongitude%3E-2.35+AND+OutfallLongitude%3C-2.20&outFields=SiteId%2CSiteName%2CEventStart%2CEventEnd%2COutfallLatitude%2COutfallLongitude%2CReceivingWatercourse&orderByFields=OBJECTID",
+    "fetched_utc": "2026-09-26T01:26:00Z",
+    "licence": "CC BY 4.0",
+    "bytes": 703746,
+    "published": true
+  },
+  "wessex_edm_warleigh_2026.json": {
+    "file": "data/raw/wessex_edm_warleigh_2026.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2026_view2/FeatureServer/0/query?where=OutfallLatitude%3E51.28+AND+OutfallLatitude%3C51.378+AND+OutfallLongitude%3E-2.35+AND+OutfallLongitude%3C-2.20&outFields=SiteId%2CSiteName%2CEventStart%2CEventEnd%2COutfallLatitude%2COutfallLongitude%2CReceivingWatercourse&orderByFields=OBJECTID",
+    "fetched_utc": "2026-09-26T01:26:01Z",
+    "licence": "CC BY 4.0",
+    "bytes": 978984,
+    "published": true
+  },
+  "wessex_wq_warleigh.json": {
+    "file": "data/raw/wessex_wq_warleigh.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Environmental_Water_Quality_view/FeatureServer/0/query?where=Latitude%3E51.3765+AND+Latitude%3C51.3775+AND+Longitude%3E-2.3011+AND+Longitude%3C-2.3001+AND+Determinand+IN+%28%27E.+coli%27%2C%27Enterococci%27%29&outFields=SampleDate%2CDeterminand%2CUnits%2COperator%2CResult%2CLatitude%2CLongitude&orderByFields=SampleDate",
+    "fetched_utc": "2026-09-26T01:26:01Z",
+    "licence": "CC BY 4.0",
+    "bytes": 114381,
+    "published": true
+  },
+  "ea_rain_claverton_daily.csv": {
+    "file": "data/raw/ea_rain_claverton_daily.csv",
+    "url": "https://environment.data.gov.uk/hydrology/id/measures/c4cceecc-19e7-471d-b57a-d04d88db1da6-rainfall-t-86400-mm-qualified/readings.csv?mineq-date=2021-01-01&max-date=2026-01-01&_limit=5000",
+    "fetched_utc": "2026-09-26T01:26:02Z",
+    "licence": "Open Government Licence v3.0",
+    "bytes": 339329,
+    "published": true
+  },
+  "ea_flow_bradford_on_avon_daily.csv": {
+    "file": "data/raw/ea_flow_bradford_on_avon_daily.csv",
+    "url": "https://environment.data.gov.uk/hydrology/id/measures/585e49e0-7070-4d85-9c52-ccd18a5a1e65-flow-m-86400-m3s-qualified/readings.csv?mineq-date=2021-01-01&max-date=2026-01-01&_limit=5000",
+    "fetched_utc": "2026-09-26T01:26:03Z",
+    "licence": "Open Government Licence v3.0",
+    "bytes": 335101,
+    "published": true
+  },
+  "osm_avon_frome_waterways.json": {
+    "file": "data/raw/osm_avon_frome_waterways.json",
+    "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22waterway%22~%22%5E%28river%7Cstream%29%24%22%5D%2851.14000%2C-2.48000%2C51.40000%2C-2.17000%29%3Bout%20body%3B%3E%3Bout%20skel%20qt%3B",
+    "fetched_utc": "2026-09-26T01:26:08Z",
+    "licence": "ODbL 1.0 (OpenStreetMap contributors)",
+    "bytes": 3169324,
+    "published": true
+  },
+  "wessex_edm_farleigh_2020_2023.json": {
+    "file": "data/raw/wessex_edm_farleigh_2020_2023.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2020_23_view/FeatureServer/0/query?where=OutfallLatitude%3E51.15+AND+OutfallLatitude%3C51.312+AND+OutfallLongitude%3E-2.45+AND+OutfallLongitude%3C-2.24&outFields=SiteId%2CSiteName%2CEventStart%2CEventEnd%2COutfallLatitude%2COutfallLongitude%2CReceivingWatercourse&orderByFields=OBJECTID",
+    "fetched_utc": "2026-09-26T01:26:23Z",
+    "licence": "CC BY 4.0",
+    "bytes": 3894187,
+    "published": true
+  },
+  "wessex_edm_farleigh_2024.json": {
+    "file": "data/raw/wessex_edm_farleigh_2024.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2024_view/FeatureServer/0/query?where=OutfallLatitude%3E51.15+AND+OutfallLatitude%3C51.312+AND+OutfallLongitude%3E-2.45+AND+OutfallLongitude%3C-2.24&outFields=SiteId%2CSiteName%2CEventStart%2CEventEnd%2COutfallLatitude%2COutfallLongitude%2CReceivingWatercourse&orderByFields=OBJECTID",
+    "fetched_utc": "2026-09-26T01:26:26Z",
+    "licence": "CC BY 4.0",
+    "bytes": 1640084,
+    "published": true
+  },
+  "wessex_edm_farleigh_2025.json": {
+    "file": "data/raw/wessex_edm_farleigh_2025.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2025_view/FeatureServer/0/query?where=OutfallLatitude%3E51.15+AND+OutfallLatitude%3C51.312+AND+OutfallLongitude%3E-2.45+AND+OutfallLongitude%3C-2.24&outFields=SiteId%2CSiteName%2CEventStart%2CEventEnd%2COutfallLatitude%2COutfallLongitude%2CReceivingWatercourse&orderByFields=OBJECTID",
+    "fetched_utc": "2026-09-26T01:26:28Z",
+    "licence": "CC BY 4.0",
+    "bytes": 1213036,
+    "published": true
+  },
+  "wessex_edm_farleigh_2026.json": {
+    "file": "data/raw/wessex_edm_farleigh_2026.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2026_view2/FeatureServer/0/query?where=OutfallLatitude%3E51.15+AND+OutfallLatitude%3C51.312+AND+OutfallLongitude%3E-2.45+AND+OutfallLongitude%3C-2.24&outFields=SiteId%2CSiteName%2CEventStart%2CEventEnd%2COutfallLatitude%2COutfallLongitude%2CReceivingWatercourse&orderByFields=OBJECTID",
+    "fetched_utc": "2026-09-26T01:26:30Z",
+    "licence": "CC BY 4.0",
+    "bytes": 1014390,
+    "published": true
+  },
+  "wessex_wq_farleigh.json": {
+    "file": "data/raw/wessex_wq_farleigh.json",
+    "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Environmental_Water_Quality_view/FeatureServer/0/query?where=Latitude%3E51.3088+AND+Latitude%3C51.3098+AND+Longitude%3E-2.2866+AND+Longitude%3C-2.2856+AND+Determinand+IN+%28%27E.+coli%27%2C%27Enterococci%27%29&outFields=SampleDate%2CDeterminand%2CUnits%2COperator%2CResult%2CLatitude%2CLongitude&orderByFields=SampleDate",
+    "fetched_utc": "2026-09-26T01:26:30Z",
+    "licence": "CC BY 4.0",
+    "bytes": 62010,
+    "published": true
+  },
+  "ea_flow_tellisford_daily.csv": {
+    "file": "data/raw/ea_flow_tellisford_daily.csv",
+    "url": "https://environment.data.gov.uk/hydrology/id/measures/29434d59-1597-4783-b0b6-9f9a821d30d8-flow-m-86400-m3s-qualified/readings.csv?mineq-date=2021-01-01&max-date=2026-01-01&_limit=5000",
+    "fetched_utc": "2026-09-26T01:26:34Z",
+    "licence": "Open Government Licence v3.0",
+    "bytes": 334768,
+    "published": true
+  },
+  "massdep_alewife_incidents.xlsx": {
+    "file": "data/raw/restricted/massdep_alewife_incidents.xlsx",
+    "url": "https://eeaonline.eea.state.ma.us/dep/CSOAPI/api/Incident/GetIncidentsForExcel/?WaterBody=Alewife%20Brook&",
+    "fetched_utc": "2026-09-26T01:26:36Z",
+    "licence": "licence not stated; kept out of the published dataset",
+    "bytes": 25032,
+    "published": false
+  },
+  "mwra_cso_table_export.csv": {
+    "file": "data/raw/restricted/mwra_cso_table_export.csv",
+    "url": "https://www.mwra.com/our-environment/combined-sewer-overflow-cso-notifications/cso-table-export",
+    "fetched_utc": "2026-09-26T01:26:36Z",
+    "licence": "licence not stated; kept out of the published dataset",
+    "bytes": 81690,
+    "published": false
+  },
+  "mwra_mystic_bacteria.xlsx": {
+    "file": "data/raw/restricted/mwra_mystic_bacteria.xlsx",
+    "url": "https://www.mwra.com/media/file/mystic-river-bacteria-data",
+    "fetched_utc": "2026-09-26T01:26:37Z",
+    "licence": "licence not stated; kept out of the published dataset",
+    "bytes": 1895232,
+    "published": false
+  },
+  "hubeau_pech_david_ecoli.json": {
+    "file": "data/raw/hubeau_pech_david_ecoli.json",
+    "url": "https://hubeau.eaufrance.fr/api/v2/qualite_rivieres/analyse_pc?code_station=BF000002&code_parametre=1449&size=200",
+    "fetched_utc": "2026-09-26T01:27:12Z",
+    "licence": "Licence Ouverte / Etalab 2.0 (stated by Naiades, the source database of Hub'Eau river quality, and by the eaufrance.fr legal notice)",
+    "bytes": 348513,
+    "published": true
+  },
+  "openmeteo_archive_toulouse_daily.json": {
+    "file": "data/raw/openmeteo_archive_toulouse_daily.json",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=43.5966&longitude=1.4331&start_date=2016-01-01&end_date=2025-12-31&daily=precipitation_sum&timezone=Europe%2FParis",
+    "fetched_utc": "2026-09-26T01:30:41Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 66282,
+    "published": true
+  },
+  "hubeau_garonne_portet_flow_daily.json": {
+    "file": "data/raw/hubeau_garonne_portet_flow_daily.json",
+    "url": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/obs_elab?code_entite=O200001001&grandeur_hydro_elab=QmnJ&date_debut_obs_elab=2015-12-25&date_fin_obs_elab=2025-12-31&size=20000",
+    "fetched_utc": "2026-09-26T01:27:18Z",
+    "licence": "Licence Ouverte / Etalab 2.0 (stated by Naiades, the source database of Hub'Eau river quality, and by the eaufrance.fr legal notice)",
+    "bytes": 1403704,
+    "published": true
+  },
+  "oah_cities.json": {
+    "file": "data/raw/oah_cities.json",
+    "url": "https://api.enora-oah.eu/api/cities/all",
+    "fetched_utc": "2026-09-26T01:26:41Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 357,
+    "published": false
+  },
+  "oah_sites.json": {
+    "file": "data/raw/oah_sites.json",
+    "url": "https://api.enora-oah.eu/api/sites/all",
+    "fetched_utc": "2026-10-03T22:28:49Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 128541,
+    "published": false
+  },
+  "oah_citizen_sites.json": {
+    "file": "data/raw/oah_citizen_sites.json",
+    "url": "https://api.enora-oah.eu/api/sites/user-generated",
+    "fetched_utc": "2026-09-26T01:26:42Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 7672,
+    "published": false
+  },
+  "oah_health_risks.json": {
+    "file": "data/raw/oah_health_risks.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/health-risks",
+    "fetched_utc": "2026-09-26T01:26:43Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 16576,
+    "published": false
+  },
+  "oah_urban_parameters.json": {
+    "file": "data/raw/oah_urban_parameters.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/urban-parameters",
+    "fetched_utc": "2026-09-26T01:26:43Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 149435,
+    "published": false
+  },
+  "oah_weather_BN1_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_BN1_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN1&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:13Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3597,
+    "published": false
+  },
+  "oah_weather_BN2_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_BN2_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN2&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:14Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3597,
+    "published": false
+  },
+  "oah_weather_BN3_2023-05-23_2023-06-06.json": {
+    "file": "data/raw/oah_weather_BN3_2023-05-23_2023-06-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN3&start=2023-05-23T00%3A00%3A00Z&end=2023-06-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:14Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3605,
+    "published": false
+  },
+  "oah_weather_BN4_2023-06-19_2023-07-03.json": {
+    "file": "data/raw/oah_weather_BN4_2023-06-19_2023-07-03.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN4&start=2023-06-19T00%3A00%3A00Z&end=2023-07-03T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:14Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3599,
+    "published": false
+  },
+  "oah_weather_BN5_2023-06-19_2023-07-03.json": {
+    "file": "data/raw/oah_weather_BN5_2023-06-19_2023-07-03.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN5&start=2023-06-19T00%3A00%3A00Z&end=2023-07-03T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:15Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3599,
+    "published": false
+  },
+  "oah_weather_BN6_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_BN6_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN6&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:15Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3597,
+    "published": false
+  },
+  "oah_weather_BN7_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_BN7_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN7&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:16Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3597,
+    "published": false
+  },
+  "oah_weather_BN8_2023-06-23_2023-07-07.json": {
+    "file": "data/raw/oah_weather_BN8_2023-06-23_2023-07-07.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN8&start=2023-06-23T00%3A00%3A00Z&end=2023-07-07T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:16Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3599,
+    "published": false
+  },
+  "oah_weather_BN9_2023-05-23_2023-06-06.json": {
+    "file": "data/raw/oah_weather_BN9_2023-05-23_2023-06-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN9&start=2023-05-23T00%3A00%3A00Z&end=2023-06-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:16Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3605,
+    "published": false
+  },
+  "oah_weather_BN10_2023-05-24_2023-06-07.json": {
+    "file": "data/raw/oah_weather_BN10_2023-05-24_2023-06-07.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN10&start=2023-05-24T00%3A00%3A00Z&end=2023-06-07T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:17Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3619,
+    "published": false
+  },
+  "oah_weather_BN11_2023-05-23_2023-06-06.json": {
+    "file": "data/raw/oah_weather_BN11_2023-05-23_2023-06-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN11&start=2023-05-23T00%3A00%3A00Z&end=2023-06-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:17Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3620,
+    "published": false
+  },
+  "oah_weather_BN12_2023-05-23_2023-06-06.json": {
+    "file": "data/raw/oah_weather_BN12_2023-05-23_2023-06-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN12&start=2023-05-23T00%3A00%3A00Z&end=2023-06-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:18Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3620,
+    "published": false
+  },
+  "oah_weather_BN13_2023-06-19_2023-07-03.json": {
+    "file": "data/raw/oah_weather_BN13_2023-06-19_2023-07-03.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN13&start=2023-06-19T00%3A00%3A00Z&end=2023-07-03T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:18Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3614,
+    "published": false
+  },
+  "oah_weather_BN14_2024-07-22_2024-08-05.json": {
+    "file": "data/raw/oah_weather_BN14_2024-07-22_2024-08-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN14&start=2024-07-22T00%3A00%3A00Z&end=2024-08-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:18Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3607,
+    "published": false
+  },
+  "oah_weather_BN15_2023-05-24_2023-06-07.json": {
+    "file": "data/raw/oah_weather_BN15_2023-05-24_2023-06-07.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN15&start=2023-05-24T00%3A00%3A00Z&end=2023-06-07T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:18Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3619,
+    "published": false
+  },
+  "oah_weather_BN16_2023-05-24_2023-06-07.json": {
+    "file": "data/raw/oah_weather_BN16_2023-05-24_2023-06-07.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN16&start=2023-05-24T00%3A00%3A00Z&end=2023-06-07T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:19Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3619,
+    "published": false
+  },
+  "oah_weather_BN17_2023-06-19_2023-07-03.json": {
+    "file": "data/raw/oah_weather_BN17_2023-06-19_2023-07-03.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN17&start=2023-06-19T00%3A00%3A00Z&end=2023-07-03T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:19Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3614,
+    "published": false
+  },
+  "oah_weather_BN18_2023-05-23_2023-06-06.json": {
+    "file": "data/raw/oah_weather_BN18_2023-05-23_2023-06-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN18&start=2023-05-23T00%3A00%3A00Z&end=2023-06-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:19Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3620,
+    "published": false
+  },
+  "oah_weather_BN19_2023-06-23_2023-07-07.json": {
+    "file": "data/raw/oah_weather_BN19_2023-06-23_2023-07-07.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN19&start=2023-06-23T00%3A00%3A00Z&end=2023-07-07T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:19Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3614,
+    "published": false
+  },
+  "oah_weather_BN20_2023-06-23_2023-07-07.json": {
+    "file": "data/raw/oah_weather_BN20_2023-06-23_2023-07-07.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=BN20&start=2023-06-23T00%3A00%3A00Z&end=2023-07-07T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:20Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_C1_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_C1_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C1&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:20Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3591,
+    "published": false
+  },
+  "oah_weather_C2_2023-06-13_2023-06-27.json": {
+    "file": "data/raw/oah_weather_C2_2023-06-13_2023-06-27.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C2&start=2023-06-13T00%3A00%3A00Z&end=2023-06-27T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:20Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3593,
+    "published": false
+  },
+  "oah_weather_C3_2023-06-13_2023-06-27.json": {
+    "file": "data/raw/oah_weather_C3_2023-06-13_2023-06-27.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C3&start=2023-06-13T00%3A00%3A00Z&end=2023-06-27T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:21Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3593,
+    "published": false
+  },
+  "oah_weather_C4_2023-06-13_2023-06-27.json": {
+    "file": "data/raw/oah_weather_C4_2023-06-13_2023-06-27.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C4&start=2023-06-13T00%3A00%3A00Z&end=2023-06-27T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:21Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3593,
+    "published": false
+  },
+  "oah_weather_C5_2023-06-15_2023-06-29.json": {
+    "file": "data/raw/oah_weather_C5_2023-06-15_2023-06-29.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C5&start=2023-06-15T00%3A00%3A00Z&end=2023-06-29T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:21Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3589,
+    "published": false
+  },
+  "oah_weather_C6_2023-06-15_2023-06-29.json": {
+    "file": "data/raw/oah_weather_C6_2023-06-15_2023-06-29.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C6&start=2023-06-15T00%3A00%3A00Z&end=2023-06-29T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:21Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3589,
+    "published": false
+  },
+  "oah_weather_C7_2023-06-15_2023-06-29.json": {
+    "file": "data/raw/oah_weather_C7_2023-06-15_2023-06-29.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C7&start=2023-06-15T00%3A00%3A00Z&end=2023-06-29T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:22Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3581,
+    "published": false
+  },
+  "oah_weather_C8_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_C8_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C8&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:22Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3591,
+    "published": false
+  },
+  "oah_weather_C9_2023-06-13_2023-06-27.json": {
+    "file": "data/raw/oah_weather_C9_2023-06-13_2023-06-27.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C9&start=2023-06-13T00%3A00%3A00Z&end=2023-06-27T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:22Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3593,
+    "published": false
+  },
+  "oah_weather_C10_2023-06-13_2023-06-27.json": {
+    "file": "data/raw/oah_weather_C10_2023-06-13_2023-06-27.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C10&start=2023-06-13T00%3A00%3A00Z&end=2023-06-27T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:22Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3608,
+    "published": false
+  },
+  "oah_weather_C11_2023-06-13_2023-06-27.json": {
+    "file": "data/raw/oah_weather_C11_2023-06-13_2023-06-27.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C11&start=2023-06-13T00%3A00%3A00Z&end=2023-06-27T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:23Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3608,
+    "published": false
+  },
+  "oah_weather_C12_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_C12_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C12&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:23Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3606,
+    "published": false
+  },
+  "oah_weather_C13_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_C13_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C13&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:23Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3595,
+    "published": false
+  },
+  "oah_weather_C14_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_C14_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C14&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:24Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3595,
+    "published": false
+  },
+  "oah_weather_C15_2023-06-14_2023-06-28.json": {
+    "file": "data/raw/oah_weather_C15_2023-06-14_2023-06-28.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C15&start=2023-06-14T00%3A00%3A00Z&end=2023-06-28T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:24Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3595,
+    "published": false
+  },
+  "oah_weather_C16_2023-06-13_2023-06-27.json": {
+    "file": "data/raw/oah_weather_C16_2023-06-13_2023-06-27.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C16&start=2023-06-13T00%3A00%3A00Z&end=2023-06-27T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:24Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3608,
+    "published": false
+  },
+  "oah_weather_C19_2023-05-23_2023-06-06.json": {
+    "file": "data/raw/oah_weather_C19_2023-05-23_2023-06-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C19&start=2023-05-23T00%3A00%3A00Z&end=2023-06-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:25Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3607,
+    "published": false
+  },
+  "oah_weather_C20_2023-05-23_2023-06-06.json": {
+    "file": "data/raw/oah_weather_C20_2023-05-23_2023-06-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=C20&start=2023-05-23T00%3A00%3A00Z&end=2023-06-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:25Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3618,
+    "published": false
+  },
+  "oah_weather_G2_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G2_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G2&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:25Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3596,
+    "published": false
+  },
+  "oah_weather_G3_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G3_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G3&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:25Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3596,
+    "published": false
+  },
+  "oah_weather_G4_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G4_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G4&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:26Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3596,
+    "published": false
+  },
+  "oah_weather_G5_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G5_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G5&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:26Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3596,
+    "published": false
+  },
+  "oah_weather_G6_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G6_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G6&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:26Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3596,
+    "published": false
+  },
+  "oah_weather_G7_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G7_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G7&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:26Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3596,
+    "published": false
+  },
+  "oah_weather_G8_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G8_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G8&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:27Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3596,
+    "published": false
+  },
+  "oah_weather_G9_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G9_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G9&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:27Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3596,
+    "published": false
+  },
+  "oah_weather_G10_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G10_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G10&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:27Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_G11_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G11_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G11&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:27Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_G12_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G12_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G12&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:28Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_G13_2023-05-11_2023-05-25.json": {
+    "file": "data/raw/oah_weather_G13_2023-05-11_2023-05-25.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G13&start=2023-05-11T00%3A00%3A00Z&end=2023-05-25T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:28Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_G14_2023-05-11_2023-05-25.json": {
+    "file": "data/raw/oah_weather_G14_2023-05-11_2023-05-25.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G14&start=2023-05-11T00%3A00%3A00Z&end=2023-05-25T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:28Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_G15_2023-05-11_2023-05-25.json": {
+    "file": "data/raw/oah_weather_G15_2023-05-11_2023-05-25.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G15&start=2023-05-11T00%3A00%3A00Z&end=2023-05-25T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:28Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_G16_2023-05-11_2023-05-25.json": {
+    "file": "data/raw/oah_weather_G16_2023-05-11_2023-05-25.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G16&start=2023-05-11T00%3A00%3A00Z&end=2023-05-25T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:29Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_G21_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G21_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G21&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:29Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_G22_2023-05-10_2023-05-24.json": {
+    "file": "data/raw/oah_weather_G22_2023-05-10_2023-05-24.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=G22&start=2023-05-10T00%3A00%3A00Z&end=2023-05-24T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:29Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3611,
+    "published": false
+  },
+  "oah_weather_O1_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O1_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O1&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:29Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3582,
+    "published": false
+  },
+  "oah_weather_O2_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O2_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O2&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:30Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3582,
+    "published": false
+  },
+  "oah_weather_O3_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O3_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O3&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:30Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3582,
+    "published": false
+  },
+  "oah_weather_O4_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O4_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O4&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:30Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_O5_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O5_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O5&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:31Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_O6_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O6_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O6&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:31Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3586,
+    "published": false
+  },
+  "oah_weather_O7_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O7_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O7&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:31Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_O8_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O8_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O8&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:31Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_O9_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O9_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O9&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:32Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3582,
+    "published": false
+  },
+  "oah_weather_O10_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O10_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O10&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:32Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3597,
+    "published": false
+  },
+  "oah_weather_O11_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O11_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O11&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:32Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3607,
+    "published": false
+  },
+  "oah_weather_O12_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O12_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O12&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:32Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3607,
+    "published": false
+  },
+  "oah_weather_O13_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O13_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O13&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:33Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3597,
+    "published": false
+  },
+  "oah_weather_O14_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O14_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O14&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:33Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3597,
+    "published": false
+  },
+  "oah_weather_O15_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O15_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O15&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:33Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3607,
+    "published": false
+  },
+  "oah_weather_O16_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O16_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O16&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:33Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3607,
+    "published": false
+  },
+  "oah_weather_O17_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O17_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O17&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:34Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3607,
+    "published": false
+  },
+  "oah_weather_O18_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O18_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O18&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:34Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3601,
+    "published": false
+  },
+  "oah_weather_O19_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O19_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O19&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:34Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3594,
+    "published": false
+  },
+  "oah_weather_O20_2023-08-23_2023-09-06.json": {
+    "file": "data/raw/oah_weather_O20_2023-08-23_2023-09-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=O20&start=2023-08-23T00%3A00%3A00Z&end=2023-09-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:35Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3597,
+    "published": false
+  },
+  "oah_weather_T1_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T1_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T1&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:35Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3577,
+    "published": false
+  },
+  "oah_weather_T2_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T2_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T2&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:35Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3577,
+    "published": false
+  },
+  "oah_weather_T3_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T3_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T3&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:35Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3577,
+    "published": false
+  },
+  "oah_weather_T4_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T4_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T4&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:36Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3577,
+    "published": false
+  },
+  "oah_weather_T5_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T5_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T5&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:36Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3577,
+    "published": false
+  },
+  "oah_weather_T6_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T6_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T6&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:36Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3577,
+    "published": false
+  },
+  "oah_weather_T7_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T7_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T7&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:36Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3577,
+    "published": false
+  },
+  "oah_weather_T8_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T8_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T8&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:37Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3577,
+    "published": false
+  },
+  "oah_weather_T9_2023-04-22_2023-05-06.json": {
+    "file": "data/raw/oah_weather_T9_2023-04-22_2023-05-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T9&start=2023-04-22T00%3A00%3A00Z&end=2023-05-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:37Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3579,
+    "published": false
+  },
+  "oah_weather_T10_2023-04-22_2023-05-06.json": {
+    "file": "data/raw/oah_weather_T10_2023-04-22_2023-05-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T10&start=2023-04-22T00%3A00%3A00Z&end=2023-05-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:37Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3603,
+    "published": false
+  },
+  "oah_weather_T11_2023-04-22_2023-05-06.json": {
+    "file": "data/raw/oah_weather_T11_2023-04-22_2023-05-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T11&start=2023-04-22T00%3A00%3A00Z&end=2023-05-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:37Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3603,
+    "published": false
+  },
+  "oah_weather_T12_2023-04-22_2023-05-06.json": {
+    "file": "data/raw/oah_weather_T12_2023-04-22_2023-05-06.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T12&start=2023-04-22T00%3A00%3A00Z&end=2023-05-06T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:38Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3594,
+    "published": false
+  },
+  "oah_weather_T13_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T13_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T13&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:38Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_T14_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T14_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T14&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:38Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_T16_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T16_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T16&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:38Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_T17_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T17_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T17&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:39Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_T18_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T18_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T18&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:39Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_T19_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T19_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T19&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:39Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_T20_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T20_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T20&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:40Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_T22_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T22_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T22&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:40Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "oah_weather_T25_2023-04-21_2023-05-05.json": {
+    "file": "data/raw/oah_weather_T25_2023-04-21_2023-05-05.json",
+    "url": "https://api.enora-oah.eu/api/resilience-map/weather?siteCode=T25&start=2023-04-21T00%3A00%3A00Z&end=2023-05-05T23%3A59%3A59Z",
+    "fetched_utc": "2026-09-26T01:30:40Z",
+    "licence": "OneAquaHealth public API, read-only; terms not stated (not redistributed beyond derived app files)",
+    "bytes": 3592,
+    "published": false
+  },
+  "osm_waterways_BE.json": {
+    "file": "data/raw/osm_waterways_BE.json",
+    "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22waterway%22~%22%5E%28river%7Cstream%7Ccanal%7Cbrook%7Ctidal_channel%29%24%22%5D%2841.04014%2C14.66999%2C41.23383%2C14.85450%29%3Bout%20body%3B%3E%3Bout%20skel%20qt%3B",
+    "fetched_utc": "2026-09-26T01:27:29Z",
+    "licence": "ODbL 1.0 (OpenStreetMap contributors)",
+    "bytes": 629697,
+    "published": true
+  },
+  "openmeteo_ensemble_BE.json": {
+    "file": "data/raw/openmeteo_ensemble_BE.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=41.13231%2C41.12679%2C41.13348%2C41.12414%2C41.10429%2C41.14775%2C41.14905%2C41.15405%2C41.11089%2C41.14607%2C41.16124%2C41.13628%2C41.11727%2C41.06014%2C41.06921%2C41.06923%2C41.13221%2C41.15126%2C41.18579%2C41.21382&longitude=14.80039%2C14.80333%2C14.78614%2C14.74864%2C14.74295%2C14.78437%2C14.81407%2C14.83450%2C14.83250%2C14.76353%2C14.75972%2C14.73193%2C14.73683%2C14.70843%2C14.70959%2C14.70876%2C14.71270%2C14.70936%2C14.71900%2C14.68999&hourly=precipitation&models=ecmwf_ifs025&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-09-26T01:27:33Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 983082,
+    "published": true
+  },
+  "osm_waterways_CO.json": {
+    "file": "data/raw/osm_waterways_CO.json",
+    "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22waterway%22~%22%5E%28river%7Cstream%7Ccanal%7Cbrook%7Ctidal_channel%29%24%22%5D%2840.09106%2C-8.51052%2C40.29702%2C-8.37363%29%3Bout%20body%3B%3E%3Bout%20skel%20qt%3B",
+    "fetched_utc": "2026-09-26T01:27:59Z",
+    "licence": "ODbL 1.0 (OpenStreetMap contributors)",
+    "bytes": 771236,
+    "published": true
+  },
+  "openmeteo_ensemble_CO.json": {
+    "file": "data/raw/openmeteo_ensemble_CO.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=40.19787%2C40.22483%2C40.19307%2C40.25289%2C40.21860%2C40.21942%2C40.22243%2C40.19133%2C40.27702%2C40.19776%2C40.22752%2C40.20386%2C40.11106%2C40.16719%2C40.17943%2C40.22461%2C40.17422%2C40.25621%2C40.24812%2C40.21085&longitude=-8.42865%2C-8.44135%2C-8.41945%2C-8.43659%2C-8.42733%2C-8.43772%2C-8.40165%2C-8.46002%2C-8.42720%2C-8.41773%2C-8.43757%2C-8.45302%2C-8.49052%2C-8.47817%2C-8.42117%2C-8.44304%2C-8.39363%2C-8.45312%2C-8.41159%2C-8.47667&hourly=precipitation&models=ecmwf_ifs025&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-09-26T01:28:02Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 983061,
+    "published": true
+  },
+  "osm_waterways_GH.json": {
+    "file": "data/raw/osm_waterways_GH.json",
+    "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22waterway%22~%22%5E%28river%7Cstream%7Ccanal%7Cbrook%7Ctidal_channel%29%24%22%5D%2850.83943%2C3.66126%2C51.11390%2C3.83680%29%3Bout%20body%3B%3E%3Bout%20skel%20qt%3B",
+    "fetched_utc": "2026-09-26T01:28:55Z",
+    "licence": "ODbL 1.0 (OpenStreetMap contributors)",
+    "bytes": 2193522,
+    "published": true
+  },
+  "openmeteo_ensemble_GH.json": {
+    "file": "data/raw/openmeteo_ensemble_GH.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=50.85943%2C50.87579%2C50.87971%2C50.87366%2C50.88344%2C50.88527%2C50.88437%2C50.88541%2C50.97958%2C50.99821%2C50.98975%2C50.99491%2C51.02678%2C51.05458%2C50.94744%2C50.87507%2C50.89162%2C50.87539%2C51.02843%2C51.09390%2C50.87604%2C50.86216&longitude=3.79794%2C3.75151%2C3.73771%2C3.73125%2C3.71431%2C3.69282%2C3.68791%2C3.68606%2C3.72241%2C3.73925%2C3.80615%2C3.80568%2C3.77389%2C3.68126%2C3.81680%2C3.80222%2C3.81558%2C3.74917%2C3.78600%2C3.71687%2C3.75174%2C3.76577&hourly=precipitation&models=ecmwf_ifs025&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-09-26T01:28:58Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 1081334,
+    "published": true
+  },
+  "osm_waterways_OS.json": {
+    "file": "data/raw/osm_waterways_OS.json",
+    "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22waterway%22~%22%5E%28river%7Cstream%7Ccanal%7Cbrook%7Ctidal_channel%29%24%22%5D%2859.82330%2C10.63030%2C59.97610%2C10.92170%29%3Bout%20body%3B%3E%3Bout%20skel%20qt%3B",
+    "fetched_utc": "2026-09-26T01:29:19Z",
+    "licence": "ODbL 1.0 (OpenStreetMap contributors)",
+    "bytes": 2357234,
+    "published": true
+  },
+  "openmeteo_ensemble_OS.json": {
+    "file": "data/raw/openmeteo_ensemble_OS.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=59.90780%2C59.95610%2C59.95140%2C59.94750%2C59.93080%2C59.93080%2C59.86280%2C59.85110%2C59.84330%2C59.94250%2C59.94140%2C59.92970%2C59.93560%2C59.94500%2C59.93920%2C59.92060%2C59.90440%2C59.92190%2C59.95250%2C59.94320&longitude=10.81280%2C10.71530%2C10.68060%2C10.71110%2C10.67690%2C10.67780%2C10.84580%2C10.81640%2C10.78470%2C10.71810%2C10.70970%2C10.65940%2C10.67360%2C10.65030%2C10.82140%2C10.80060%2C10.79440%2C10.83690%2C10.90170%2C10.67360&hourly=precipitation&models=ecmwf_ifs025&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-09-26T01:29:22Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 983061,
+    "published": true
+  },
+  "osm_waterways_TO.json": {
+    "file": "data/raw/osm_waterways_TO.json",
+    "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22waterway%22~%22%5E%28river%7Cstream%7Ccanal%7Cbrook%7Ctidal_channel%29%24%22%5D%2843.50152%2C1.30265%2C43.66862%2C1.55609%29%3Bout%20body%3B%3E%3Bout%20skel%20qt%3B",
+    "fetched_utc": "2026-09-26T01:29:57Z",
+    "licence": "ODbL 1.0 (OpenStreetMap contributors)",
+    "bytes": 1161391,
+    "published": true
+  },
+  "openmeteo_ensemble_TO.json": {
+    "file": "data/raw/openmeteo_ensemble_TO.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=43.59278%2C43.59604%2C43.55267%2C43.52756%2C43.53219%2C43.56780%2C43.56755%2C43.57873%2C43.58553%2C43.52152%2C43.57130%2C43.53220%2C43.54003%2C43.53530%2C43.53855%2C43.57860%2C43.57882%2C43.58253%2C43.58280%2C43.56499%2C43.52992%2C43.64862%2C43.57895%2C43.59608&longitude=1.34767%2C1.36671%2C1.49147%2C1.47439%2C1.46332%2C1.50937%2C1.51974%2C1.53609%2C1.52861%2C1.34273%2C1.38535%2C1.32265%2C1.34077%2C1.37785%2C1.42074%2C1.35861%2C1.35262%2C1.35047%2C1.34930%2C1.49464%2C1.32597%2C1.51501%2C1.35929%2C1.36657&hourly=precipitation&models=ecmwf_ifs025&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-09-26T01:30:01Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 1179659,
+    "published": true
+  },
+  "openmeteo_era5_hourly_warleigh.json": {
+    "file": "data/raw/openmeteo_era5_hourly_warleigh.json",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.37705&longitude=-2.30064&start_date=2020-12-25&end_date=2025-12-31&hourly=precipitation&models=era5&timezone=GMT",
+    "fetched_utc": "2026-09-26T01:30:06Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 1056062,
+    "published": true
+  },
+  "openmeteo_era5_hourly_pech_david.json": {
+    "file": "data/raw/openmeteo_era5_hourly_pech_david.json",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=43.60930&longitude=1.41950&start_date=2015-12-25&end_date=2025-12-31&hourly=precipitation&models=era5&timezone=GMT",
+    "fetched_utc": "2026-09-26T01:30:13Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 2108417,
+    "published": true
+  },
+  "openmeteo_nowcast_CO.json": {
+    "file": "data/raw/openmeteo_nowcast_CO.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=40.19787%2C40.22483%2C40.19307%2C40.25289%2C40.21860%2C40.21942%2C40.22243%2C40.19133%2C40.27702%2C40.19776%2C40.22752%2C40.20386%2C40.11106%2C40.16719%2C40.17943%2C40.22461%2C40.17422%2C40.25621%2C40.24812%2C40.21085&longitude=-8.42865%2C-8.44135%2C-8.41945%2C-8.43659%2C-8.42733%2C-8.43772%2C-8.40165%2C-8.46002%2C-8.42720%2C-8.41773%2C-8.43757%2C-8.45302%2C-8.49052%2C-8.47817%2C-8.42117%2C-8.44304%2C-8.39363%2C-8.45312%2C-8.41159%2C-8.47667&hourly=precipitation&models=ecmwf_ifs025&past_days=2&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-10-03T22:31:18Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 1246093,
+    "published": true
+  },
+  "openmeteo_archive_warleigh_daily.json": {
+    "file": "data/raw/openmeteo_archive_warleigh_daily.json",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.37705&longitude=-2.300635&start_date=2020-12-20&end_date=2025-12-31&daily=precipitation_sum&timezone=Europe%2FLondon",
+    "fetched_utc": "2026-09-26T01:30:42Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 33500,
+    "published": true
+  },
+  "openmeteo_nowcast_BE.json": {
+    "file": "data/raw/openmeteo_nowcast_BE.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=41.13231%2C41.12679%2C41.13348%2C41.12414%2C41.10429%2C41.14775%2C41.14905%2C41.15405%2C41.11089%2C41.14607%2C41.16124%2C41.13628%2C41.11727%2C41.06014%2C41.06921%2C41.06923%2C41.13221%2C41.15126%2C41.18579%2C41.21382&longitude=14.80039%2C14.80333%2C14.78614%2C14.74864%2C14.74295%2C14.78437%2C14.81407%2C14.83450%2C14.83250%2C14.76353%2C14.75972%2C14.73193%2C14.73683%2C14.70843%2C14.70959%2C14.70876%2C14.71270%2C14.70936%2C14.71900%2C14.68999&hourly=precipitation&models=ecmwf_ifs025&past_days=2&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-10-03T22:28:53Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 1246186,
+    "published": true
+  },
+  "openmeteo_nowcast_GH.json": {
+    "file": "data/raw/openmeteo_nowcast_GH.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=50.85943%2C50.87579%2C50.87971%2C50.87366%2C50.88344%2C50.88527%2C50.88437%2C50.88541%2C50.97958%2C50.99821%2C50.98975%2C50.99491%2C51.02678%2C51.05458%2C50.94744%2C50.87507%2C50.89162%2C50.87539%2C51.02843%2C51.09390%2C50.87604%2C50.86216&longitude=3.79794%2C3.75151%2C3.73771%2C3.73125%2C3.71431%2C3.69282%2C3.68791%2C3.68606%2C3.72241%2C3.73925%2C3.80615%2C3.80568%2C3.77389%2C3.68126%2C3.81680%2C3.80222%2C3.81558%2C3.74917%2C3.78600%2C3.71687%2C3.75174%2C3.76577&hourly=precipitation&models=ecmwf_ifs025&past_days=2&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-10-03T22:33:55Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 1370681,
+    "published": true
+  },
+  "openmeteo_nowcast_OS.json": {
+    "file": "data/raw/openmeteo_nowcast_OS.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=59.90780%2C59.95610%2C59.95140%2C59.94750%2C59.93080%2C59.93080%2C59.86280%2C59.85110%2C59.84330%2C59.94250%2C59.94140%2C59.92970%2C59.93560%2C59.94500%2C59.93920%2C59.92060%2C59.90440%2C59.92190%2C59.95250%2C59.94320&longitude=10.81280%2C10.71530%2C10.68060%2C10.71110%2C10.67690%2C10.67780%2C10.84580%2C10.81640%2C10.78470%2C10.71810%2C10.70970%2C10.65940%2C10.67360%2C10.65030%2C10.82140%2C10.80060%2C10.79440%2C10.83690%2C10.90170%2C10.67360&hourly=precipitation&models=ecmwf_ifs025&past_days=2&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-10-03T22:36:37Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 1246105,
+    "published": true
+  },
+  "openmeteo_nowcast_TO.json": {
+    "file": "data/raw/openmeteo_nowcast_TO.json",
+    "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=43.59278%2C43.59604%2C43.55267%2C43.52756%2C43.53219%2C43.56780%2C43.56755%2C43.57873%2C43.58553%2C43.52152%2C43.57130%2C43.53220%2C43.54003%2C43.53530%2C43.53855%2C43.57860%2C43.57882%2C43.58253%2C43.58280%2C43.56499%2C43.52992%2C43.64862%2C43.57895%2C43.59608&longitude=1.34767%2C1.36671%2C1.49147%2C1.47439%2C1.46332%2C1.50937%2C1.51974%2C1.53609%2C1.52861%2C1.34273%2C1.38535%2C1.32265%2C1.34077%2C1.37785%2C1.42074%2C1.35861%2C1.35262%2C1.35047%2C1.34930%2C1.49464%2C1.32597%2C1.51501%2C1.35929%2C1.36657&hourly=precipitation&models=ecmwf_ifs025&past_days=2&forecast_days=7&timezone=GMT",
+    "fetched_utc": "2026-10-03T22:39:24Z",
+    "licence": "CC BY 4.0 (Open-Meteo.com)",
+    "bytes": 1495306,
+    "published": true
+  }
+}
