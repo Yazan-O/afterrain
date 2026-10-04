@@ -1257,3 +1257,50 @@ body[data-story='city'] .city .voice {
     font-size: 14px;
   }
 }
+
+/* the real Warleigh Weir under the opening line */
+.story-photo {
+  position: fixed;
+  right: 24px;
+  bottom: 72px;
+  width: min(30vw, 420px);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+.story-photo[data-on='true'] {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.story-photo img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+.story-photo figcaption {
+  margin-top: 6px;
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: right;
+}
+.story-photo figcaption a {
+  color: inherit;
+}
+@media (max-width: 640px) {
+  .story-photo {
+    width: 46vw;
+    right: 12px;
+    bottom: 150px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-photo {
+    transition: none;
+  }
+}

@@ -85,6 +85,7 @@ export function createStory(host: StoryHost): Scene & { advance(): void; route(p
   let city: { layer: HTMLDivElement; scene: Scene & { route?(p: readonly string[]): void } } | null = null;
   let title!: HTMLParagraphElement;
   let skip!: HTMLButtonElement;
+  let photo: HTMLElement | null = null;
   const mounted = new Map<number, Mounted>();
   const offs: (() => void)[] = [];
   let lastSec = 0;
@@ -431,6 +432,7 @@ export function createStory(host: StoryHost): Scene & { advance(): void; route(p
     document.body.dataset['story'] = id;
     document.body.dataset['storyBeat'] = m.beat;
     root.dataset['beat'] = m.beat;
+    if (photo) photo.dataset['on'] = String(m.beat === 'weir');
     // the link follows the beat (no history entry): a reload resumes at the beat on screen
     const want = m.beat === 'title' ? '#/story' : `#/story/${m.beat}`;
     // only a hash the story itself set: a link the viewer just followed waits for its hashchange (route())
@@ -514,7 +516,17 @@ export function createStory(host: StoryHost): Scene & { advance(): void; route(p
       skip.setAttribute('aria-label', 'Skip ahead (space). Escape leaves the story.');
       skip.innerHTML = '<span class="w">skip</span><span class="g" aria-hidden="true">&rarr;</span>';
       skip.addEventListener('click', () => advance());
+      // the real place under the opening line: Warleigh Weir (data/LICENSE-DATA.md, Photographs); left out under the
+      // film clock (?clock=manual), whose frames must not depend on a photo's load and fade
+      photo = new URLSearchParams(location.search).get('clock') === 'manual' ? null : document.createElement('figure');
+      if (photo) {
+        photo.className = 'story-photo';
+        photo.innerHTML =
+          `<img src="${import.meta.env.BASE_URL}photos/warleigh-weir.jpg" alt="Warleigh Weir on the River Avon near Bath: water pouring over the curved weir between green trees" />` +
+          '<figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Warleigh_Weir,_from_north.jpg" target="_blank" rel="noopener">Rwendland</a>, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA</a></figcaption>';
+      }
       root.append(title, skip);
+      if (photo) root.append(photo);
       document.body.dataset['story'] = 'title';
       window.addEventListener('keydown', onKey, { capture: true });
       offs.push(() => window.removeEventListener('keydown', onKey, { capture: true }));
