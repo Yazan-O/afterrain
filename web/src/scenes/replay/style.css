@@ -1,0 +1,120 @@
+/* W3 Replay the storm. Colours come from the shell's theme tokens (src/styles.css): --bg, --ink, --dim and the
+   --t-* text colours, which are checked for WCAG AA against each theme's ground. Words and figures are set in Archivo;
+   JetBrains Mono only for small labels. */
+.rp {
+  --plume: #d08a4c;
+  --sans: 'Archivo', 'Helvetica Neue', Helvetica, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  position: absolute; inset: 0; overflow: hidden; background: var(--bg); color: var(--ink);
+  -webkit-font-smoothing: antialiased; user-select: none;
+}
+.rp[data-theme='day'] { --plume: #8a4f1c; }
+.rp-gl, .rp-cv, .rp-veil, .rp-layer { position: absolute; inset: 0; width: 100%; height: 100%; }
+.rp-layer { pointer-events: none; }
+.rp-cv { cursor: pointer; }
+.rp-veil { background: var(--bg); opacity: 0; pointer-events: none; }
+.rp-ui { position: absolute; inset: 0; pointer-events: none; }
+.rp-ui > * { pointer-events: none; }
+.rp-ctrls { pointer-events: auto; }
+
+.rp-voice {
+  position: absolute; left: clamp(96px, 8.5vw, 160px); top: 92px; margin: 0; max-width: min(780px, 62vw);
+  font: 500 clamp(26px, 2.51vw, 38px)/1.06 var(--sans); letter-spacing: -.012em; text-wrap: balance;
+  text-shadow: 0 0 10px var(--bg), 0 0 24px var(--bg), 0 0 40px var(--bg);
+}
+.rp-place { position: absolute; left: 30px; bottom: 26px; display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 14px; max-width: calc(100% - 200px); }
+.rp-key { flex-basis: 100%; margin: 0 0 10px; font: 500 16px/1.2 var(--sans); color: var(--dim); }
+.rp-river { font: 500 26px/1 var(--sans); letter-spacing: -.012em; }
+/* folded into the timetable, its axes and times fill the word budget: the key stays, the dated name waits */
+.rp:not([data-fold='map']) .rp-river { display: none; }
+.rp-clock { font: 500 16px/1 var(--sans); color: var(--dim); white-space: nowrap; letter-spacing: .01em; }
+
+/* the shell's credit mark sits at the bottom right; the two controls sit beside it, as words that say what
+   they do, each with a hit area of at least 44 by 44 px */
+.rp-ctrls { position: absolute; right: 66px; bottom: 14px; display: flex; gap: 4px; }
+.rp-btn {
+  all: unset; box-sizing: border-box; min-width: 44px; height: 44px; padding: 0 12px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; white-space: nowrap;
+  font: 500 19px/1 var(--sans); letter-spacing: -.005em; color: var(--ink);
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .22em;
+  text-decoration-color: color-mix(in srgb, var(--ink) 36%, transparent); transition: text-decoration-color .3s;
+  text-shadow: 0 0 6px var(--bg), 0 0 14px var(--bg);
+}
+.rp-btn:hover { text-decoration-color: var(--ink); }
+.rp-btn:focus-visible { outline: 1px solid var(--ink); outline-offset: -2px; }
+.rp-credits { position: absolute; right: 30px; max-width: min(680px, calc(100% - 60px)); text-align: right; font: 400 11px/1.5 var(--mono); color: var(--dim); text-shadow: 0 0 4px var(--bg); }
+
+.rp-weir, .rp-dep, .rp-arr, .rp-unit, .rp-tick { position: absolute; left: 0; top: 0; white-space: nowrap; will-change: transform; }
+.rp-weir { font: 500 17px/1 var(--sans); color: var(--ink); text-shadow: 0 0 6px var(--bg), 0 0 14px var(--bg); }
+.rp-weir.rp-left, .rp-unit.rp-left { translate: -100% 0; }
+
+.rp-dep { font: 500 12px/1 var(--sans); color: var(--t-higher); text-shadow: 0 0 4px var(--bg), 0 0 10px var(--bg); }
+.rp-dep-hero { display: grid; grid-template-columns: auto auto; column-gap: 9px; row-gap: 5px; align-items: baseline; color: var(--ink); }
+.rp-dep-hero.rp-left { translate: -100% 0; }
+.rp-dep-hero.rp-above { translate: 0 -100%; }
+.rp-dep-hero .rp-dep-t { font-size: 19px; color: var(--t-higher); }
+.rp-dep-n { font: 500 21px/1 var(--sans); letter-spacing: -.01em; }
+.rp-dep-km { grid-column: 2; font: 500 12px/1 var(--sans); color: var(--dim); text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg), 0 0 14px var(--bg); }
+
+.rp-arr { font: 500 21px/1 var(--sans); letter-spacing: 0; color: var(--t-usual); text-shadow: 0 0 6px var(--bg), 0 0 16px var(--bg); transform-origin: 0 0; }
+.rp-arr.rp-over { color: var(--t-higher); }
+.rp-arr.rp-arr-hero { font-size: 64px; letter-spacing: -.01em; color: var(--t-high); }
+.rp-unit { font: 500 13px/1 var(--sans); color: var(--dim); text-shadow: 0 0 6px var(--bg); }
+
+.rp-tick { font: 500 12px/1 var(--sans); color: var(--dim); translate: -100% 0; text-shadow: 0 0 4px var(--bg); }
+
+/* words the scene teaches once, beside their first instance, then lets fade */
+.rp-teach, .rp-axis { position: absolute; left: 0; top: 0; white-space: nowrap; will-change: transform; text-shadow: 0 0 6px var(--bg), 0 0 14px var(--bg); }
+.rp-teach { font: 500 17px/1 var(--sans); }
+.rp-teach-spill { color: var(--t-higher); }
+.rp-teach-water { color: var(--t-higher); translate: 0 -100%; }
+.rp-teach-water.rp-left { translate: -100% -100%; }
+.rp-teach-sample { color: var(--ink); translate: 0 -100%; }
+.rp-teach-sample.rp-left { translate: -100% -100%; }
+.rp-axis { font: 500 15px/1 var(--sans); color: var(--dim); }
+.rp-axis-time { translate: -100% 0; }
+.rp-axis-time.rp-axis-in { translate: 0 0; }
+.rp-axis-down { translate: -100% 0; }
+.rp-arrow { font-style: normal; }
+.rp-tick.rp-tick-in { translate: 0 0; }
+.rp-tick.rp-tick-day { color: var(--ink); }
+
+/* the proof, and under it the empty line (.rp-proof) where the shell sets "Now see Coimbra": the pair sits
+   centred a little above the middle of the screen */
+.rp-proof-text { position: absolute; left: clamp(96px, 8.5vw, 160px); top: calc(50% - 38px); translate: 0 -50%; margin: 0; text-shadow: 0 0 12px var(--bg), 0 0 28px var(--bg); }
+.rp-proof-text p { margin: 0; }
+.rp-proof { height: 0; margin-top: 26px; }
+.rp-pl { font: 500 clamp(20px, 1.98vw, 30px)/1.1 var(--sans); letter-spacing: -.01em; color: var(--ink); }
+.rp-pn { font: 500 clamp(64px, 7.6vw, 114px)/.95 var(--sans); letter-spacing: -.01em; color: var(--ink); margin: 4px 0 30px !important; white-space: nowrap; }
+.rp-pn.rp-hi { color: var(--t-high); }
+/* a count read as "43 of 44": "of" small, italic and quiet, the denominator a step smaller */
+.rp-of { font-style: normal; font-size: .34em; color: var(--dim); vertical-align: .32em; }
+.rp-den { font-size: .62em; color: var(--dim); }
+.rp-pnote { font: 500 16px/1.4 var(--sans); color: var(--dim); max-width: 40em; }
+.rp-nw { white-space: nowrap; }
+
+@media (max-width: 699px) {
+  .rp-voice { left: 20px; right: 20px; top: 70px; max-width: none; font-size: 23px; }
+  .rp-place { left: 20px; bottom: 22px; flex-direction: column; align-items: flex-start; gap: 6px; max-width: calc(100% - 40px); }
+  .rp-key { font-size: 13px; margin: 0 0 4px; }
+  .rp-river { font-size: 21px; }
+  .rp-clock { font-size: 14px; }
+  .rp-ctrls { right: 50px; bottom: 4px; gap: 0; }
+  .rp-btn { font-size: 18px; padding: 0 10px; }
+  .rp-teach { font-size: 14px; }
+  .rp-axis { font-size: 13px; }
+  .rp-credits { right: 18px; max-width: calc(100% - 36px); }
+  .rp-weir { font-size: 14px; }
+  .rp-arr { font-size: 18px; }
+  .rp-arr.rp-arr-hero { font-size: 41px; }
+  .rp-dep-n { font-size: 18px; }
+  .rp-tick { font-size: 11px; }
+  .rp-proof-text { left: 20px; right: 20px; top: calc(50% - 28px); }
+  .rp-proof { margin-top: 18px; }
+  .rp-pl { font-size: 21px; }
+  .rp-pn { font-size: 55px; margin: 2px 0 22px !important; }
+  .rp-pnote { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rp-btn { transition: none; }
+}

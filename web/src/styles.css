@@ -1,0 +1,1259 @@
+/* Sayr. The visual style: Archivo (500 and 700, no italics) and JetBrains Mono for small chart labels on a night terrain map; paper white by day.
+   Text colours are checked for WCAG AA against each theme's ground (tests/e2e/app.spec.ts). */
+:root {
+  --bg: #04090a;
+  --ink: #e7eeea;
+  --dim: #8d9c97;
+  --usual: #d6ecf7;
+  --higher: #ffb03a;
+  --high: #ff581e;
+  --fog: #98a29f;
+  --t-usual: #d6ecf7;
+  --t-higher: #ffb03a;
+  --t-high: #ff7a4a;
+  --t-fog: #b4bebb;
+  --ok: #7fcf9f;
+  --sans: 'Archivo', 'Helvetica Neue', Helvetica, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --ease: cubic-bezier(0.22, 0.8, 0.2, 1);
+  color-scheme: dark;
+}
+:root[data-theme='day'] {
+  --bg: #f3f1ea;
+  --ink: #1b2325;
+  --dim: #545d5b;
+  --usual: #1f5e8c;
+  --higher: #9c5e00;
+  --high: #b4300c;
+  --fog: #686f6d;
+  --t-usual: #1f5e8c;
+  --t-higher: #815300;
+  --t-high: #b3330c;
+  --t-fog: #5d6664;
+  --ok: #2f7a4d;
+  color-scheme: light;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 4px;
+}
+[hidden] {
+  display: none !important;
+}
+.sr {
+  position: fixed !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ----- chrome ----- */
+#scene {
+  position: fixed;
+  inset: 0;
+}
+/* on the strip the way back takes the wordmark's corner */
+body[data-state='opening'] .mark,
+body[data-state='compare'] .mark,
+body[data-state='strip'] .mark,
+body[data-state='closing'] .mark {
+  visibility: hidden;
+}
+.mark {
+  position: fixed;
+  left: 30px;
+  top: 20px;
+  font: 500 24px/1 var(--sans);
+  letter-spacing: -0.01em;
+  z-index: 5;
+}
+.place {
+  position: fixed;
+  left: 30px;
+  bottom: 26px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  z-index: 5;
+}
+body[data-state='opening'] .place,
+body[data-state='compare'] .place,
+body[data-state='strip'] .place,
+body[data-state='closing'] .place {
+  visibility: hidden;
+}
+.city-btn {
+  font: 500 33px/1 var(--sans);
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: flex-end;
+}
+/* one numeral voice: Archivo figures for every number people read */
+.hour {
+  font: 500 16px/1 var(--sans);
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+.hour.dated {
+  font-style: normal;
+}
+.cities {
+  position: absolute;
+  left: 0;
+  bottom: 56px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cities a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font: 500 23px/1.1 var(--sans);
+  color: var(--ink);
+  text-decoration: none;
+  text-shadow: 0 0 6px var(--bg), 0 0 14px var(--bg);
+}
+.cities a:hover {
+  color: var(--t-usual);
+}
+/* day and night: a 20 px half-lit disc inside a 44 px target */
+.mode {
+  position: fixed;
+  right: 18px;
+  top: 14px;
+  width: 44px;
+  height: 44px;
+  z-index: 5;
+}
+.mode::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--dim);
+  box-sizing: border-box;
+}
+.mode i {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px 0 0 10px;
+  background: var(--dim);
+}
+:root[data-theme='day'] .mode {
+  transform: rotate(180deg);
+}
+.credit {
+  position: fixed;
+  right: 16px;
+  bottom: 14px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font: 500 12px/1 var(--sans);
+  color: var(--dim);
+  z-index: 5;
+}
+.credits {
+  position: fixed;
+  right: 30px;
+  bottom: 52px;
+  max-width: min(560px, calc(100vw - 60px));
+  text-align: right;
+  font: 500 13px/1.45 var(--sans);
+  color: var(--dim);
+  z-index: 5;
+  text-shadow: 0 0 4px var(--bg);
+}
+
+/* ----- the city scene ----- */
+.city .world {
+  position: fixed;
+  inset: 0;
+  transform-origin: 50% 42%;
+}
+.city .map {
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0;
+}
+.city canvas.rest {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.maplibregl-ctrl-attrib,
+.maplibregl-ctrl-logo {
+  display: none !important;
+}
+.city .veil {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0;
+  pointer-events: none;
+}
+.city canvas.stripc {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  /* a finger drag on the strip scrubs the hours; the page never pans or zooms under it */
+  touch-action: none;
+  outline: none;
+}
+.city .ui {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+.city .ui > * {
+  pointer-events: auto;
+}
+.city .voice {
+  position: fixed;
+  left: var(--vl, 96px);
+  top: var(--vt, 84px);
+  width: var(--vw, 880px);
+  font: 500 var(--vs, 38px) / 1.06 var(--sans);
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  pointer-events: none;
+  text-wrap: balance;
+}
+.city .voice:not(.on) {
+  visibility: hidden;
+}
+.city .voice:focus {
+  outline: none;
+}
+/* the quest's controls by stage: the ask (its window, "Try a test reading"), the kit (the test's date, time and
+   zone, the two readings, the unit and the flag said once), the reveal (the reading entered), the result ("Hold
+   before", "Reset test"), and the story's last screen ("Sample <site>", its window) */
+.city .questui[data-stage] > * {
+  display: none;
+}
+.city .questui[data-stage='ask'] :is(.win, .add),
+.city .questui[data-stage='kit'] :is(.when, [data-obs], .unit),
+.city .questui[data-stage='testing'] .tested,
+.city .questui[data-stage='result'] :is(.tested, .hold, .reset),
+.city .questui[data-stage='next'] :is(.win, .next),
+.city .questui[data-stage='cmp'] :is(.cmpk, [data-obs]) {
+  display: inline-block;
+}
+/* the comparison's control: "Test reading" and its assumed date, then the two readings; the one taken is marked */
+.city .questui .cmpk {
+  order: -1;
+  flex-basis: 100%;
+  margin-bottom: 2px;
+  font-size: 16px;
+  color: var(--dim);
+}
+/* the story's last screen: the next site first (the one control), its window under it */
+.city .questui[data-stage='next'] .next {
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg), 0 0 14px var(--bg);
+  order: -1;
+  flex-basis: 100%;
+  text-align: left;
+}
+.city .questui .cmpk [data-time] {
+  white-space: nowrap;
+}
+.city[data-tested] .questui[data-stage='cmp'] button[aria-pressed='false'] {
+  color: var(--dim);
+}
+.city .questui[data-stage='cmp'] button[aria-pressed='true'] {
+  text-decoration-thickness: 3px;
+}
+/* the opening comparison's words: each stroke's name and its readout at its end, the scale's fixed end, the fog's
+   words, the upstream reference's name, the definition; the ground under the map band is the page's own */
+.city.cmp .veil {
+  background: linear-gradient(to bottom, transparent 0, transparent 40%, var(--bg) 47%);
+}
+.city .cmp p {
+  position: fixed;
+  white-space: nowrap;
+  pointer-events: none;
+  font: 500 17px/1 var(--sans);
+  color: var(--dim);
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg);
+}
+.city .cmp .cl {
+  font-size: 18px;
+  color: var(--ink);
+}
+.city .cmp .cv {
+  font: 500 24px/1 var(--sans);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  pointer-events: auto;
+}
+.city .cmp .cf {
+  font-size: 16px;
+  color: var(--t-fog);
+}
+.city .cmp .cs {
+  font: 500 13px/1 var(--sans);
+  font-variant-numeric: tabular-nums;
+}
+.city .cmp .cr {
+  font-size: 16px;
+  line-height: 1.05;
+}
+.city .cmp .cn {
+  font-size: 16px;
+}
+.city .cmp .cr span {
+  display: block;
+}
+.city .cmp .cr .up {
+  font-size: 12px;
+}
+.city .cmp .cu {
+  font-size: 15px;
+}
+.city .questui :is(.win, .when, .tested) {
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg), 0 0 14px var(--bg);
+  flex-basis: 100%;
+  margin-bottom: 2px;
+  font-size: 16px;
+  color: var(--dim);
+}
+.city.holding .questui .hold {
+  text-decoration-thickness: 2px;
+}
+.city .questui {
+  position: fixed;
+  left: var(--vl, 96px);
+  max-width: var(--vw, 880px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 24px;
+  font: 500 19px/1 var(--sans);
+}
+.city .questui .kit {
+  color: var(--dim);
+}
+.city .questui button {
+  display: inline-block;
+  padding: 9px 0;
+  min-height: 44px;
+  font: 500 20px/26px var(--sans);
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+.city .questui button:hover {
+  text-decoration-thickness: 2px;
+}
+.city .questui[data-stage='kit'] .unit {
+  display: block;
+  flex-basis: 100%;
+  margin-top: 4px;
+  font-size: 16px;
+  color: var(--dim);
+}
+/* the way back from the strip: the stream's name with an arrow, where the wordmark sits at rest */
+.city .back {
+  position: fixed;
+  left: 22px;
+  top: 12px;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 8px;
+  font: 500 20px/1 var(--sans);
+  color: var(--ink);
+  white-space: nowrap;
+  z-index: 2;
+}
+.city .back {
+  max-width: calc(100vw - 96px);
+}
+.city .back .nm {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 0.12em;
+}
+.city .back .ar {
+  font-style: normal;
+  font-size: 21px;
+}
+/* a time or a window never breaks across lines */
+.city .voice [data-time] {
+  white-space: nowrap;
+}
+.city .back:hover .nm {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+/* during the quest the way back is its arrow alone: the quest's words fit the budget */
+.city.questing .back .nm {
+  display: none;
+}
+.city .tick,
+.city .days span {
+  position: fixed;
+  font: 500 13px/1 var(--sans);
+  color: var(--dim);
+  pointer-events: none;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.city .tick.scrub {
+  color: var(--ink);
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg);
+}
+.city:not(.strip) .tick,
+.city:not(.strip) .days,
+.city .tick.off {
+  visibility: hidden;
+}
+/* the strip's own words: the axes, the stations, the estimate and the fog at the lamp, the rain ticks' word */
+.city .tick.axis,
+.city .tick.rainl {
+  font-style: normal;
+}
+.city .tick.sta {
+  font-style: normal;
+  font-size: 14px;
+  color: var(--ink);
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg);
+}
+.city .tick.est {
+  font: 500 17px/1 var(--sans);
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg), 0 0 14px var(--bg);
+}
+.city .tick.fogl {
+  font: 500 14px/1 var(--sans);
+  color: var(--t-fog);
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg), 0 0 14px var(--bg);
+}
+.city .tick.rainl {
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg);
+}
+/* the curve's words: what its scale measures, its fixed ends, the result's mark, and "Hours" (a control) */
+.city .tick.axisp,
+.city .tick.resl {
+  font-style: normal;
+}
+.city .tick.axisp {
+  font-size: 14px;
+}
+/* the sample's marks under their ticks (when it is collected, when its result is ready), and each curve's name
+   beside its own curve: the test's in ink, the one from before as dim as its dashed curve */
+.city .tick.resl,
+.city .tick.cname {
+  color: var(--ink);
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg);
+}
+.city .tick.cname {
+  font: 500 14px/1 var(--sans);
+}
+.city .tick.cname.prior {
+  color: var(--dim);
+}
+/* the value's connector, only when the value sits farther than 40 px from its point */
+.city .tick.lead {
+  height: 1px;
+  background: var(--dim);
+  transform-origin: 0 50%;
+}
+.city .tick.hoursb {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 0 0 8px;
+  font: 500 16px/44px var(--sans);
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.city .tick.hoursb[aria-pressed='true'] {
+  text-decoration-thickness: 3px;
+}
+/* on the curve the reading itself is the result's line: the reading under it gives way */
+.city:not(.hours) .questui[data-stage='result'] .tested {
+  display: none;
+}
+/* the curve's selected value: the readout, upright and in ink (the hours' estimate stays a quiet label) */
+.city:not(.hours) .tick.est {
+  font: 500 21px/1 var(--sans);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+/* the site's name beside its lamp while the story's opening asks for its sample */
+.city .sitename {
+  position: fixed;
+  font: 500 18px/1 var(--sans);
+  color: var(--dim);
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow: 0 0 3px var(--bg), 0 0 9px var(--bg);
+}
+/* the story's last screen (the next site and its window) takes the place of the hour, the links to the other
+   scenes and the city's name (eight words); a dated corner ("forecast 2 Oct") stays: an old forecast is never shown
+   as now */
+body[data-cue='next']:not([data-dated]) .place,
+body[data-cue='next'] .elsewhere {
+  visibility: hidden;
+}
+body[data-cue='next'][data-dated] .city-btn {
+  display: none;
+}
+.city .nodata {
+  position: fixed;
+  left: max(30px, 8.4vw);
+  top: 40vh;
+  font: 500 clamp(21px, 2.58vw, 33px) / 1.1 var(--sans);
+  color: var(--ink);
+}
+.city .bank {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+.city .figs {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+.city .fig {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+}
+.city .fig svg {
+  display: block;
+  overflow: visible;
+  fill: currentColor;
+}
+.city .questbtn {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.city .teach span {
+  position: fixed;
+  font: 500 18px/1 var(--sans);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 0 0 3px var(--bg), 0 0 8px var(--bg), 0 0 14px var(--bg);
+}
+
+/* ----- layers: every route mounts in its own; the old one fades once the new one is ready ----- */
+.scene-layer,
+.story,
+.story-layer {
+  position: fixed;
+  inset: 0;
+}
+.scene-layer.leaving {
+  pointer-events: none;
+}
+/* a scene on its way out keeps its pictures, not its words */
+.scene-layer.leaving * {
+  visibility: hidden !important;
+}
+.scene-layer.leaving canvas {
+  visibility: visible !important;
+}
+
+/* ----- the tagline: the first screen, and whatever a first visit waits on ----- */
+.tagline,
+.story-title {
+  position: fixed;
+  left: max(30px, 8.4vw);
+  top: 36vh;
+  width: min(1040px, calc(100vw - 60px));
+  font: 500 clamp(30px, 3.88vw, 56px) / 1.04 var(--sans);
+  letter-spacing: -0.016em;
+  color: var(--ink);
+  pointer-events: none;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+}
+.tagline span,
+.story-title span {
+  display: block;
+}
+.tagline span + span,
+.story-title span + span {
+  color: var(--dim);
+}
+
+/* ----- story mode ----- */
+.story-layer {
+  z-index: 0;
+}
+.story .rp-ctrls {
+  visibility: hidden !important;
+}
+.story-skip {
+  position: fixed;
+  right: 58px;
+  bottom: 16px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font: 500 21px/1 var(--sans);
+  color: var(--dim);
+  z-index: 5;
+}
+.story-skip .w {
+  font: 500 17px/1 var(--sans);
+  opacity: 0;
+}
+.story-skip:hover,
+.story-skip:focus-visible {
+  color: var(--ink);
+}
+.story-skip:hover .w,
+.story-skip:focus-visible .w {
+  opacity: 1;
+}
+
+/* ----- after the replay's proof: the way on, beneath the proof (button.onward: body.onward marks the moment) ----- */
+button.onward {
+  position: fixed;
+  font: 500 clamp(26px, 2.81vw, 41px) / 1.1 var(--sans);
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  padding: 6px 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: var(--dim);
+  z-index: 5;
+}
+button.onward:hover {
+  text-decoration-color: var(--ink);
+}
+
+/* ----- free exploration: the other scenes, near the city's name ----- */
+.elsewhere {
+  position: fixed;
+  left: 30px;
+  bottom: 78px;
+  display: flex;
+  gap: 22px;
+  z-index: 5;
+}
+.elsewhere a {
+  display: block;
+  padding: 12px 0;
+  font: 500 18px/20px var(--sans);
+  color: var(--dim);
+  text-decoration: none;
+}
+.elsewhere a:hover {
+  color: var(--ink);
+}
+.elsewhere.menu,
+body[data-state='opening'] .elsewhere,
+body[data-state='compare'] .elsewhere,
+body[data-state='strip'] .elsewhere,
+body[data-state='closing'] .elsewhere {
+  visibility: hidden;
+}
+/* while the city's "tap a stream" cue shows, it takes the hour's place in the word budget; a dated corner ("forecast
+   26 Sep") is never covered: the links to the other scenes give way instead */
+body[data-cue='tap']:not([data-dated]) .hour,
+body[data-cue='tap'][data-dated] .elsewhere {
+  visibility: hidden;
+}
+.city .tapcue {
+  position: fixed;
+  font: 500 19px/1 var(--sans);
+  color: var(--ink);
+  white-space: nowrap;
+  pointer-events: none;
+  visibility: hidden;
+  text-shadow: 0 0 3px var(--bg), 0 0 9px var(--bg), 0 0 16px var(--bg);
+}
+
+/* ----- the FHIR x-ray: the card turned over ----- */
+.xr-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6;
+}
+.xr-src {
+  visibility: hidden !important;
+}
+.xr-ghost {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+  pointer-events: none;
+  overflow: visible;
+}
+.xr-back {
+  position: fixed;
+  width: max-content;
+  pointer-events: auto;
+  color: var(--ink);
+  backface-visibility: hidden;
+  outline: none;
+  user-select: text;
+}
+.xr-note {
+  font: 500 18px/1.2 var(--sans);
+  color: var(--dim);
+  margin-bottom: 16px;
+}
+/* what the record is ("Test estimate at Eiras"), and the published forecast peak as a separate source */
+.xr-head {
+  font: 500 20px/1.15 var(--sans);
+  margin-bottom: 14px;
+}
+.xr-link {
+  display: inline-block;
+  margin-top: 18px;
+  min-height: 44px;
+  line-height: 44px;
+  font: 500 17px/44px var(--sans);
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+/* a phone card made on screen: what was observed, the estimate with its unit, when; the identifiers fold away */
+.xr-lead {
+  font: 500 18px/1.25 var(--sans);
+  color: var(--ink);
+}
+.xr-lead.xr-est {
+  font-style: normal;
+  font-size: 21px;
+}
+.xr-more {
+  margin-top: 10px;
+}
+.xr-more summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font: 500 15px/1 var(--sans);
+  color: var(--dim);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.xr-code {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 28px;
+  font: 400 13px/1.8 var(--mono);
+}
+.xr-res,
+.xr-l {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+.xr-res + .xr-res {
+  margin-top: 20px;
+}
+.xr-k {
+  color: var(--dim);
+  white-space: nowrap;
+}
+.xr-v {
+  overflow-wrap: break-word;
+}
+.xr-pre {
+  color: var(--dim);
+}
+.xr-hot .xr-v {
+  font-weight: 500;
+}
+.xr-mark {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  font: 500 16px/1 var(--sans);
+  color: var(--dim);
+}
+.xr-mark .xr-n {
+  font-style: normal;
+  color: var(--ink);
+}
+.xr-mark i {
+  font-style: inherit;
+}
+.xr-mark.xr-bad svg {
+  stroke: var(--t-high);
+}
+.xr-mark svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: var(--ok);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.xr-ear {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  z-index: 6;
+}
+.xr-ear svg {
+  width: 15px;
+  height: 15px;
+  overflow: visible;
+}
+.xr-ear path:first-child {
+  fill: var(--ink);
+  fill-opacity: 0.34;
+}
+.xr-ear path:last-child {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.2;
+}
+.xr-ear:hover path:first-child {
+  fill-opacity: 0.6;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .xr-ear path:first-child {
+    transition: fill-opacity 0.2s;
+  }
+}
+
+@media (max-width: 699px) {
+  .tagline,
+  .story-title {
+    left: 18px;
+    top: 30vh;
+    width: calc(100vw - 36px);
+    font-size: 30px;
+  }
+  /* on a phone the strip reaches the bottom edge: the skip sits in the top row, beside day and night */
+  .story-skip {
+    right: 52px;
+    top: 5px;
+    bottom: auto;
+    justify-content: center;
+  }
+  .elsewhere {
+    left: 18px;
+    bottom: 60px;
+    gap: 18px;
+  }
+  .elsewhere a {
+    font-size: 16px;
+  }
+  .city .tapcue {
+    font-size: 17px;
+  }
+  .xr-code {
+    grid-template-columns: minmax(0, 1fr);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .xr-l {
+    padding-bottom: 5px;
+  }
+  .xr-k {
+    font-size: 11px;
+  }
+  .xr-note {
+    font-size: 16px;
+  }
+  .xr-mark {
+    font-size: 14px;
+  }
+  .mark {
+    left: 18px;
+    top: 16px;
+    font-size: 21px;
+  }
+  .place {
+    left: 18px;
+    bottom: 20px;
+    gap: 10px;
+  }
+  .city-btn {
+    font-size: 27px;
+  }
+  .cities {
+    gap: 0;
+  }
+  .cities a {
+    font-size: 21px;
+  }
+  .hour {
+    font-size: 14px;
+  }
+  .mode {
+    right: 6px;
+    top: 8px;
+  }
+  .credit {
+    right: 4px;
+    bottom: 4px;
+  }
+  .credits {
+    right: 18px;
+    bottom: 44px;
+  }
+  .city .back {
+    left: 8px;
+    top: 8px;
+    font-size: 18px;
+  }
+  .city .questui {
+    font-size: 16px;
+    column-gap: 18px;
+  }
+  .city .questui button {
+    font-size: 19px;
+  }
+  .city .questui[data-stage='kit'] .unit,
+  .city .questui :is(.win, .when, .tested, .cmpk) {
+    font-size: 13px;
+  }
+  .city.cmp .veil {
+    background: linear-gradient(to bottom, transparent 0, transparent 34%, var(--bg) 40%);
+  }
+  .city .cmp .cl {
+    font-size: 16px;
+  }
+  .city .cmp .cv {
+    font-size: 20px;
+  }
+  .city .cmp .cf,
+  .city .cmp .cu {
+    font-size: 13px;
+  }
+  .city .cmp .cs {
+    font-size: 11px;
+  }
+  .city .cmp .cr,
+  .city .cmp .cn {
+    font-size: 13px;
+  }
+  .city .cmp .cr .up {
+    font-size: 11px;
+  }
+  .city .tick.est {
+    font-size: 13px;
+  }
+  .city .tick.fogl,
+  .city .tick.sta {
+    font-size: 12px;
+  }
+  .city .sitename {
+    font-size: 16px;
+  }
+  .xr-head {
+    font-size: 19px;
+  }
+  .city .tick,
+  .city .days span {
+    font-size: 11px;
+  }
+  .city .tick.axisp {
+    font-size: 12px;
+    line-height: 1.15;
+  }
+  /* the flag's meaning on its own line under the caption's number and unit */
+  .city .tick.axisp .ssf {
+    display: block;
+  }
+  .city .tick.axisp .ssf .dot,
+  .city .tick.axisp .ssf[hidden] {
+    display: none;
+  }
+  .city .tick.hoursb {
+    font-size: 14px;
+  }
+  .city:not(.hours) .tick.est {
+    font-size: 18px;
+  }
+  .city .teach span {
+    font-size: 15px;
+  }
+}
+
+/* ----- the story's narration: one sentence at a time, large and plain, over every chapter ----- */
+.story-say {
+  position: fixed;
+  left: clamp(20px, 8.5vw, 160px);
+  top: clamp(84px, 13vh, 132px);
+  width: min(860px, calc(100vw - 2 * clamp(20px, 8.5vw, 160px)));
+  z-index: 4;
+  pointer-events: none;
+  color: var(--ink);
+  text-shadow: 0 0 10px var(--bg), 0 0 24px var(--bg), 0 0 44px var(--bg);
+}
+.story-say .say-main {
+  font: 700 clamp(26px, 2.9vw, 44px) / 1.12 var(--sans);
+  letter-spacing: -0.018em;
+  text-wrap: pretty;
+}
+.story-say .say-small {
+  margin-top: 14px;
+  font: 500 15px/1.3 var(--sans);
+  color: var(--dim);
+}
+/* the scenes' own words give way to the narration (their keys, places and readings stay) */
+.story [data-ch='storm'] :is(.rp-voice, .rp-proof-text, .rp-teach, .rp-axis, .rp-dep:not(.rp-dep-hero), .rp-tick) {
+  display: none !important;
+}
+.story [data-ch='dark'] :is(.dh-say) {
+  display: none !important;
+}
+body[data-story='city'] .city .voice {
+  visibility: hidden;
+}
+.story-layer[data-dim] .rp-ui {
+  display: none;
+}
+/* the close shares the top with the sampling request it hands over: the line sits low */
+.story-say[data-beat='close'] {
+  top: auto;
+  bottom: clamp(96px, 15vh, 150px);
+}
+
+/* ----- the map's key, on the map: a hairline from a real place to a few plain words ----- */
+.city .maplabels {
+  position: fixed;
+  inset: 0;
+  pointer-events: none !important;
+}
+.city .mk {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.city .mk::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  box-sizing: border-box;
+}
+.city .mk::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -0.5px;
+  width: 22px;
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.6;
+}
+.city .mk-t {
+  position: absolute;
+  left: 34px;
+  top: -0.62em;
+  width: max-content;
+  max-width: 340px;
+  font: 500 17px/1.2 var(--sans);
+  color: var(--ink);
+  text-shadow: 0 0 4px var(--bg), 0 0 10px var(--bg), 0 0 18px var(--bg);
+}
+.city .mk-l::after {
+  left: -28px;
+}
+.city .mk-l .mk-t {
+  left: auto;
+  right: 34px;
+  text-align: right;
+}
+.city .mk-site .mk-t {
+  font-size: 20px;
+}
+.city .voice .vfog {
+  display: block;
+  margin-top: 0.35em;
+  font-size: 0.6em;
+  color: var(--t-fog);
+}
+.city .keybtn {
+  position: fixed;
+  right: 64px;
+  top: 16px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  color: var(--dim);
+  z-index: 5;
+}
+.city .keybtn .g {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--dim);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: 500 13px/1 var(--sans);
+}
+.city .keybtn .w {
+  font: 500 16px/1 var(--sans);
+  opacity: 0;
+  white-space: nowrap;
+}
+.city .keybtn:hover,
+.city .keybtn:focus-visible {
+  color: var(--ink);
+}
+.city .keybtn:hover .w,
+.city .keybtn:focus-visible .w {
+  opacity: 1;
+}
+@media (max-width: 699px) {
+  .story-say {
+    top: 64px;
+  }
+  .story-say .say-main {
+    font-size: 24px;
+  }
+  .story-say .say-small {
+    font-size: 14px;
+  }
+  .city .mk-t {
+    font-size: 15px;
+  }
+  .city .keybtn {
+    right: 52px;
+    top: 8px;
+  }
+}
+
+/* ----- where the story's places are (src/app/geoView.ts): an outline map, a dot and a name ----- */
+.story .geo {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: var(--bg);
+}
+.story .geo-map,
+.story .geo-marks {
+  position: absolute;
+  inset: 0;
+}
+.story .geo-mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font: 500 17px/1 var(--sans);
+  color: var(--ink);
+  white-space: nowrap;
+  text-shadow: 0 0 6px var(--bg), 0 0 14px var(--bg);
+}
+.story .geo-mark.left {
+  flex-direction: row-reverse;
+}
+.story .geo-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+.story .geo-mark.left .geo-dot {
+  margin: 0 -3.5px 0 0;
+}
+.story .geo-here {
+  font-weight: 700;
+  font-size: 20px;
+}
+.story .geo-river {
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: var(--river-name, #8fb0bc);
+}
+:root[data-theme='day'] .story .geo-river {
+  --river-name: #3f6a80;
+}
+@media (max-width: 699px) {
+  .story .geo-mark {
+    font-size: 14px;
+    gap: 7px;
+  }
+  .story .geo-here {
+    font-size: 16px;
+  }
+  .story .geo-river {
+    font-size: 14px;
+  }
+}

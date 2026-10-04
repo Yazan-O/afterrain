@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="data:," />
+<title>Clean fixture</title>
+<style>html, body { margin: 0; } .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }</style>
+</head>
+<body>
+<h1>Sayr</h1>
+<p style="opacity:0.5">within <span data-num="warleigh.window_hours">48</span> hours</p>
+<time data-time datetime="2024-09-24T08:10Z">09:10</time>
+<div style="display:none">Hidden in display none: 1 2 3 four five six seven eight nine ten</div>
+<div style="visibility:hidden">Hidden by visibility: 11 twelve thirteen fourteen fifteen</div>
+<div style="opacity:0.5"><div style="opacity:0.15">Faded below the threshold: 16 seventeen eighteen unsafe hours</div></div>
+<span class="sr-only">Screen reader only: 19 twenty twenty-one twenty-two</span>
+<script type="module">
+import { registerCanvasText } from "/src/format/canvasText.ts";
+registerCanvasText('legend-usual', { text: "usual" });
+document.body.dataset.ready = "true";
+</script>
+</body>
+</html>

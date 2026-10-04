@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="data:," />
+<title>Strip fixture</title>
+<style>html, body { margin: 0; } .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }</style>
+</head>
+<body>
+<h1>Sayr</h1>
+<p>I'm carrying last night's storm. Keep dogs out until <time data-time>Thursday 18:00</time>.</p>
+<p><span data-num="replay.2024-09-23.max_ecoli">31,000</span> <span data-unit>E. coli per 100 ml</span></p>
+<p>Distance <span data-num="warleigh.freshford_distance_km" data-fmt="fixed:2">4.55</span></p>
+<script type="module">
+import { registerCanvasText } from "/src/format/canvasText.ts";
+registerCanvasText('freshford-km', { text: "4.55", num: "warleigh.freshford_distance_km", fmt: "fixed:2" });
+registerCanvasText('freshford-unit', { text: "km" });
+document.body.dataset.ready = "true";
+</script>
+</body>
+</html>

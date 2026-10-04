@@ -1,0 +1,192 @@
+/* The dark hours. The visual style: dark canvas, light only from data, Archivo for every word
+   and every figure, no boxes. Every opacity is set
+   per frame from the app clock, so nothing here animates. */
+.dh {
+  --dh-bg: #04090a;
+  --dh-ink: #e7eeea;
+  --dh-dim: #7f8e89;
+  --dh-flag: #ff8a4a;
+  --dh-fogword: #b9c4c0;
+  --dh-sans: 'Archivo', 'Helvetica Neue', Helvetica, sans-serif;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--dh-bg);
+  color: var(--dh-ink);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.dh[data-theme="day"] {
+  --dh-bg: #f3f1ea;
+  --dh-ink: #1b2325;
+  --dh-dim: #6b7472;
+  --dh-flag: #cf3f14;
+  --dh-fogword: #4f5957;
+}
+.dh-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.dh p {
+  margin: 0;
+}
+.dh-sayblock,
+.dh-numline {
+  position: absolute;
+  width: var(--dh-text-w, 900px);
+  pointer-events: none;
+}
+.dh-say {
+  font: 500 40px/1.06 var(--dh-sans);
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+.dh-numline {
+  font-size: 33px;
+}
+/* Numbers inside a sentence use the serif's own figures (the mono slashed zero reads as a letter there). */
+.dh-n,
+.dh-mn {
+  font: inherit;
+}
+.dh-mn {
+  margin-right: 0.16em;
+}
+.dh-mark {
+  position: absolute;
+  transform: translateX(-50%);
+  font: 500 16px/1 var(--dh-sans);
+  color: var(--dh-dim);
+  pointer-events: none;
+  white-space: nowrap;
+}
+/* what the axis counts, right-aligned under its storm end */
+.dh-axis {
+  position: absolute;
+  transform: translateX(-100%);
+  font: 500 18px/1 var(--dh-sans);
+  color: var(--dh-dim);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.dh-arrow {
+  font-style: normal;
+}
+/* what each side of the axis means: the dry side in the ink, the storm side in the fog's own grey-white */
+.dh-side {
+  position: absolute;
+  transform: translateX(-50%);
+  font: 500 19px/1 var(--dh-sans);
+  color: var(--dh-ink);
+  pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 0 0 4px var(--dh-bg), 0 0 10px var(--dh-bg);
+}
+.dh-side-storm {
+  color: var(--dh-fogword);
+}
+.dh-city {
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.dh-cname {
+  font: 500 21px/1 var(--dh-sans);
+}
+.dh-ccount {
+  font: 500 19px/1 var(--dh-sans);
+  color: var(--dh-dim);
+}
+.dh-cwhat {
+  font-style: normal;
+}
+.dh-ccount .dh-n {
+  color: var(--dh-ink);
+}
+.dh-river {
+  position: absolute;
+  font: 500 18px/1 var(--dh-sans);
+  color: var(--dh-dim);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.dh-flag {
+  position: absolute;
+  font: 500 15px/1.15 var(--dh-sans);
+  color: var(--dh-flag);
+  pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 0 0 4px var(--dh-bg), 0 0 10px var(--dh-bg);
+}
+.dh-flag-note {
+  display: block;
+  font: 500 12px/1.5 var(--dh-sans);
+  color: var(--dh-dim);
+}
+.dh-tip {
+  position: absolute;
+  pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 0 0 4px var(--dh-bg), 0 0 10px var(--dh-bg);
+}
+.dh-tip-name {
+  font: 500 15px/1 var(--dh-sans);
+}
+.dh-tip-date {
+  margin-left: 8px;
+  font: 500 13px/1 var(--dh-sans);
+  color: var(--dh-dim);
+}
+.dh-credits {
+  position: absolute;
+  right: 30px;
+  max-width: min(680px, calc(100% - 60px));
+  text-align: right;
+  font: 500 11px/1.5 var(--dh-sans);
+  color: var(--dh-dim);
+  text-shadow: 0 0 4px var(--dh-bg);
+  pointer-events: none;
+}
+
+@media (max-width: 699px) {
+  .dh-say {
+    font-size: 24px;
+    line-height: 1.08;
+  }
+  .dh-numline {
+    font-size: 21px;
+  }
+  .dh-cname {
+    font-size: 17px;
+  }
+  .dh-ccount {
+    font-size: 15px;
+  }
+  .dh-axis {
+    font-size: 13px;
+  }
+  .dh-side {
+    font-size: 14px;
+  }
+  .dh-credits {
+    right: 18px;
+    max-width: calc(100% - 36px);
+  }
+  .dh-river {
+    font-size: 14px;
+  }
+  .dh-flag {
+    font-size: 13px;
+  }
+  .dh-mark {
+    font-size: 12px;
+  }
+}

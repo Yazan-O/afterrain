@@ -1,0 +1,29 @@
+{
+  "name": "sayr-web",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "data": "node scripts/sync-data.mjs && python scripts/build_streams.py && node scripts/sync-fhir.mjs",
+    "dev": "npm run data -- --warn-drift && vite",
+    "build": "npm run data && tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "npm run build && playwright test",
+    "streams": "python scripts/build_streams.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.19.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "vitest": "5.0.2"
+  },
+  "dependencies": {
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "maplibre-gl": "5.24.0"
+  }
+}
