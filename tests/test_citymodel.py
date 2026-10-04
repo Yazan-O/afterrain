@@ -54,7 +54,7 @@ def test_parameters_and_thresholds(cm: dict) -> None:
     spec = _out("update_spec.json")["params"]
     for k, v in (("alpha", "alpha"), ("beta", "beta"), ("tau_a", "tau_a"), ("tau_b", "tau_b"),
                  ("s", "count_scale_s"), ("t_higher", "t_higher"), ("t_high", "t_high")):
-        assert spec[k] == pytest.approx(cm[v], rel=1e-12, abs=1e-15)   # last-digit float differences across platforms
+        assert spec[k] == pytest.approx(cm[v], rel=1e-9)   # the fit converges to ~1e-11 differently across platforms
 
 
 def test_gauge_vs_openmeteo(cm: dict) -> None:
