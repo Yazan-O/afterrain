@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-G14",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Merelbeke2 (Mr2)</p><p>OneAquaHealth research site G14 in Ghent.</p><p>Identifier G14 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 50.99821, 3.73925</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "G14",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Merelbeke2 (Mr2)",
+ "description": "OneAquaHealth research site G14 in Ghent.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 50.99821,
+  "longitude": 3.73925
+ },
+ "partOf": {
+  "reference": "Location/oah-city-GH"
+ }
+}

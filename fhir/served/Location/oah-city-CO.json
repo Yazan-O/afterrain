@@ -1,0 +1,36 @@
+{
+ "resourceType": "Location",
+ "id": "oah-city-CO",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Coimbra</p><p>Identifier CO (https://yazan-o.github.io/sayr/fhir/sid/oah-city)</p><p>Position 40.2033, -8.4103</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-city",
+   "value": "CO"
+  }
+ ],
+ "name": "Coimbra",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "288520005",
+     "system": "http://snomed.info/sct",
+     "display": "City environment"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 40.2033,
+  "longitude": -8.4103
+ }
+}

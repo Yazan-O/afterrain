@@ -1,0 +1,16 @@
+{
+ "resourceType": "PractitionerRole",
+ "id": "wessex-water-sampler",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Environmental water quality sampler</p><p>Organization: Organization/wessex-water</p></div>"
+ },
+ "organization": {
+  "reference": "Organization/wessex-water"
+ },
+ "code": [
+  {
+   "text": "Environmental water quality sampler"
+  }
+ ]
+}

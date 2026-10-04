@@ -1,0 +1,11 @@
+# Sayr's FHIR layer on the OneAquaHealth Implementation Guide (hl7.eu.fhir.oah).
+# FSH only: SUSHI compiles the profiles and instances; sayr_fhir packages them (package id sayr.fhir.oah).
+# The canonical is the GitHub Pages address where the static FHIR surface is published.
+canonical: https://yazan-o.github.io/sayr/fhir
+version: 0.1.0
+status: draft
+fhirVersion: 4.0.1
+dependencies:
+  hl7.eu.fhir.oah: 0.1.0-ci-build
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
+FSHOnly: true

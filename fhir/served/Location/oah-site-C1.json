@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-C1",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Exploratório</p><p>OneAquaHealth research site C1 in Coimbra.</p><p>Identifier C1 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.19787, -8.42865</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "C1",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Exploratório",
+ "description": "OneAquaHealth research site C1 in Coimbra.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 40.19787,
+  "longitude": -8.42865
+ },
+ "partOf": {
+  "reference": "Location/oah-city-CO"
+ }
+}

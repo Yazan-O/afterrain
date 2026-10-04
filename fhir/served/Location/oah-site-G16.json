@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-G16",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Melle2 (Ml2)</p><p>OneAquaHealth research site G16 in Ghent.</p><p>Identifier G16 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 50.99491, 3.80568</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "G16",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Melle2 (Ml2)",
+ "description": "OneAquaHealth research site G16 in Ghent.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 50.99491,
+  "longitude": 3.80568
+ },
+ "partOf": {
+  "reference": "Location/oah-city-GH"
+ }
+}

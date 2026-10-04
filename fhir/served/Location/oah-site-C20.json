@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-C20",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Corujeira</p><p>OneAquaHealth research site C20 in Coimbra.</p><p>Identifier C20 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.21085, -8.47667</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "C20",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Corujeira",
+ "description": "OneAquaHealth research site C20 in Coimbra.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 40.21085,
+  "longitude": -8.47667
+ },
+ "partOf": {
+  "reference": "Location/oah-city-CO"
+ }
+}

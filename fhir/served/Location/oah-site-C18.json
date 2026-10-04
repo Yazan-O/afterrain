@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-C18",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ponte da Espertina</p><p>OneAquaHealth research site C18 in Coimbra.</p><p>Identifier C18 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.25621, -8.45312</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "C18",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ponte da Espertina",
+ "description": "OneAquaHealth research site C18 in Coimbra.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 40.25621,
+  "longitude": -8.45312
+ },
+ "partOf": {
+  "reference": "Location/oah-city-CO"
+ }
+}

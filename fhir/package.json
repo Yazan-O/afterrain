@@ -1,0 +1,16 @@
+{
+  "name": "sayr-fhir",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Sayr resources on the OneAquaHealth FHIR Implementation Guide (hl7.eu.fhir.oah)",
+  "license": "MIT",
+  "scripts": {
+    "fhir": "python -m sayr_fhir build && node ../web/scripts/sync-fhir.mjs --export",
+    "fhir:test": "python -m pytest -q",
+    "fhir:serve": "python -m sayr_fhir serve",
+    "fhir:examples": "python -m sayr_fhir validate-examples"
+  },
+  "devDependencies": {
+    "fsh-sushi": "3.20.1"
+  }
+}

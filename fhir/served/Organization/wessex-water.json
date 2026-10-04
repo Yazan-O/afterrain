@@ -1,0 +1,15 @@
+{
+ "resourceType": "Organization",
+ "id": "wessex-water",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Wessex Water</p></div>"
+ },
+ "name": "Wessex Water",
+ "telecom": [
+  {
+   "system": "url",
+   "value": "https://www.wessexwater.co.uk"
+  }
+ ]
+}

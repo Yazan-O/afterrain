@@ -1,0 +1,204 @@
+{
+ "files": 927,
+ "counts": {
+  "fatal": 0,
+  "error": 0,
+  "warning": 241,
+  "information": 330
+ },
+ "files_with_errors": [],
+ "groups": [
+  {
+   "severity": "warning",
+   "count": 226,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[8].resource/*Location/hubeau-station-BF000002*/.type[0]",
+    "text": "None of the codings provided are in the value set 'ServiceDeliveryLocationRoleType' (http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#420531007)"
+   }
+  },
+  {
+   "severity": "warning",
+   "count": 6,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[4].resource/*Group/cohort-adult-swimmers*/.characteristic[1].code",
+    "text": "None of the codings provided are in the value set 'OAH Cohort Characteristic Code' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-cohort-characteristic-code-vs), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs#water-contact-activity)"
+   }
+  },
+  {
+   "severity": "warning",
+   "count": 4,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[1].resource/*Communication/alert-warleigh-dog-owners-20240925T0810Z*/.reasonReference[1]",
+    "text": "Found multiple matching profiles for Observation/warleigh-ecoli-20240924T0810Z among choices: http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-health-measure-oah, http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+   }
+  },
+  {
+   "severity": "warning",
+   "count": 4,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[922].resource/*ValueSet/sayr-alert-reason-vs*/.compose.include[0].system",
+    "text": "There are multiple different potential matches for the url 'https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '0.1.0', found versions: 0.1.0, 0.1.0 (from sayr.fhir.oah#0.1.0). Suggested fix: change the canonical reference from 'https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs' to 'https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs|0.1.0'"
+   }
+  },
+  {
+   "severity": "warning",
+   "count": 1,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[1].resource/*Communication/alert-warleigh-dog-owners-20240925T0810Z*/.reasonReference[0]",
+    "text": "Found multiple matching profiles for Observation/warleigh-risk-dog-owners-20240925T0810Z among choices: http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-health-measure-oah, http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 302,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[121].resource/*Observation/oah-risk-dog-owners-BN1*/.code",
+    "text": "None of the codings provided are in the value set 'OAH Health Indicators' (http://hl7.eu/fhir/ig/oah/ValueSet/health-indicators-oah-vs), and a coding is recommended to come from this value set (codes = https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs#ecoli-exceedance-probability)"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 5,
+   "example": {
+    "file": "Group-cohort-adult-swimmers.json",
+    "at": "Group.characteristic[0].code",
+    "text": "Binding for path Group.characteristic[0].code in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Group|4.0.1] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 3,
+   "example": {
+    "file": "Group-cohort-adult-swimmers.json",
+    "at": "Group.characteristic[1].value.ofType(CodeableConcept)",
+    "text": "Binding for path Group.characteristic[1].value.ofType(CodeableConcept) in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Group|4.0.1] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 3,
+   "example": {
+    "file": "Group-cohort-adult-swimmers.json",
+    "at": "Group.characteristic[1].value.ofType(CodeableConcept)",
+    "text": "Binding for path Group.characteristic[1].value.ofType(CodeableConcept) in profile StructureDefinition[http://hl7.eu/fhir/ig/oah/StructureDefinition/group-oah] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 2,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[4].resource/*Group/cohort-adult-swimmers*/.characteristic[0].code",
+    "text": "Binding for path Bundle.entry[4].resource/*Group/cohort-adult-swimmers*/.characteristic[0].code in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Group|4.0.1] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 2,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[5].resource/*Group/cohort-children-paddling*/.characteristic[0].code",
+    "text": "Binding for path Bundle.entry[5].resource/*Group/cohort-children-paddling*/.characteristic[0].code in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Group|4.0.1] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 2,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[7].resource/*Library/warleigh-backtest*/.content[0]",
+    "text": "Attachment content was not checked: Binary/warleigh-backtest-data is not a directly accessible link"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 2,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[7].resource/*Library/warleigh-backtest*/.extension[2]",
+    "text": "This element does not match any known slice defined in the profile http://hl7.eu/fhir/ig/oah/StructureDefinition/library-oah (this may not be a problem, but you should check that it's not intended to match a slice)"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 2,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[919].resource/*StructureDefinition/alert-oah*/.snapshot.element[4].binding.extension[0]",
+    "text": "The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 1,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[4].resource/*Group/cohort-adult-swimmers*/.characteristic[1].value.ofType(CodeableConcept)",
+    "text": "Binding for path Bundle.entry[4].resource/*Group/cohort-adult-swimmers*/.characteristic[1].value.ofType(CodeableConcept) in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Group|4.0.1] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 1,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[4].resource/*Group/cohort-adult-swimmers*/.characteristic[1].value.ofType(CodeableConcept)",
+    "text": "Binding for path Bundle.entry[4].resource/*Group/cohort-adult-swimmers*/.characteristic[1].value.ofType(CodeableConcept) in profile StructureDefinition[http://hl7.eu/fhir/ig/oah/StructureDefinition/group-oah] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 1,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[5].resource/*Group/cohort-children-paddling*/.characteristic[1].value.ofType(CodeableConcept)",
+    "text": "Binding for path Bundle.entry[5].resource/*Group/cohort-children-paddling*/.characteristic[1].value.ofType(CodeableConcept) in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Group|4.0.1] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 1,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[5].resource/*Group/cohort-children-paddling*/.characteristic[1].value.ofType(CodeableConcept)",
+    "text": "Binding for path Bundle.entry[5].resource/*Group/cohort-children-paddling*/.characteristic[1].value.ofType(CodeableConcept) in profile StructureDefinition[http://hl7.eu/fhir/ig/oah/StructureDefinition/group-oah] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 1,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[6].resource/*Group/cohort-dog-owners*/.characteristic[0].code",
+    "text": "Binding for path Bundle.entry[6].resource/*Group/cohort-dog-owners*/.characteristic[0].code in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Group|4.0.1] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 1,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[6].resource/*Group/cohort-dog-owners*/.characteristic[0].value.ofType(CodeableConcept)",
+    "text": "Binding for path Bundle.entry[6].resource/*Group/cohort-dog-owners*/.characteristic[0].value.ofType(CodeableConcept) in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Group|4.0.1] has no source, so can't be checked"
+   }
+  },
+  {
+   "severity": "information",
+   "count": 1,
+   "example": {
+    "file": "Bundle-sayr-transaction.json",
+    "at": "Bundle.entry[6].resource/*Group/cohort-dog-owners*/.characteristic[0].value.ofType(CodeableConcept)",
+    "text": "Binding for path Bundle.entry[6].resource/*Group/cohort-dog-owners*/.characteristic[0].value.ofType(CodeableConcept) in profile StructureDefinition[http://hl7.eu/fhir/ig/oah/StructureDefinition/group-oah] has no source, so can't be checked"
+   }
+  }
+ ],
+ "validated": 927,
+ "validated_utc": "2026-10-03T22:56:39Z",
+ "validator": "HL7 FHIR validator 6.10.4"
+}

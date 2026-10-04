@@ -1,0 +1,36 @@
+{
+ "resourceType": "Location",
+ "id": "oah-city-TO",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Toulouse</p><p>Identifier TO (https://yazan-o.github.io/sayr/fhir/sid/oah-city)</p><p>Position 43.6047, 1.4442</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-city",
+   "value": "TO"
+  }
+ ],
+ "name": "Toulouse",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "288520005",
+     "system": "http://snomed.info/sct",
+     "display": "City environment"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.6047,
+  "longitude": 1.4442
+ }
+}

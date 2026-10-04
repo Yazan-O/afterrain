@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T10",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Canal de Saint Martory</p><p>OneAquaHealth research site T10 in Toulouse.</p><p>Identifier T10 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.5322, 1.32265</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T10",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Canal de Saint Martory",
+ "description": "OneAquaHealth research site T10 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.5322,
+  "longitude": 1.32265
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

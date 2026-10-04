@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-BN14",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Rocca - Tufara</p><p>OneAquaHealth research site BN14 in Benevento.</p><p>Identifier BN14 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 41.06014, 14.70843</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "BN14",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Rocca - Tufara",
+ "description": "OneAquaHealth research site BN14 in Benevento.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 41.06014,
+  "longitude": 14.70843
+ },
+ "partOf": {
+  "reference": "Location/oah-city-BE"
+ }
+}

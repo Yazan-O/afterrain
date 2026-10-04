@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-O10",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Frognerelva - VInderen</p><p>OneAquaHealth research site O10 in Oslo.</p><p>Identifier O10 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 59.9414, 10.7097</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "O10",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Frognerelva - VInderen",
+ "description": "OneAquaHealth research site O10 in Oslo.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 59.9414,
+  "longitude": 10.7097
+ },
+ "partOf": {
+  "reference": "Location/oah-city-OS"
+ }
+}

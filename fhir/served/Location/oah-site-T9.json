@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T9",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau du Roussimort amont</p><p>OneAquaHealth research site T9 in Toulouse.</p><p>Identifier T9 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.52152, 1.34273</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T9",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ruisseau du Roussimort amont",
+ "description": "OneAquaHealth research site T9 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.52152,
+  "longitude": 1.34273
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

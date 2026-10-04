@@ -1,0 +1,1374 @@
+{
+ "resourceType": "Library",
+ "id": "warleigh-backtest",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/library-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Warleigh Weir E. coli and storm-overflow backtest (2021-2025)</p><p>Warleigh Weir, River Avon: 322 E. coli samples (2021-03-19 to 2025-12-08) with the storm-overflow spills of the 48 hours before each, the gauge rain and flow of the days finished before it, the warning rules that fired, and the model probability.</p></div>"
+ },
+ "extension": [
+  {
+   "url": "http://hl7.eu/fhir/ig/oah/StructureDefinition/library-size",
+   "valueQuantity": {
+    "value": 151956,
+    "code": "By",
+    "system": "http://unitsofmeasure.org",
+    "unit": "bytes"
+   }
+  },
+  {
+   "url": "http://hl7.eu/fhir/ig/oah/StructureDefinition/library-numberOfRecords",
+   "valueInteger": 322
+  },
+  {
+   "url": "http://hl7.org/fhir/StructureDefinition/artifact-copyrightLabel",
+   "valueString": "CC BY 4.0 (Wessex Water) and OGL v3.0 (Environment Agency)"
+  }
+ ],
+ "url": "https://yazan-o.github.io/sayr/fhir/Library/warleigh-backtest",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/dataset",
+   "value": "warleigh-backtest"
+  }
+ ],
+ "version": "2026-10-03T22:28:20Z",
+ "name": "WarleighWeirBacktest",
+ "title": "Warleigh Weir E. coli and storm-overflow backtest (2021-2025)",
+ "status": "active",
+ "type": {
+  "coding": [
+   {
+    "code": "asset-collection",
+    "system": "http://terminology.hl7.org/CodeSystem/library-type",
+    "display": "Asset Collection"
+   }
+  ]
+ },
+ "date": "2026-10-03",
+ "publisher": "Sayr team",
+ "author": [
+  {
+   "name": "Sayr team"
+  }
+ ],
+ "description": "Warleigh Weir, River Avon: 322 E. coli samples (2021-03-19 to 2025-12-08) with the storm-overflow spills of the 48 hours before each, the gauge rain and flow of the days finished before it, the warning rules that fired, and the model probability.",
+ "copyright": "Contains Wessex Water data (CC BY 4.0) and Environment Agency data (Open Government Licence v3.0). Derived values keep these licences; attribute Wessex Water and the Environment Agency.",
+ "relatedArtifact": [
+  {
+   "type": "derived-from",
+   "display": "Wessex Water, Environmental Water Quality (CC BY 4.0)",
+   "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Environmental_Water_Quality_view/FeatureServer/0"
+  },
+  {
+   "type": "derived-from",
+   "display": "Wessex Water, Event Duration Monitoring (storm overflow spill log, CC BY 4.0)",
+   "url": "https://services.arcgis.com/3SZ6e0uCvPROr4mS/arcgis/rest/services/Wessex_Water_Event_Duration_Monitoring_2024_view/FeatureServer/0"
+  },
+  {
+   "type": "derived-from",
+   "display": "Environment Agency Hydrology API: Bath Claverton rain, Bradford-on-Avon flow (OGL v3.0)",
+   "url": "https://environment.data.gov.uk/hydrology/"
+  }
+ ],
+ "content": [
+  {
+   "contentType": "application/json",
+   "url": "Binary/warleigh-backtest-data",
+   "size": 151956,
+   "title": "warleigh_backtest.json"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210319T1110Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210323T1410Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210401T0730Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210407T1140Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210414T1555Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210421T1030Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210427T1245Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210507T1300Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210513T0625Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210520T0635Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210524T0635Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210602T0635Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210607T0630Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210614T0537Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210623T0640Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210630T0655Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210706T0503Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210714T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210722T0705Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210727T0650Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210803T0650Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210809T1300Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210817T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210824T0650Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210901T0705Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210908T0710Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210915T0715Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210920T0715Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20210928T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211004T0705Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211013T0805Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211020T0705Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211027T1200Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211101T1045Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211109T0800Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211115T1130Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211125T0820Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211129T1135Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211209T0800Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211214T0815Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211220T1255Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20211229T0830Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220104T0800Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220113T0805Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220117T0800Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220202T1355Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220208T1300Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220217T0815Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220223T1245Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220303T1420Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220309T0930Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220310T0950Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220311T1120Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220314T0925Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220315T1000Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220316T1050Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220321T0925Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220322T1025Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220323T1115Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220328T0540Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220330T0927Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220331T0935Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220406T0730Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220408T0620Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220412T0655Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220413T0800Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220414T0730Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220419T0721Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220422T0820Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220425T1330Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220428T0825Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220429T0710Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220504T0715Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220505T0545Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220506T0550Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220509T0705Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220510T0610Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220511T0725Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220517T0640Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220518T1215Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220520T0705Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220523T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220526T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220526T0800Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220530T0535Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220601T0650Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220606T0610Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220607T0600Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220608T0655Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220615T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220616T0710Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220617T0535Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220621T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220622T1255Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220626T1005Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220628T0645Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220629T0653Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220701T0610Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220705T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220706T0640Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220712T0705Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220712T0705Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220714T0650Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220714T0650Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220715T1055Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220715T1056Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220718T0940Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220718T0941Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220720T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220722T0745Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220722T0746Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220725T0700Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220726T0540Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220729T0655Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220729T0655Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220801T0610Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220801T0610Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220802T0545Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220802T0545Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220803T0710Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220803T0710Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220810T0544Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220810T0544Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220811T0547Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220811T0547Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220812T0446Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220812T0446Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220815T0640Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220815T0640Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220817T0550Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220817T0550Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220818T0547Z-1"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220818T0547Z-2"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220824T0650Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220826T0910Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220901T0650Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220902T0830Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220905T0620Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220906T0652Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220907T0600Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220912T0550Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220913T0656Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220915T0524Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220921T0710Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220923T0905Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20220928T0726Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221005T0600Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221013T0534Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221017T0557Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221026T0720Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221104T0725Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221109T0836Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221118T0645Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221121T0806Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221129T0740Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221205T0750Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221212T0712Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221219T1250Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20221219T1300Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230103T0822Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230118T0910Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230126T0744Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230201T0852Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230210T0810Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230214T1034Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230220T1015Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230220T1020Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230301T0830Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230308T0815Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230316T0820Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230321T0732Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230327T0726Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230403T0810Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230413T0755Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230420T0750Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230426T0810Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230503T0810Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230509T0815Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230516T0745Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230524T0810Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230531T0745Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230606T0845Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230615T0740Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230619T1030Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230628T0930Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230704T0830Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230711T0800Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230717T0730Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230725T0800Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230803T0945Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230810T1000Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230817T1050Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230825T0845Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230831T1125Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230907T0840Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230914T0745Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230922T0750Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20230928T1100Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231003T0720Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231026T0840Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231031T1020Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231109T0945Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231113T1100Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231122T0940Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231129T0940Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231206T1010Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231212T0920Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20231221T1050Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240104T0951Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240111T1010Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240118T1245Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240125T1155Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240201T1020Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240208T1131Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240214T1110Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240222T1235Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240229T1200Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240306T0955Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240314T1130Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240321T0915Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240326T1115Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240410T1015Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240415T1000Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240422T1020Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240430T1005Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240508T1030Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240522T1030Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240529T1125Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240605T1030Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240610T1150Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240620T1200Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240703T0825Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240710T0935Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240717T0840Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240723T0845Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240731T1025Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240808T0910Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240815T0825Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240822T0825Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240828T1310Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240913T0840Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240917T0820Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240918T0905Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240918T1205Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240918T1525Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240919T1550Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240920T1400Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240920T1500Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240924T0810Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240924T1240Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240924T1540Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240925T0810Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240925T1135Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240925T1515Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240926T0815Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240926T1045Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240926T1320Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240927T0845Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240927T1200Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20240927T1515Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241002T1030Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241007T1020Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241018T0805Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241023T1345Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241031T0001Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241104T1200Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241115T1115Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241121T1010Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241205T1310Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241213T1205Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241216T1045Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20241223T1208Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250102T1115Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250110T1200Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250113T1015Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250122T1025Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250204T1400Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250211T1045Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250218T1300Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250227T1215Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250304T1300Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250311T1110Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250319T1240Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250324T1040Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250331T1211Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250407T1020Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250410T0840Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250414T0840Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250415T1115Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250416T0845Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250423T1135Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250502T0955Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250515T1105Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250529T1050Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250606T0920Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250612T0755Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250619T1000Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250624T0955Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250703T0840Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250708T0745Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250717T0825Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250724T0745Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250731T0950Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250806T1105Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250814T0840Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250819T0905Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250826T1205Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250904T1320Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250911T0915Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250915T0915Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20250926T0805Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251003T1000Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251009T0935Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251016T0930Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251020T1105Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251028T1000Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251104T1230Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251110T0900Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251121T1300Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251127T1015Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251204T0915Z"
+  },
+  {
+   "contentType": "application/fhir+json",
+   "url": "Observation/warleigh-ecoli-20251208T0945Z"
+  }
+ ]
+}

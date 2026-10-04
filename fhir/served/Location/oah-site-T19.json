@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T19",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Touch</p><p>OneAquaHealth research site T19 in Toulouse.</p><p>Identifier T19 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.58253, 1.35047</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T19",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Touch",
+ "description": "OneAquaHealth research site T19 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.58253,
+  "longitude": 1.35047
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

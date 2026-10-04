@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-C4",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Eiras</p><p>OneAquaHealth research site C4 in Coimbra.</p><p>Identifier C4 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.25289, -8.43659</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "C4",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Eiras",
+ "description": "OneAquaHealth research site C4 in Coimbra.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 40.25289,
+  "longitude": -8.43659
+ },
+ "partOf": {
+  "reference": "Location/oah-city-CO"
+ }
+}

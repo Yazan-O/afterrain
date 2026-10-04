@@ -1,0 +1,84 @@
+{
+ "resourceType": "Observation",
+ "id": "warleigh-risk-dog-owners-20240925T0810Z",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-health-measure-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Probability of E. coli over 900 per 100 mL: 0.9999918017213049 probability</p><p>At Location/warleigh-weir, 2024-09-25T09:10:00+01:00, for Group/cohort-dog-owners</p><p>Interpretation: High</p><p>Logistic regression on upstream storm-overflow spills, river flow, rain and season (model_warleigh.json). Fitted on the 2021, 2022, 2023 samples; 2024 held out.</p></div>"
+ },
+ "status": "final",
+ "code": {
+  "coding": [
+   {
+    "code": "ecoli-exceedance-probability",
+    "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+    "display": "Probability of E. coli over 900 per 100 mL"
+   }
+  ]
+ },
+ "subject": {
+  "reference": "Location/warleigh-weir"
+ },
+ "focus": [
+  {
+   "reference": "Group/cohort-dog-owners"
+  }
+ ],
+ "effectiveDateTime": "2024-09-25T09:10:00+01:00",
+ "performer": [
+  {
+   "reference": "Organization/sayr-team"
+  }
+ ],
+ "device": {
+  "reference": "Device/sayr-model-warleigh-without-2024"
+ },
+ "method": {
+  "text": "Logistic regression on upstream storm-overflow spills, river flow, rain and season (model_warleigh.json). Fitted on the 2021, 2022, 2023 samples; 2024 held out."
+ },
+ "valueQuantity": {
+  "value": 0.9999918017213049,
+  "code": "1",
+  "system": "http://unitsofmeasure.org",
+  "unit": "probability"
+ },
+ "interpretation": [
+  {
+   "coding": [
+    {
+     "code": "H",
+     "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+     "display": "High"
+    }
+   ]
+  }
+ ],
+ "referenceRange": [
+  {
+   "high": {
+    "value": 0.5857430928675903,
+    "code": "1",
+    "system": "http://unitsofmeasure.org",
+    "unit": "probability"
+   },
+   "text": "Warning cut fixed on the training years: it maximises the hit rate minus the false-alarm rate."
+  }
+ ],
+ "extension": [
+  {
+   "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
+   "valueReference": {
+    "reference": "Library/warleigh-backtest"
+   }
+  }
+ ],
+ "note": [
+  {
+   "text": "The estimate is for the water at this place; the cohort is the group it is addressed to. The model has no cohort-specific term."
+  }
+ ]
+}

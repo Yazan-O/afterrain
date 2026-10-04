@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T18",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ousseau</p><p>OneAquaHealth research site T18 in Toulouse.</p><p>Identifier T18 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.57882, 1.35262</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T18",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ousseau",
+ "description": "OneAquaHealth research site T18 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.57882,
+  "longitude": 1.35262
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

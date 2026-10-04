@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-C17",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Conraria</p><p>OneAquaHealth research site C17 in Coimbra.</p><p>Identifier C17 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.17422, -8.39363</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "C17",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Conraria",
+ "description": "OneAquaHealth research site C17 in Coimbra.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 40.17422,
+  "longitude": -8.39363
+ },
+ "partOf": {
+  "reference": "Location/oah-city-CO"
+ }
+}

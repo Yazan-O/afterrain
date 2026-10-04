@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-O13",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mærradalsbekken – Huseby skole</p><p>OneAquaHealth research site O13 in Oslo.</p><p>Identifier O13 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 59.945, 10.6503</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "O13",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Mærradalsbekken – Huseby skole",
+ "description": "OneAquaHealth research site O13 in Oslo.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 59.945,
+  "longitude": 10.6503
+ },
+ "partOf": {
+  "reference": "Location/oah-city-OS"
+ }
+}

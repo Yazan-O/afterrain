@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T25",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau de l’Armurié</p><p>OneAquaHealth research site T25 in Toulouse.</p><p>Identifier T25 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.64862, 1.51501</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T25",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ruisseau de l’Armurié",
+ "description": "OneAquaHealth research site T25 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.64862,
+  "longitude": 1.51501
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

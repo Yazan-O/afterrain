@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T12",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Fossé de Larramet médian</p><p>OneAquaHealth research site T12 in Toulouse.</p><p>Identifier T12 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.54003, 1.34077</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T12",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Fossé de Larramet médian",
+ "description": "OneAquaHealth research site T12 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.54003,
+  "longitude": 1.34077
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

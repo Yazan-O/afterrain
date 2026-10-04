@@ -1,0 +1,36 @@
+{
+ "resourceType": "Location",
+ "id": "oah-city-GH",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ghent</p><p>Identifier GH (https://yazan-o.github.io/sayr/fhir/sid/oah-city)</p><p>Position 51.0543, 3.7174</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-city",
+   "value": "GH"
+  }
+ ],
+ "name": "Ghent",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "288520005",
+     "system": "http://snomed.info/sct",
+     "display": "City environment"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 51.0543,
+  "longitude": 3.7174
+ }
+}

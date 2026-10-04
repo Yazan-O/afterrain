@@ -1,0 +1,76 @@
+{
+ "resourceType": "Observation",
+ "id": "oah-risk-dog-owners-G3",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-health-measure-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Probability of E. coli over 900 per 100 mL: 0.5089 probability</p><p>At Location/oah-site-G3, 2026-10-09T05:00:00+02:00, for Group/cohort-dog-owners</p><p>Fog (uncertainty of the exceedance probability): 0.9536 fog</p><p>City model: logistic regression of the chance that one sample is over 900 E. coli per 100 mL on ln(1 + the rain of the 48 hours before), fitted on 390 Bath and Toulouse samples with a shared rain slope (city_model.json). At this site it runs at the mean of the two site intercepts plus the site&#x27;s own offset,which is still at its prior because the OneAquaHealth API holds no E. coli counts for the site. Rain from the Open-Meteo ECMWF IFS 0.25 ensemble. The value is the highest, over the forecast hours, of the median over the ensemble members. Model version sayr-city-2:8b0c1ef2b5.</p></div>"
+ },
+ "status": "final",
+ "code": {
+  "coding": [
+   {
+    "code": "ecoli-exceedance-probability",
+    "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+    "display": "Probability of E. coli over 900 per 100 mL"
+   }
+  ]
+ },
+ "subject": {
+  "reference": "Location/oah-site-G3"
+ },
+ "focus": [
+  {
+   "reference": "Group/cohort-dog-owners"
+  }
+ ],
+ "effectiveDateTime": "2026-10-09T05:00:00+02:00",
+ "performer": [
+  {
+   "reference": "Organization/sayr-team"
+  }
+ ],
+ "device": {
+  "reference": "Device/sayr-model-city"
+ },
+ "method": {
+  "text": "City model: logistic regression of the chance that one sample is over 900 E. coli per 100 mL on ln(1 + the rain of the 48 hours before), fitted on 390 Bath and Toulouse samples with a shared rain slope (city_model.json). At this site it runs at the mean of the two site intercepts plus the site's own offset,which is still at its prior because the OneAquaHealth API holds no E. coli counts for the site. Rain from the Open-Meteo ECMWF IFS 0.25 ensemble. The value is the highest, over the forecast hours, of the median over the ensemble members. Model version sayr-city-2:8b0c1ef2b5."
+ },
+ "valueQuantity": {
+  "value": 0.5089,
+  "code": "1",
+  "system": "http://unitsofmeasure.org",
+  "unit": "probability"
+ },
+ "component": [
+  {
+   "code": {
+    "coding": [
+     {
+      "code": "fog",
+      "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+      "display": "Fog (uncertainty of the exceedance probability)"
+     }
+    ]
+   },
+   "valueQuantity": {
+    "value": 0.9536,
+    "code": "1",
+    "system": "http://unitsofmeasure.org",
+    "unit": "fog"
+   }
+  }
+ ],
+ "note": [
+  {
+   "text": "The estimate is for the water at this place; the cohort is the group it is addressed to. The model has no cohort-specific term."
+  },
+  {
+   "text": "Forecast fetched 2026-10-03T22:33:55Z; forecast hours 2026-10-03T22:00Z to 2026-10-09T23:00Z. Sayr state at the peak hour: unknown (fog 0.9536; unknown at 0.5 or more)."
+  }
+ ]
+}

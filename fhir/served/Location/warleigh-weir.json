@@ -1,0 +1,37 @@
+{
+ "resourceType": "Location",
+ "id": "warleigh-weir",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Warleigh Weir, River Avon</p><p>E. coli sampling point on the River Avon near Bath (Wessex Water, CC BY 4.0).</p><p>Identifier warleigh-weir (https://yazan-o.github.io/sayr/fhir/sid/site)</p><p>Position 51.37705, -2.300635</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/site",
+   "value": "warleigh-weir"
+  }
+ ],
+ "name": "Warleigh Weir, River Avon",
+ "description": "E. coli sampling point on the River Avon near Bath (Wessex Water, CC BY 4.0).",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 51.37705,
+  "longitude": -2.300635
+ }
+}

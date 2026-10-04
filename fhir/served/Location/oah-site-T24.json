@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T24",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>OneAquaHealth site T24</p><p>OneAquaHealth research site T24 in Toulouse. The OneAquaHealth API gives no name for this site.</p><p>Identifier T24 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.59604, 1.36671</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T24",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "OneAquaHealth site T24",
+ "description": "OneAquaHealth research site T24 in Toulouse. The OneAquaHealth API gives no name for this site.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.59604,
+  "longitude": 1.36671
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

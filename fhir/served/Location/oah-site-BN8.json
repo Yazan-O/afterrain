@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-BN8",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Paduli</p><p>OneAquaHealth research site BN8 in Benevento.</p><p>Identifier BN8 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 41.15405, 14.8345</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "BN8",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Paduli",
+ "description": "OneAquaHealth research site BN8 in Benevento.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 41.15405,
+  "longitude": 14.8345
+ },
+ "partOf": {
+  "reference": "Location/oah-city-BE"
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-C5",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mina Hospital</p><p>OneAquaHealth research site C5 in Coimbra.</p><p>Identifier C5 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.2186, -8.42733</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "C5",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Mina Hospital",
+ "description": "OneAquaHealth research site C5 in Coimbra.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 40.2186,
+  "longitude": -8.42733
+ },
+ "partOf": {
+  "reference": "Location/oah-city-CO"
+ }
+}

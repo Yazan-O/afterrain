@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-C14",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Antanhol</p><p>OneAquaHealth research site C14 in Coimbra.</p><p>Identifier C14 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 40.16719, -8.47817</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "C14",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Antanhol",
+ "description": "OneAquaHealth research site C14 in Coimbra.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 40.16719,
+  "longitude": -8.47817
+ },
+ "partOf": {
+  "reference": "Location/oah-city-CO"
+ }
+}

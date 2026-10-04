@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T3",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau de Bonneval amont</p><p>OneAquaHealth research site T3 in Toulouse.</p><p>Identifier T3 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.52756, 1.47439</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T3",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ruisseau de Bonneval amont",
+ "description": "OneAquaHealth research site T3 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.52756,
+  "longitude": 1.47439
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

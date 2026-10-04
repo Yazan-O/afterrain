@@ -1,0 +1,31 @@
+{
+ "resourceType": "Specimen",
+ "id": "warleigh-water-20240229T1200Z",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/specimen-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water sample from Location/warleigh-weir</p><p>Collected 2024-02-29T12:00:00+00:00 by PractitionerRole/wessex-water-sampler</p></div>"
+ },
+ "type": {
+  "coding": [
+   {
+    "code": "11713004",
+    "system": "http://snomed.info/sct",
+    "display": "Water"
+   }
+  ]
+ },
+ "subject": {
+  "reference": "Location/warleigh-weir"
+ },
+ "collection": {
+  "collector": {
+   "reference": "PractitionerRole/wessex-water-sampler"
+  },
+  "collectedDateTime": "2024-02-29T12:00:00+00:00"
+ }
+}

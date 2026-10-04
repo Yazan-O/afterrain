@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-BN20",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Lenta</p><p>OneAquaHealth research site BN20 in Benevento.</p><p>Identifier BN20 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 41.213825, 14.68999</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "BN20",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Lenta",
+ "description": "OneAquaHealth research site BN20 in Benevento.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 41.213825,
+  "longitude": 14.68999
+ },
+ "partOf": {
+  "reference": "Location/oah-city-BE"
+ }
+}

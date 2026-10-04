@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T8",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau du Grand Port de Mer</p><p>OneAquaHealth research site T8 in Toulouse.</p><p>Identifier T8 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.58553, 1.52861</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T8",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ruisseau du Grand Port de Mer",
+ "description": "OneAquaHealth research site T8 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.58553,
+  "longitude": 1.52861
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

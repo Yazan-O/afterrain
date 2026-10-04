@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-O6",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ljanselva- Skullerud -</p><p>OneAquaHealth research site O6 in Oslo.</p><p>Identifier O6 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 59.8628, 10.8458</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "O6",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ljanselva- Skullerud -",
+ "description": "OneAquaHealth research site O6 in Oslo.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 59.8628,
+  "longitude": 10.8458
+ },
+ "partOf": {
+  "reference": "Location/oah-city-OS"
+ }
+}

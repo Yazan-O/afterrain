@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-BN4",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Serretelle 4</p><p>OneAquaHealth research site BN4 in Benevento.</p><p>Identifier BN4 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 41.12414, 14.74864</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "BN4",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Serretelle 4",
+ "description": "OneAquaHealth research site BN4 in Benevento.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 41.12414,
+  "longitude": 14.74864
+ },
+ "partOf": {
+  "reference": "Location/oah-city-BE"
+ }
+}

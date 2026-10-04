@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-BN10",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Malacagna</p><p>OneAquaHealth research site BN10 in Benevento.</p><p>Identifier BN10 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 41.14607, 14.76353</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "BN10",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Malacagna",
+ "description": "OneAquaHealth research site BN10 in Benevento.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 41.14607,
+  "longitude": 14.76353
+ },
+ "partOf": {
+  "reference": "Location/oah-city-BE"
+ }
+}

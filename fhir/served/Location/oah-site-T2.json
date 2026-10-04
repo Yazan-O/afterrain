@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T2",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ruisseau de Bonneval aval</p><p>OneAquaHealth research site T2 in Toulouse.</p><p>Identifier T2 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.53219, 1.46332</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T2",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ruisseau de Bonneval aval",
+ "description": "OneAquaHealth research site T2 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.53219,
+  "longitude": 1.46332
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

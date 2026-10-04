@@ -1,0 +1,39 @@
+{
+ "resourceType": "Group",
+ "id": "cohort-dog-owners",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/group-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dog owners</p><p>Water contact activity: Dog enters the water</p></div>"
+ },
+ "type": "person",
+ "actual": false,
+ "name": "Dog owners",
+ "characteristic": [
+  {
+   "code": {
+    "coding": [
+     {
+      "code": "water-contact-activity",
+      "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+      "display": "Water contact activity"
+     }
+    ]
+   },
+   "valueCodeableConcept": {
+    "coding": [
+     {
+      "code": "dog-in-water",
+      "system": "https://yazan-o.github.io/sayr/fhir/CodeSystem/sayr-cs",
+      "display": "Dog enters the water"
+     }
+    ]
+   },
+   "exclude": false
+  }
+ ]
+}

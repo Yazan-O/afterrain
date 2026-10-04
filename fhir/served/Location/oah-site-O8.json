@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-O8",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Ljanselva – Nedre Ljan Nordstrand</p><p>OneAquaHealth research site O8 in Oslo.</p><p>Identifier O8 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 59.8433, 10.7847</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "O8",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Ljanselva – Nedre Ljan Nordstrand",
+ "description": "OneAquaHealth research site O8 in Oslo.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 59.8433,
+  "longitude": 10.7847
+ },
+ "partOf": {
+  "reference": "Location/oah-city-OS"
+ }
+}

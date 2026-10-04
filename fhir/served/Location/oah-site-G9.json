@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-G9",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Zwalm5 (Zw5)</p><p>OneAquaHealth research site G9 in Ghent.</p><p>Identifier G9 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 50.87366, 3.73125</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "G9",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Zwalm5 (Zw5)",
+ "description": "OneAquaHealth research site G9 in Ghent.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 50.87366,
+  "longitude": 3.73125
+ },
+ "partOf": {
+  "reference": "Location/oah-city-GH"
+ }
+}

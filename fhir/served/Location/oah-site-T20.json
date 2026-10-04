@@ -1,0 +1,43 @@
+{
+ "resourceType": "Location",
+ "id": "oah-site-T20",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Canal de Moulin</p><p>OneAquaHealth research site T20 in Toulouse.</p><p>Identifier T20 (https://yazan-o.github.io/sayr/fhir/sid/oah-site-code)</p><p>Position 43.5828, 1.3493</p></div>"
+ },
+ "mode": "instance",
+ "identifier": [
+  {
+   "system": "https://yazan-o.github.io/sayr/fhir/sid/oah-site-code",
+   "value": "T20",
+   "assigner": {
+    "display": "OneAquaHealth"
+   }
+  }
+ ],
+ "name": "Canal de Moulin",
+ "description": "OneAquaHealth research site T20 in Toulouse.",
+ "type": [
+  {
+   "coding": [
+    {
+     "code": "420531007",
+     "system": "http://snomed.info/sct",
+     "display": "River"
+    }
+   ]
+  }
+ ],
+ "position": {
+  "latitude": 43.5828,
+  "longitude": 1.3493
+ },
+ "partOf": {
+  "reference": "Location/oah-city-TO"
+ }
+}

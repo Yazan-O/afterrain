@@ -1,0 +1,80 @@
+{
+ "resourceType": "Observation",
+ "id": "warleigh-ecoli-20230403T0810Z",
+ "meta": {
+  "profile": [
+   "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+  ]
+ },
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>E. coli per 100 mL: 2400 per 100 mL</p><p>At Location/warleigh-weir, 2023-04-03T09:10:00+01:00</p><p>Interpretation: High</p></div>"
+ },
+ "status": "final",
+ "category": [
+  {
+   "coding": [
+    {
+     "code": "laboratory",
+     "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+     "display": "Laboratory"
+    }
+   ]
+  }
+ ],
+ "code": {
+  "coding": [
+   {
+    "code": "coliforms",
+    "system": "http://hl7.eu/fhir/ig/oah/CodeSystem/temporarySystem-oah-eu",
+    "display": "Coliforms"
+   },
+   {
+    "code": "87317-4",
+    "system": "http://loinc.org",
+    "display": "Escherichia coli [#/volume] in Water by Viability count"
+   }
+  ],
+  "text": "E. coli per 100 mL"
+ },
+ "subject": {
+  "reference": "Location/warleigh-weir"
+ },
+ "specimen": {
+  "reference": "Specimen/warleigh-water-20230403T0810Z"
+ },
+ "effectiveDateTime": "2023-04-03T09:10:00+01:00",
+ "performer": [
+  {
+   "reference": "Organization/wessex-water"
+  }
+ ],
+ "valueQuantity": {
+  "value": 2400,
+  "code": "/(100.mL)",
+  "system": "http://unitsofmeasure.org",
+  "unit": "per 100 mL"
+ },
+ "interpretation": [
+  {
+   "coding": [
+    {
+     "code": "H",
+     "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+     "display": "High"
+    }
+   ]
+  }
+ ],
+ "referenceRange": [
+  {
+   "high": {
+    "value": 900,
+    "code": "/(100.mL)",
+    "system": "http://unitsofmeasure.org",
+    "unit": "per 100 mL"
+   },
+   "text": "Over 900 per 100 mL is a single-sample flag; the EU Bathing Water Directive applies 900 to the 90th percentile of a season's samples."
+  }
+ ]
+}
