@@ -275,7 +275,7 @@ npm run fhir:serve    # read-only FHIR surface on http://127.0.0.1:8777/
 
 Point the build at Java and the validator with `FHIR_JAVA` and `FHIR_VALIDATOR_JAR`. [fhir/README.md](fhir/README.md) has the full steps and the HAPI FHIR option.
 
-**Live site.** The `pages` workflow deploys `web/dist` to GitHub Pages on every push to `main`, and the `nowcast` workflow runs daily at 04:00 UTC. Each deploy refetches the forecast, rewrites the nowcast, and rebuilds and validates the FHIR resources first.
+**Live site.** The `pages` workflow deploys `web/dist` to GitHub Pages on every push to `main`, rebuilding and validating the FHIR resources first. During judging the site shows the submitted forecast of 3 October 2026, so it matches the film and the write-up. One run of the `nowcast` workflow refetches the forecast, rewrites the nowcast and redeploys; set back on its daily schedule, it keeps every stream current.
 
 </details>
 
