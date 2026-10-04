@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="https://oneaquahealth-ieee-hackathon.devpost.com/"><img src="https://img.shields.io/badge/Proudly%20submitted%20to-OneAquaHealth%20IEEE%20Global%20Hackathon%202026-C2410C?style=flat&labelColor=1b2421&logo=ieee&logoColor=white" alt="Proudly submitted to the OneAquaHealth IEEE Global Hackathon 2026"></a>
+  <a href="https://oneaquahealth-ieee-hackathon.devpost.com/"><img src="https://img.shields.io/badge/Track%206-Resilience%20Informatics-7C3AED?style=flat&labelColor=1b2421" alt="Track 6: Resilience Informatics"></a>
   <a href="https://github.com/Yazan-O"><img src="https://img.shields.io/badge/Built%20by-Mohamad%20Yazan%20Sadoun-1F6FEB?style=flat&labelColor=1b2421&logo=github&logoColor=white" alt="Built by Mohamad Yazan Sadoun"></a>
   <a href="https://github.com/AbdullahOsmanR"><img src="https://img.shields.io/badge/%26-Abdullah%20Osman-1F6FEB?style=flat&labelColor=1b2421&logo=github&logoColor=white" alt="and Abdullah Osman"></a>
   <br>
